@@ -100,10 +100,10 @@ List of operations and their syntax:
 - Compress and decompress operations
     - Compress file (using Brotli algorytm)
     ```bash
-     zip compress --filename path_to_file --destination path_to_destination_folder
+     zip compress --filename path_to_file --destination path_to_destination
     ```
     - Decompress file (using Brotli algorytm)
     ```bash
-     zip decompress --filename path_to_file --destination path_to_destination_folder
+     zip decompress --filename path_to_file --destination path_to_destination
     ```
     
