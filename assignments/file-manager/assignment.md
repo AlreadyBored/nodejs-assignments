@@ -33,6 +33,19 @@ You are in <span style="color:blue">*path to working directory*</span>
     - Operation *operation name* <span style="color:red">failed</span>
 
 List of operations and their syntax:
+- Navigation & working directory
+    - Go upper from current directory
+    ```bash
+    nwd up
+    ```
+    - Go to dedicated folder from current directory
+    ```bash
+    nwd go --path path_to_directory
+    ```
+    - List all files and folder in current directory
+    ```bash
+    nwd ls
+    ```
 - Basic operations with files
     - Read file and print it's content in console: 
     ```bash

@@ -2,6 +2,10 @@
 
 ## Basic Scope
 
+- Navigation & working directory operations
+    - **+10** Go upper from current directory
+    - **+10** Go to dedicated folder from current directory
+    - **+10** List all files and folder in current directory
 - Basic operations with files
     - **+10** Read file and print it's content in console
     - **+10** Write in file (prompts user to write additional content in file until he writes `EOW`)
@@ -15,10 +19,6 @@
     - **+6** Get home directory
     - **+6** Get current *system user name* (Do not confuse with the username that is set when the application starts)
     - **+6** Get CPU architecture for which Node.js binary has compiled
-- Child processes
-    - **+20** Spawn of the child process (creates IPC channel and prints newly created process's id)
-    - **+20** Send data in cp (only strings are supported)
-    - **+20** Read available data from cp and print it to console
 - Hash calculation (uses Worker Threads internally)
     - **+20** Calculate hash for file 
 - Compress and decompress operations
@@ -27,11 +27,16 @@
 
 ## Advanced Scope
 
+- Child processes operations
+    - **+20** Spawn of the child process (creates IPC channel and prints newly created process's id)
+    - **+20** Send data in cp (only strings are supported)
+    - **+20** Read available data from cp and print it to console
 - **+50** All files operations with reading/writing should be performed using Streams API
 - **+50** Hash calculation performed in Worker Threads
 - **+20** Codebase is written in ESM modules instead of CommonJS
 - **+20** Codebase is separated (at least 7 modules)
 
 ## Forfeits
+
 - **-95% of total task score** Any external tools/libraries are used
 - **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
