@@ -27,10 +27,6 @@
 
 ## Advanced Scope
 
-- Child processes operations
-    - **+20** Spawn of the child process (creates IPC channel and prints newly created process's id)
-    - **+20** Send data in cp (only strings are supported)
-    - **+20** Read available data from cp and print it to console
 - **+50** All files operations with reading/writing should be performed using Streams API
 - **+50** Hash calculation performed in Worker Threads
 - **+20** Codebase is written in ESM modules instead of CommonJS

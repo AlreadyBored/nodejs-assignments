@@ -10,7 +10,6 @@ The file manager should be able to do the following:
 - Perform basic file operations (copy, move, delete, rename)
 - Utilize Streams API
 - Get information about the host machine operating system
-- Spawn child processes and interact with them
 - Perform CPU-intensive calculations using Worker Threads
 - Compress and decompress files
 
@@ -91,19 +90,6 @@ List of operations and their syntax:
     - Get CPU architecture for which Node.js binary has compiled: 
     ```bash
     os --architecture
-    ```
-- Child processes
-    - Spawn of the child process (creates IPC channel and prints newly created process's id)
-    ```bash
-    cp spawn --source path_to_source
-    ```
-    - Send data in cp (only strings are supported)
-    ```bash
-    cp send --id cp_id data data_to_send
-    ```
-    - Read available data from cp and print it to console
-    ```bash
-    cp read --id cp_id
     ```
 - Hash calculation (uses Worker Threads internally)
     - Calculate hash for file 
