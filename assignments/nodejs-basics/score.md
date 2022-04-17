@@ -31,9 +31,9 @@
     - **+10** `worker.js` implemented properly
     - **+10** `main.js` implemented properly
 - Child Processes (src/cp)
-        - **+10** spawns child process
-        - **+10** child process `stdin` receives input from master process  `stdout`
-        - **+10** child process `stdout` sends data to master process `stdin`
+    - **+10** spawns child process
+    - **+10** child process `stdin` receives input from master process  `stdout`
+     - **+10** child process `stdout` sends data to master process `stdin`
 
 ## Forfeits
 
