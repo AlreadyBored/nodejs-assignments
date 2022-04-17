@@ -27,15 +27,14 @@ You should implement several functions in dedicated files
 
 You should implement several functions in dedicated files
 
-- `args.js` - implement function that parses environment variables
-- `commands.js` - implement function that parses command line arguments
+- `env.js` - implement function that parses environment variables and prints them to the console in the format `name1=value1; name2=value2`
+- `args.js` - implement function that parses command line arguments and prints them to the console in the format `propName is value, prop2Name is value2`
 
 ### Modules(src/modules)
 
-You should refactor files
+You should refactor file
 
-- `cjsToEsm.cjs` - rewrite it to it's equivalent in ECMAScript notation
-- `esmToCjs.mjs` - rewrite it to it's equivalent in CommonJS notation
+- `cjsToEsm.cjs` - rewrite it to it's equivalent in ECMAScript notation (and switch extension to `.mjs`)
 
 ### Hash (src/hash)
 
@@ -69,6 +68,6 @@ You should implement several functions in dedicated files
 
 You should implement several functions in dedicated files
 
-- `cp.js` - spawns child process from file `script.py`. This function should create IPC-channel between `stdin` and `stdout` of master process and child process:
+- `cp.js` - spawns child process from file `script.js`. This function should create IPC-channel between `stdin` and `stdout` of master process and child process:
     - child process `stdin` should receive input from master process `stdout`
     - child process `stdout` should send data to master process `stdin`
