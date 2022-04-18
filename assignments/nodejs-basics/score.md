@@ -10,11 +10,10 @@
     - **+6** `list.js` implemented properly
     - **+6** `read.js` implemented properly
 - Command line interface(src/cli)
+    - **+6** `env.js` implemented properly
     - **+6** `args.js` implemented properly
-    - **+6** `commands.js` implemented properly
 - Modules(src/modules)
-    - **+6** `cjsToEsm.cjs` refactored properly
-    - **+6** `esmToCjs.mjs` refactored properly
+    - **+10** `cjsToEsm.cjs` refactored properly
 - Hash (src/hash)
     - **+10** `calcHash.js` implemented properly
 - Streams (src/streams)
