@@ -13,7 +13,7 @@
     - **+6** `env.js` implemented properly
     - **+6** `args.js` implemented properly
 - Modules(src/modules)
-    - **+10** `cjsToEsm.cjs` refactored properly
+    - **+20** `cjsToEsm.cjs` refactored properly
 - Hash (src/hash)
     - **+10** `calcHash.js` implemented properly
 - Streams (src/streams)
@@ -28,11 +28,11 @@
 
 - Worker Threads (src/wt)
     - **+10** `worker.js` implemented properly
-    - **+10** `main.js` implemented properly
+    - **+30** `main.js` implemented properly
 - Child Processes (src/cp)
     - **+10** spawns child process
     - **+10** child process `stdin` receives input from master process  `stdout`
-     - **+10** child process `stdout` sends data to master process `stdin`
+    - **+10** child process `stdout` sends data to master process `stdin`
 
 ## Forfeits
 
