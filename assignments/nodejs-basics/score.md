@@ -4,8 +4,8 @@
 
 - File system (src/fs)
     - **+6** `create.js` implemented properly
-    - **+6** `copy.js` implemented properly
-    - **+6** `rename.js` implemented properly
+    - **+10** `copy.js` implemented properly
+    - **+10** `rename.js` implemented properly
     - **+6** `delete.js` implemented properly
     - **+6** `list.js` implemented properly
     - **+6** `read.js` implemented properly
