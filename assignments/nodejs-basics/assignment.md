@@ -32,7 +32,7 @@ You should implement several functions in dedicated files
 
 ### Modules(src/modules)
 
-You should refactor file
+You should refactor file (you can add additional imports if needed)
 
 - `cjsToEsm.cjs` - rewrite it to it's equivalent in ECMAScript notation (and switch extension to `.mjs`)
 
