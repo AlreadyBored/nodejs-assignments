@@ -5,10 +5,10 @@
 - Navigation & working directory operations
     - **+10** Go upper from current directory
     - **+10** Go to dedicated folder from current directory
-    - **+10** List all files and folder in current directory
+    - **+10** List all files and folders in current directory
 - Basic operations with files
     - **+10** Read file and print it's content in console
-    - **+10** Write in file (prompts user to write additional content in file until he writes `EOW`)
+    - **+10** Create empty file
     - **+10** Rename file
     - **+10** Copy file
     - **+10** Move file
@@ -19,7 +19,7 @@
     - **+6** Get home directory
     - **+6** Get current *system user name* (Do not confuse with the username that is set when the application starts)
     - **+6** Get CPU architecture for which Node.js binary has compiled
-- Hash calculation (uses Worker Threads internally)
+- Hash calculation
     - **+20** Calculate hash for file 
 - Compress and decompress operations
     - **+20** Compress file (using Brotli algorytm)
@@ -28,7 +28,6 @@
 ## Advanced Scope
 
 - **+50** All files operations with reading/writing should be performed using Streams API
-- **+50** Hash calculation performed in Worker Threads
 - **+20** Codebase is written in ESM modules instead of CommonJS
 - **+20** Codebase is separated (at least 7 modules)
 
