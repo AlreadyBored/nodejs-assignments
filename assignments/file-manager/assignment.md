@@ -7,75 +7,75 @@ Your task is to implement File Manager using Node.js APIs.
 The file manager should be able to do the following:
 
 - Work using CLI
-- Perform basic file operations (copy, move, delete, rename)
+- Perform basic file operations (copy, move, delete, rename, etc.)
 - Utilize Streams API
 - Get information about the host machine operating system
-- Perform CPU-intensive calculations using Worker Threads
+- Perform hash calculations
 - Compress and decompress files
 
 ## Technical requirements
 
 - No external dependencies should be required
 - The program is started by npm-script start in following way:
-npm run start -- --username=*your_username* --password=*your_password*
-- After starting the program displays the following text in the console (with same colors and formatting)  
-<span style="color:green">Welcome to the File Manager, **Username**!</span>  
-- After program work finished the program displays the following text in the console (with same colors and formatting):  
-<span style="color:green">Thank you for using File Manager, **Username**!</span>  
-
-- At the start and after each end of input/operation current working directory should be printed in following way:
-You are in <span style="color:blue">*path to working directory*</span>
+```bash
+npm run start -- --username=*your_username*
+```
+- After starting the program displays the following text in the console  
+`Welcome to the File Manager, *Username*!`  
+- After program work finished the program displays the following text in the console  
+`Thank you for using File Manager, *Username*!`  
+- At the start and after each end of input/operation current working directory should be printed in following way:  
+`You are currently in *path to working directory*`  
 - Starting working directory is current user's home directory (for example, on Windows it's something like `system_drive/Users/username`)
 - By default program should prompt user in console to print commands and wait for results  
-- After all operations following message should be shown:
-    - Operation *operation name* <span style="color:green">succeed</span>
-    - Operation *operation name* <span style="color:red">failed</span>
+- In case of unknown operation or invalid input `Invalid input` message should be shown and user should be able to enter another command
+- In case of error during execution of operation `Operation failed` message should be shown and user user should be able to enter another command
 
 List of operations and their syntax:
-- Navigation & working directory
-    - Go upper from current directory
+- Navigation & working directory (nwd)
+    - Go upper from current directory (when you are in the root folder this operation shouldn't change working directory)  
     ```bash
-    nwd up
+    up
     ```
-    - Go to dedicated folder from current directory
+    - Go to dedicated folder from current directory (`path_to_directory` can be relative or absolute)
     ```bash
-    nwd go --path path_to_directory
+    cd path_to_directory
     ```
-    - List all files and folder in current directory
+    - List all files and folder in current directory and print it to console
     ```bash
-    nwd ls
+    ls
     ```
 - Basic operations with files
     - Read file and print it's content in console: 
     ```bash
-    file cat --file path_to_file
+    cat path_to_file
     ```
-    - Write in file (prompts user to write additional content in file until he writes `EOW`): 
+    - Create empty file in current working directory: 
     ```bash
-    file add --file path_to_file
+    add new_file_name
     ```
     - Rename file: 
     ```bash
-    file rn --file path_to_file --n new_filename
+    rn path_to_file new_filename
     ```
     - Copy file: 
     ```bash
-    file cp --file path_to_file --destination path_to_new_directory
+    cp path_to_file path_to_new_directory
     ```
-    - Move file: 
+    - Move file (same as copy but initial file is deleted): 
     ```bash
-    file mv --file path_to_file --destination path_to_new_directory
+    mv path_to_file path_to_new_directory
     ```
     - Delete file: 
     ```bash
-    file rm --file path_to_file
+    rm path_to_file
     ```
 - Operating system info (prints following information in console)
-    - Get EOL (default system End-Of-Line): 
+    - Get EOL (default system End-Of-Line)  
     ```bash
     os --EOL
     ```
-    - Get host machine CPUs info (overall amount of CPUS plus model and clock rate (in GHz) for each of them): 
+    - Get host machine CPUs info (overall amount of CPUS plus model and clock rate (in GHz) for each of them)  
     ```bash
     os --cpus
     ```
@@ -83,26 +83,26 @@ List of operations and their syntax:
     ```bash
     os --homedir
     ```
-    - Get current *system user name* (Do not confuse with the username that is set when the application starts): 
+    - Get current *system user name* (Do not confuse with the username that is set when the application starts)  
     ```bash
     os --username
     ```
-    - Get CPU architecture for which Node.js binary has compiled: 
+    - Get CPU architecture for which Node.js binary has compiled  
     ```bash
     os --architecture
     ```
-- Hash calculation (uses Worker Threads internally)
-    - Calculate hash for file 
+- Hash calculation  
+    - Calculate hash for file and print it into console  
     ```bash
-    hash --filename *path_to_file*
+    hash path_to_file
     ```
-- Compress and decompress operations
-    - Compress file (using Brotli algorytm)
+- Compress and decompress operations  
+    - Compress file (using Brotli algorytm)  
     ```bash
-     zip compress --filename path_to_file --destination path_to_destination
+    compress path_to_file path_to_destination
     ```
-    - Decompress file (using Brotli algorytm)
+    - Decompress file (using Brotli algorytm)  
     ```bash
-     zip decompress --filename path_to_file --destination path_to_destination
+    decompress path_to_file path_to_destination
     ```
     
