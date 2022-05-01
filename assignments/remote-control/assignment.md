@@ -1,8 +1,8 @@
-# Assignment: Remote Control
+# Assignment: Websocket Remote Control
 
 ## Description
 
-Your task is to implement remote control backend using RobotJS library and websocket.
+Your task is to implement remote control backend using `RobotJS` library and websocket.
 
 The backend should be able to do the following:
 
@@ -15,9 +15,13 @@ The backend should be able to do the following:
 
 ## Technical requirements
 
-- Only [ws](https://www.npmjs.com/package/ws) and [robotjs](https://www.npmjs.com/package/robotjs) dependencies and subdependencies should be required
-- The program is started by npm-script start in following way:
+- Task can be implemented on Javascript or Typescript
+- Use 16 LTS version of Node.js
+- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` are allowed
+- The program is started by npm script `start` in following way:
+```bash
 npm run start 
+```
 - After starting the program displays websocket parameters
 - After program work finished the program should end websocket work correctly  
 - After each received command program should display the command and result
