@@ -18,14 +18,14 @@ The file manager should be able to do the following:
 - No external dependencies should be required
 - The program is started by npm-script start in following way:
 ```bash
-npm run start -- --username=*your_username*
+npm run start -- --username=your_username
 ```
 - After starting the program displays the following text in the console  
-`Welcome to the File Manager, *Username*!`  
+`Welcome to the File Manager, Username!`  
 - After program work finished the program displays the following text in the console  
-`Thank you for using File Manager, *Username*!`  
+`Thank you for using File Manager, Username!`  
 - At the start and after each end of input/operation current working directory should be printed in following way:  
-`You are currently in *path to working directory*`  
+`You are currently in path_to_working_directory`  
 - Starting working directory is current user's home directory (for example, on Windows it's something like `system_drive/Users/username`)
 - By default program should prompt user in console to print commands and wait for results  
 - In case of unknown operation or invalid input `Invalid input` message should be shown and user should be able to enter another command
