@@ -30,6 +30,7 @@ npm run start -- --username=your_username
 - By default program should prompt user in console to print commands and wait for results  
 - In case of unknown operation or invalid input `Invalid input` message should be shown and user should be able to enter another command
 - In case of error during execution of operation `Operation failed` message should be shown and user user should be able to enter another command
+- Attempt to perform an operation on a non-existent file or work on a non-existent path should result in the operation fail
 
 List of operations and their syntax:
 - Navigation & working directory (nwd)
