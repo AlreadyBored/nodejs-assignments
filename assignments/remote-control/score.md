@@ -7,11 +7,11 @@
     - **+10** Websocket server message handler implemented properly
     - **+10** Websocket server message sender implemented properly
 - Navigation
-    - **+10** Move mouse up implemented properly
-    - **+10** Move mouse down implemented properly
-    - **+10** Move mouse left implemented properly
-    - **+10** Move mouse right implemented properly
-    - **+10** Send mouse coordinates implemented properly
+    - **+5** Move mouse up implemented properly
+    - **+5** Move mouse down implemented properly
+    - **+5** Move mouse left implemented properly
+    - **+5** Move mouse right implemented properly
+    - **+5** Send mouse coordinates implemented properly
 - Drawing
     - **+10** Draw circle implemented properly
     - **+10** Draw rectangle implemented properly
