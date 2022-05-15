@@ -27,44 +27,46 @@ npm run start
 - After each received command program should display the command and result
 - All commands should be ended with **\0**
 
-List of websocket commands and their syntax:
-- Navigation
+List of websocket commands and their syntax (<- - cmd from frontend, -> - answer):
+- Navigation over the x and y axis
     - Move mouse up
     ```bash
-    mouse_up
+    <- mouse_up {y px}
     ```
     - Move mouse down
     ```bash
-    mouse_down
+    <- mouse_down {y px}
     ```
     - Move mouse left
     ```bash
-    mouse_left
+    <- mouse_left {x px}
     ```
     - Move mouse right
     ```bash
-    mouse_right
+    <- mouse_right {x px}
     ```
     - Send mouse coordinates
     ```bash
-    mouse_right
+    <- mouse_coord
+    -> mouse coord {x px} {y px}
     ```
 - Drawing
     - Draw circle with pushed left button: 
     ```bash
-    draw_circle
+    <- draw_circle {px}
     ```
     - Draw rectangle with pushed left button: 
     ```bash
-    draw_rectangle
+    <- draw_rectangle {px} {px}
     ```
     - Draw square with pushed left button: 
     ```bash
-    draw_square
+    <- draw_square {px}
     ```
 - Print screen
     - Make print screen command and send image:
     ```bash
-    prnt_scrn
+    <- prnt_scrn
+    -> prnt scrn {bitmap buf}
     ```
     
