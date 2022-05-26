@@ -21,24 +21,24 @@ Your task is to implement Authentication and JWT (Access and Refresh Tokens).
 
 1. - **POST** `api/person` should accept `password` field and before saving it replace it with **hash** (use [bcrypt package](https://www.npmjs.com/package/bcrypt) or its equivalent like `bcryptjs`).
 
-2. Implement **POST** `api/auth/signup` method which accepts **JSON** with `login` and `password` and returns **JWT** token in response body: `{ token: <jwt_token> }` (use [jsonwebtoken package](https://www.npmjs.com/package/jsonwebtoken)).
+2. Implement **POST** `api/auth/signup` method which accepts **JSON** with `login` and `password` and returns **JWT** token in response body: `{ token: <jwt_token> }` (use [jsonwebtoken package](https://www.npmjs.com/package/jsonwebtoken)) together with Refresh Token.
 
-3. Implement **POST** `api/auth/signin` method which accepts **JSON** with `login` and `password` and returns **JWT** access token  (use [jsonwebtoken package](https://www.npmjs.com/package/jsonwebtoken)) together with Refresh Token and other person details in response body: 
+3. Implement **POST** `api/auth/signin` method which accepts **JSON** with `login` and `password` and returns **JWT** Access Token  (use [jsonwebtoken package](https://www.npmjs.com/package/jsonwebtoken)) together with Refresh Token and other person details in response body: 
 ```
     { 
         personId: <uuid>,
         name: <string>,
         login: <string>,
         accessToken: <jwt_token> ,
-        refreshToken: <uuid>
+        refreshToken: <jwt_token>
      }
 ```
 
 4.  Implement **POST** `api/auth/refreshtoken` method which accepts **JSON** with refreshToken in request and returns response with new accessToken together with refreshToken. This way user may access resource successfully with new accessToken.
 
-4. **JWT** accessToken should contain `personId` and `login` in a **payload**.
+4. **JWT** accessToken should contain `personId` and `login` in a **payload** and has expiration time.
 
-5.  To create refreshToken use uuid library for creating a random token and add time validation, save new object into database. On expiration refreshToken to be destroyed.
+5.  **JWT** refreshToken should contain `login` in a **payload**, and should be saved as new object into database togerther with and `iat` (issued at) value. On expiration refreshToken to be destroyed. And once user submit request with expired refreshToken but his accessToken is still valid, user gets two tokens back with updated refreshToken.
 
 6. Secret that used for signing of the tokens should be stored in `.env` file.
 
@@ -51,9 +51,9 @@ Your task is to implement Authentication and JWT (Access and Refresh Tokens).
 
 7. In case of the HTTP `Authorization` header in the request is absent or invalid or doesn’t follow `Bearer` scheme or when the accessToken is expired, further router method execution should be stopped and lead to response with HTTP **401** code (Unauthorized error) and the corresponding error message.
 
-8. When the refreshToken is expired or inexistent, further router method execution should be stopped and lead to response with HTTP **403** code (Forbidden error) and the corresponding error message.
+8. When both refreshToken and accessokens are expired or inexistent, further router method execution should be stopped and lead to response with HTTP **403** code (Forbidden error) and the corresponding error message.
 The Refresh Token has different value and expiration time to the Access Token.
-Regularly we configure the expiration time of Refresh Token longer than Access Token’s.
+Regularly the expiration time of Refresh Token is longer than of Access Token’s.
 
 9. **Add admin user to DB** on service start with `login = admin` and `password = admin`.
 
