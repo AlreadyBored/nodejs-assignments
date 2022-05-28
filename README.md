@@ -15,3 +15,7 @@
 ## Remote control
 - [Assignment](assignments/remote-control/assignment.md)
 - [Scoring](assignments/remote-control/score.md)
+
+## Authentication & JWT
+- [Assignment](assignments/authentication/assignment.md)
+- [Scoring](assignments/authentication/score.md)
