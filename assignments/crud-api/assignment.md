@@ -44,7 +44,7 @@ Your task is to implement simple CRUD API using in-memory database underneath.
     - The application is run in production mode (there is a `npm` script `start:prod` that starts the build process and then runs the bundled file)
 7. There could be some tests for API (not less than **3** scenarios). Example of test scenario:
     1. Get all records with a `GET` `api/users` request (an empty array is expected)
-    2. A new object is created by a `POST` `api/auth/signup` request (a response containing newly created record is expected)
+    2. A new object is created by a `POST` `api/users` request (a response containing newly created record is expected)
     3. With a `GET` `api/user/{userId}` request, we try to get the created  record by its `id` (the created record is expected)
     4. We try to update the created record with a `PUT` `api/users/{userId}`request (a response is expected containing an updated object with the same `id`)
     5. With a `DELETE` `api/users/{userId}` request, we delete the created object by `id` (confirmation of successful deletion is expected)
