@@ -30,7 +30,7 @@ Logs with configured level to be registered as well as other higher priority lev
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
 - **-20** Less than 3 commits in the development branch, not including commits that make changes only to `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)
-- **100 points** for changes in tests or workflow.
-- **10 points** for each failed test.
-- **10 points** for each lint error either on `npm run lint` on the basis of the **local config** or for compilation errors on the basis of the **local tsconfig** (`errors` not `warnings`).
+- **-100 points** for changes in tests or workflow.
+- **-10 points** for each failed test.
+- **-10 points** for each lint error either on `npm run lint` on the basis of the **local config** or for compilation errors on the basis of the **local tsconfig** (`errors` not `warnings`).
 - **-20** for every explicty set type `any`.
