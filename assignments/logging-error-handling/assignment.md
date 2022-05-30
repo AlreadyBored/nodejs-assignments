@@ -6,8 +6,8 @@ Your task is to implement logging functionality to already existing REST service
 
 ## Technical requirements
 
-- Task can be implemented on Javascript or Typescript
-- Only `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `uuid`, `@types/*` as well as libraries used for testing are allowed
+- Task can be implemented in Javascript or Typescript
+- Only `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `uuid`, `@types/*` as well as libraries used for testing and logging are allowed
 - Use 16 LTS version of Node.js
 
 ## Implementation details
