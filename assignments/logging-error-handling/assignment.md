@@ -1,4 +1,4 @@
-# Logging & Error Handling
+# REST service: Logging & Error Handling
 
 ## Description
 
