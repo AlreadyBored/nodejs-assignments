@@ -4,6 +4,8 @@
 
 Your task is to complete several simple tasks to learn Node.js basics
 
+Fork [this repository](https://github.com/AlreadyBored/node-nodejs-basics)
+
 Assignment contains several nested folders inside `src`. Your task is to implement necessary functionality inside them
 
 ## Technical requirements
