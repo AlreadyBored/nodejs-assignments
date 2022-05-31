@@ -16,6 +16,10 @@
 - [Assignment](assignments/remote-control/assignment.md)
 - [Scoring](assignments/remote-control/score.md)
 
-## Authentication & JWT
+## REST service: Database & ORM
+- [Assignment](assignments/dbORM/assignment.md)
+- [Scoring](assignments/dbORM/score.md)
+
+## REST service: Authentication & Authorization
 - [Assignment](assignments/authentication/assignment.md)
 - [Scoring](assignments/authentication/score.md)
