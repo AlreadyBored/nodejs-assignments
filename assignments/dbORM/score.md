@@ -1,24 +1,29 @@
-# PostgreSQL & Typeorm
+# Scoring: PostgreSQL & ORM
 
-## Базовая реализация
-1. В качестве источника данных для `users` используется **PostgreSQL** база данных, работа с которой происходит при помощи `typeorm` **плюс 40 баллов**
-2. В качестве источника данных для `tasks` используется **PostgreSQL** база данных, работа с которой происходит при помощи `typeorm` **плюс 40 баллов**
-3. В качестве источника данных для `boards` используется **PostgreSQL** база данных, работа с которой происходит при помощи `typeorm` **плюс 40 баллов**
+## Basic Scope
 
-## Продвинутая реализация
-1. Для создания таблиц с сущностями используются миграции **плюс 50 баллов**
-2. Переменные, используемые для подключения к базе данных, хранятся в `.env` **плюс 10 баллов**
-3. Для установления отношений между сущностями используются соответствующие [декораторы](https://typeorm.io/#/relations) `typeorm` **плюс 10 баллов**
-4. Для проверки задания не требуется локальная установка **PostgreSQL**, подключение осуществляется к базе данных, работающей в `docker` контейнере (на основе созданной в предыдущем задании) **плюс 30 баллов**
+- **+15** `users` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interact with the database to manipulate data.  
+- **+15** `tracks` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interact with the database to manipulate data.
+- **+15** `albums` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interact with the database to manipulate data.
+- **+15** `movies` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interact with the database to manipulate data.
+- **+15** `books` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interact with the database to manipulate data.
+- **+15** `favourites` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interact with the database to manipulate data.
 
-## Штрафы
-* Наличие изменений в тестах либо в workflow **минус 150 баллов**
-* Внесение изменений в репозиторий после дедлайна не считая коммиты, вносящие изменения только в `Readme.md` **минус 30% от максимального балла за задание (для этого задания 66 баллов)**
-* За **каждую** ошибку линтера при запуске `npm run lint` на основе **локального конфига** **минус 20 баллов** (именно `errors`, не `warnings`)
-* За **каждую** ошибку компилятора **минус 20 баллов**
-* За каждый непроходящий тест при запуске `npm run test` **минус 20 баллов**
-* Имеются явно указанный тип `any` **минус 20 баллов** за каждое использование
-* За отсутствие отдельной ветки для разработки **минус 20 баллов**
-* За отсутствие `Pull Request` **минус 20 баллов**
-* За неполную информацию в описании `Pull Request` (отсутствует либо некорректен один из 3 обязательных пунктов) **минус 10 баллов**
-* Меньше 3 коммитов в ветке разработки, не считая коммиты, вносящие изменения только в `Readme.md` **минус 20 баллов**
+
+## Advanced Scope
+- **+30** Migrations are used to create database entities 
+- **+10** Variables used for connection to database to be stored in `.env`
+- **+10** `typeorm` [decorators](https://typeorm.io/#/relations) create relations between entities
+- **+30** Local **PostgreSQL** installation is not required for task check, connection is implemented to database stored in `docker` container  (on the basis of the previous task)
+
+## Forfeits
+- **-150** Changes in tests or workflow
+- **-100** Full link to repsitory differs from https://github.com/%your-gihub-id%/nodejs2021Q4-service
+- **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
+- **-20** No separate development branch
+- **-20** No Pull Request
+- **-10** Pull Request description is incorrect
+- **-5** Every lint error after npm run lint using local config (errors, not warnings) 
+- **-20** Less than 3 commits in the development branch, not including commits that make changes only to `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)
+- **-20** for **every** compiler error
+- **-20** for every test failure on `npm run test`
