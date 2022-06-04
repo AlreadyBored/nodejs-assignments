@@ -4,9 +4,9 @@
 
 ## Basic Scope
 
-- **+10** Route `/auth/signup` has been amended with `password` requirement.
+- **+10** Route `/auth/signup` has been implemented with `username` and `password` requirement, logic connected to it is divided between controller and coresponding service.
 - **+20** Users' passwords are to be saved into data base as hash, created by `bcrypt` (or similar package, for example `bcryptjs`).
-- **+10** Route `/auth/login` has been implemented, logic connected to it is divided between controller and coresponding service. In case of `auth/login` POST method when user is absent in DB, server replies with  **403** (`Forbidden`) HTTP status.
+- **+10** Route `/auth/login` has been amended from `/login`, logic connected to it is divided between controller and coresponding service. In case of `auth/login` POST method when user is absent in DB, server replies with  **403** (`Forbidden`) HTTP status.
 - **+20** Access Token is implemented,`JWT` consists of `userId` and `username`, secret key is saved in `.env`.
 - **+20** Authentication is required for the access to all routes except 
 `/auth/signup`, `/auth/login`, `/doc` and `/`.
@@ -22,7 +22,6 @@
 
 ## Forfeits
 
-- **-95% of total task score** any external tools except `bcrypt` or `bcryptjs` or similar, `jsonwebtoken`, `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `uuid`, `@types/*` as well as libraries used for testing
 - **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch

@@ -20,7 +20,7 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
 
 # REST service: Authentication & Authorization
 
-1. Implement **POST** `api/auth/signup` method (instead of **POST** `api/users`) that accepts **JSON** `username`, `password`, `age`, `hobbies` and server responses with HTTP **200** code and relevant message on success.
+1. Implement **POST** `api/auth/signup` method (instead of **POST** `api/users`) that accepts **JSON** `username`, `password` and server responses with HTTP **200** code and relevant message on success.
 
 2. Once **POST** `api/auth/signup` accepts `password` property, it is replaced with **hash** (use [bcrypt package](https://www.npmjs.com/package/bcrypt) or its equivalent like `bcryptjs`) prior to be saved in data base.
 

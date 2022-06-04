@@ -4,7 +4,7 @@
 
 Let's try to create a Home Library Service!
 
-NB! You must create new repository from template for this task. Its name must be nodejs2022Q1-service i.e. full link to the repository must be https://github.com/%your-gihub-id%/nodejs2022Q1-service.
+NB! You must create new repository from [template](https://github.com/rolling-scopes-school/nodejs-course-template/generate) for this task. Its name must be nodejs2022Q1-service i.e. full link to the repository must be https://github.com/%your-gihub-id%/nodejs2022Q1-service.
 
 **Create an application, the application should operate with the following resources:**
 
