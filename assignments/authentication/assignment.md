@@ -1,8 +1,8 @@
-# Authentication and JWT
+# Authentication and Authorization
 
 ## Description
 
-Your task is to implement Authentication and JWT (Access and Refresh Tokens).
+Your task is to implement Authentication and Authorization with JWT (Access and Refresh Tokens).
 - User can signup new account and login with personal login & password.
 – **POST** `/login` method, returns response with Access Token and Refresh Token (optional).
 – Access resource successfully with Access Token.

@@ -16,14 +16,18 @@
 - [Assignment](assignments/remote-control/assignment.md)
 - [Scoring](assignments/remote-control/score.md)
 
+## REST service: Database & ORM
+- [Assignment](assignments/dbORM/assignment.md)
+- [Scoring](assignments/dbORM/score.md)
+
 ##  Logging & Error handling
 - [Assignment](assignments/logging-error-handling/assignment.md)
 - [Scoring](assignments/logging-error-handling/score.md)
 
-## Containerization
-- [Assignment](assignments/containerization/assignment.md)
-- [Scoring](assignments/containerization/score.md)
-
 ## Authentication & Authorization
 - [Assignment](assignments/authentication/assignment.md)
 - [Scoring](assignments/authentication/score.md)
+
+## Containerization
+- [Assignment](assignments/containerization/assignment.md)
+- [Scoring](assignments/containerization/score.md)
