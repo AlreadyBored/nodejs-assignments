@@ -1,4 +1,4 @@
-# Scoring: Authentication & JWT
+# Scoring: Authentication & Authorization
 
 ## NB! For the succesfull tests results user with username = **admin**, and password = **admin** should be saved into DB. 
 

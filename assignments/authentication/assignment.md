@@ -18,7 +18,7 @@ Your task is to implement Authentication and JWT (Access and Refresh Tokens).
 
 ## Implementation details
 
-# Authentication and JWT
+# REST service: Authentication & Authorization
 
 1. Implement **POST** `api/auth/signup` method (instead of **POST** `api/users`) that accepts **JSON** `username`, `password`, `age`, `hobbies` and server responses with HTTP **200** code and relevant message on success.
 
