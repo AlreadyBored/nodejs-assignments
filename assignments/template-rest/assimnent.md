@@ -74,9 +74,10 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 **Details:**
 
-1. For `Users`, `Albums`, `Tracks`, `Movie` and `Book` REST endpoints with separate router paths should be created
+1. For `Login`, `Users`, `Albums`, `Tracks`, `Movies` , `Books` and `Favorites` REST endpoints with separate router paths should be created
     * `Login` (`/login` route)
       * `POST /login` - logins a user and returns a JWT-token
+
     * `Users` (`/users` route)
       * `GET /users` - get all users
       * `GET /users/:id` - get user by id
@@ -100,21 +101,21 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
       * `POST /albums/:id/track/:trackId` - add track to the album
       * `DELETE /albums/:id/track/:trackId` - delete track from the album
 
-    * `Movie` (`/movie` route)
+    * `Movies` (`/movies` route)
       * `GET /movie` - get movie list
       * `POST /movie` - create new movie
       * `GET /movie/:id` - get movie by id
       * `PUT /movie/:id` - update movie info
       * `DELETE /movie/:id` - delete movie by id
 
-    * `Book` (`/book` route)
+    * `Books` (`/books` route)
       * `GET /book` - get book list
       * `POST /book` - create new book
       * `GET /book/:id` - get book by id
       * `PUT /book/:id` - update book info
       * `DELETE /book/:id` - delete book
 
-    * `Favorities`
+    * `Favorites`
       * `GET /favs` - get all favorities
       * `POST /tracks/:id/favs` - add track to the favourites
       * `DELETE /tracks/:id/favs` - delete track from favourites
@@ -133,7 +134,6 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 6. Service should listen on PORT `4000`.
 
-7. You can try to refactor template using framework that differs from Express.js and Nest.js
 
 **Hints**
 

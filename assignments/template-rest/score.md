@@ -3,16 +3,16 @@
 ## Basic Scope
 
 - **+10** The repository with the application contains a `Readme.md` file containing detailed instructions for installing, running and using the application
-- **+10** The application code that worked with `users` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
-- **+10** The application code that worked with `tracks` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
-- **+10** The application code that worked with `albums` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
-- **+10** The application code that worked with `movie` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
-- **+10** The application code that worked with `book` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
-- **+10** The application code that worked with `favourites` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
+- **+15** The application code that worked with `users` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
+- **+15** The application code that worked with `tracks` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
+- **+15** The application code that worked with `albums` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
+- **+15** The application code that worked with `movies` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
+- **+15** The application code that worked with `books` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
+- **+15** The application code that worked with `favourites` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
 
 ## Advanced Scope
 - **+30** Task implemented on Typescript 
-- **+100** REST service is implemented using framework/library differs from Express and Nest.js or pure Node.js
+
 
 ## Forfeits
 
