@@ -17,8 +17,8 @@
 - [Scoring](assignments/remote-control/score.md)
 
 ## REST service: Database & ORM
-- [Assignment](assignments/dbORM/assignment.md)
-- [Scoring](assignments/dbORM/score.md)
+- [Assignment](assignments/database-orm/assignment.md)
+- [Scoring](assignments/database-orm/score.md)
 
 ##  Logging & Error handling
 - [Assignment](assignments/logging-error-handling/assignment.md)
