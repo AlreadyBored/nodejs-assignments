@@ -40,22 +40,88 @@ NB! You must create new repository from template for this task. Its name must be
     updtedAt 
   }
   ```
+- `Movie` (with attributes):
+  ```javascript
+  {
+    id,
+    name,
+    genre,
+    duration,
+    year
+  }
+  ```
+
+  - `Book` (with attributes):
+  ```javascript
+  {
+    id,
+    name,
+    author,
+    genre,
+    year
+  }
+  ```
+
+- `Favourites` (with attributes):
+  ```javascript
+  {
+    movies,
+    tracks,
+    books
+  }
+  ```
+
 
 **Details:**
 
-1. For `Users` and `Track` REST endpoints with separate router paths should be created
+1. For `Users`, `Albums`, `Tracks`, `Movie` and `Book` REST endpoints with separate router paths should be created
+    * `Login` (`/login` route)
+      * `POST /login` - logins a user and returns a JWT-token
     * `Users` (`/users` route)
       * `GET /users` - get all users
+      * `GET /users/:id` - get user by id
       * `POST /users` - create user
       * `PUT /users` - update user's password
       * `DELETE /users/:id` - delete user
-    * `Login` (`/login` route)
-      * `POST /login` - logins a user and returns a JWT-token
-    * `Track` (`/tracks` route)
+    
+    * `Tracks` (`/tracks` route)
       * `GET /tracks` - get all tracks
       * `POST /tracks` - create new track
+      * `GET /tracks/:id` - get track by id
       * `PUT /tracks/:id` - update track info
       * `DELETE /tracks/:id` - delete track
+
+    * `Albums` (`/albums` route)
+      * `GET /albums` - get album list
+      * `POST /albums` - create new movie
+      * `GET /albums/:id` - get album by id
+      * `PUT /albums/:id` - update movie info
+      * `DELETE /albums/:id` - delete album
+      * `POST /albums/:id/track/:trackId` - add track to the album
+      * `DELETE /albums/:id/track/:trackId` - delete track from the album
+
+    * `Movie` (`/movie` route)
+      * `GET /movie` - get movie list
+      * `POST /movie` - create new movie
+      * `GET /movie/:id` - get movie by id
+      * `PUT /movie/:id` - update movie info
+      * `DELETE /movie/:id` - delete movie by id
+
+    * `Book` (`/book` route)
+      * `GET /book` - get book list
+      * `POST /book` - create new book
+      * `GET /book/:id` - get book by id
+      * `PUT /book/:id` - update book info
+      * `DELETE /book/:id` - delete book
+
+    * `Favorities`
+      * `GET /favs` - get all favorities
+      * `POST /tracks/:id/favs` - add track to the favourites
+      * `DELETE /tracks/:id/favs` - delete track from favourites
+      * `POST /movie/:id/favs` - add movie to the favourites
+      * `DELETE /movie/:id/favs` - delete movie from favourites
+      * `POST /book/:id/favs` - add book to the favourites
+      * `DELETE /book/:id/favs` - delete book from favourites
 
 2. For now, these endpoints should operate only with **in-memory** (hardcoded) data, in the next tasks we will use a DB for it. You may organize your modules with the consideration that the data source will be changed soon.
 
