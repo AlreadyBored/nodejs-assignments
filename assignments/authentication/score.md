@@ -1,7 +1,5 @@
 # Scoring: Authentication & Authorization
 
-## NB! For the succesfull tests results user with login = **admin**, and password = **admin** should be saved into DB. 
-
 ## Basic Scope
 
 - **+10** Route `/auth/signup` has been implemented with `login` and `password` requirement, logic connected to it is divided between controller and coresponding service.

@@ -11,8 +11,6 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
 
 ## Technical requirements
 
-- Task can be implemented in Typescript
-- Use [template](https://github.com/rolling-scopes-school/nodejs-course-template/generate)
 - Use 16 LTS version of Node.js
 
 ## Implementation details
@@ -53,8 +51,6 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
 
 8. When Refresh Token (if implemented) is expired or inexistent, **POST** `/refreshtoken` method responses with HTTP **403** code (Forbidden error) and the corresponding error message. User needs then to make a new signin request.
 
-
-9. **Add admin user to DB** on service start with `login = admin` and `password = admin`.
 
 ### `bcrypt` installation issues:
 
