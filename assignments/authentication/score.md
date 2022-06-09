@@ -1,12 +1,12 @@
 # Scoring: Authentication & Authorization
 
-## NB! For the succesfull tests results user with username = **admin**, and password = **admin** should be saved into DB. 
+## NB! For the successful tests results user with username = **admin**, and password = **admin** should be saved into DB.  
 
 ## Basic Scope
 
 - **+10** Route `/auth/signup` has been amended with `password` requirement.
 - **+20** Users' passwords are to be saved into data base as hash, created by `bcrypt` (or similar package, for example `bcryptjs`).
-- **+10** Route `/auth/login` has been implemented, logic connected to it is divided between controller and coresponding service. In case of `auth/login` POST method when user is absent in DB, server replies with  **403** (`Forbidden`) HTTP status.
+- **+10** Route `/auth/login` has been implemented, logic connected to it is divided between controller and corresponding service. In case of `auth/login` POST method when user is absent in DB, server replies with  **403** (`Forbidden`) HTTP status.
 - **+20** Access Token is implemented,`JWT` consists of `userId` and `username`, secret key is saved in `.env`.
 - **+20** Authentication is required for the access to all routes except 
 `/auth/signup`, `/auth/login`, `/doc` and `/`.

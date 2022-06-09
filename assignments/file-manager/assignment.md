@@ -99,11 +99,11 @@ List of operations and their syntax:
     hash path_to_file
     ```
 - Compress and decompress operations  
-    - Compress file (using Brotli algorytm)  
+    - Compress file (using Brotli algorithm)  
     ```bash
     compress path_to_file path_to_destination
     ```
-    - Decompress file (using Brotli algorytm)  
+    - Decompress file (using Brotli algorithm)  
     ```bash
     decompress path_to_file path_to_destination
     ```
