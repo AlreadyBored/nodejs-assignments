@@ -8,7 +8,7 @@
 - **+10** The application code that worked with `albums` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
 - **+10** The application code that worked with `movie` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
 - **+10** The application code that worked with `book` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
-- **+10** The application code that worked with `favourites` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
+- **+10** The application code that worked with `favorites` instance divided into modules according to to its purpose (e.g.: work with request and response in *.router.js, business logic *.service.js, work with data storage in *.repository.js etc.)
 
 ## Advanced Scope
 - **+30** Task implemented on Typescript 
@@ -17,7 +17,7 @@
 ## Forfeits
 
 - **-200** Changes in tests or workflow
-- **-150** Full link to repsitory differs from https://github.com/%your-gihub-id%/nodejs2021Q4-service
+- **-150** Full link to repository differs from https://github.com/%your-gihub-id%/nodejs2021Q4-service
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** No separate development branch
 - **-20** No Pull Request

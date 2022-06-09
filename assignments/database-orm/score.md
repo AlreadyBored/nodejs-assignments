@@ -7,7 +7,7 @@
 - **+15** `albums` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
 - **+15** `movies` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
 - **+15** `books` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
-- **+15** `favourites` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
+- **+15** `favorites` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
 
 
 ## Advanced Scope

@@ -4,42 +4,55 @@
 
 Let's try to create a Home Library Service!
 
-NB! You must create new repository from template for this task. Its name must be nodejs2022Q1-service i.e. full link to the repository must be https://github.com/%your-gihub-id%/nodejs2022Q1-service.
+NB! You must create new repository from [template](https://github.com/rolling-scopes-school/nodejs-course-template/generate) for this task. Its name must be nodejs2022Q2-service i.e. full link to the repository must be https://github.com/%your-gihub-id%/nodejs2022Q2-service.
 
 **Create an application, the application should operate with the following resources:**
 
 - `User` (with attributes):
   ```javascript
-  {  id, login, password, version, createdAt, updtedAt }
+  {  id, login, password, version, createdAt, updatedAt }
   ```
-- `CreateUserDto` (with attriutes): 
+
+- `CreateUserDto` (with attributes): 
   ```javascript
   {  login, password }
   ```
-- `UpdatePasswordDto` (with attriutes): 
+
+- `UpdatePasswordDto` (with attributes): 
   ```javascript
   {  id, oldPassword, password }
   ```
-- `CredentialsDto` (with attriutes): 
+
+- `CredentialsDto` (with attributes): 
   ```javascript
   {  username, password }
   ```
-- `AuthTokenResponse` (with attriutes): 
+
+- `AuthTokenResponse` (with attributes): 
   ```javascript
   {  token }
   ```
-- `Track` (with attriutes):
+  
+- `Track` (with attributes):
   ```javascript
   { id, 
     name, 
     singer, 
-    albums, 
-    duration, 
-    version, 
-    createdAt, 
-    updtedAt 
+    album, 
+    duration
   }
   ```
+
+- `Album` (with attributes):
+  ```javascript
+  { id, 
+    name, 
+    singer, 
+    songs, 
+    year
+  }
+  ```
+
 - `Movie` (with attributes):
   ```javascript
   {
@@ -74,9 +87,10 @@ NB! You must create new repository from template for this task. Its name must be
 
 **Details:**
 
-1. For `Users`, `Albums`, `Tracks`, `Movie` and `Book` REST endpoints with separate router paths should be created
+1. For `Login`, `Users`, `Albums`, `Tracks`, `Movies` , `Books` and `Favourites` REST endpoints with separate router paths should be created
     * `Login` (`/login` route)
       * `POST /login` - logins a user and returns a JWT-token
+
     * `Users` (`/users` route)
       * `GET /users` - get all users
       * `GET /users/:id` - get user by id
@@ -93,14 +107,14 @@ NB! You must create new repository from template for this task. Its name must be
 
     * `Albums` (`/albums` route)
       * `GET /albums` - get album list
-      * `POST /albums` - create new movie
+      * `POST /albums` - create new album
       * `GET /albums/:id` - get album by id
-      * `PUT /albums/:id` - update movie info
+      * `PUT /albums/:id` - update album info
       * `DELETE /albums/:id` - delete album
       * `POST /albums/:id/track/:trackId` - add track to the album
       * `DELETE /albums/:id/track/:trackId` - delete track from the album
 
-    * `Movie` (`/movie` route)
+    * `Movies` (`/movies` route)
       * `GET /movie` - get movie list
       * `POST /movie` - create new movie
       * `GET /movie/:id` - get movie by id
@@ -114,8 +128,8 @@ NB! You must create new repository from template for this task. Its name must be
       * `PUT /book/:id` - update book info
       * `DELETE /book/:id` - delete book
 
-    * `Favorities`
-      * `GET /favs` - get all favorities
+    * `Favourites`
+      * `GET /favs` - get all favourites
       * `POST /tracks/:id/favs` - add track to the favourites
       * `DELETE /tracks/:id/favs` - delete track from favourites
       * `POST /movie/:id/favs` - add movie to the favourites
