@@ -17,7 +17,7 @@
     - **+6** Draw rectangle implemented properly
     - **+6** Draw square implemented properly
 - Screen image
-    - **+20** Send screen image implemented properly
+    - **+30** Send screen image implemented properly (optionally)
 
 ## Advanced Scope
 
