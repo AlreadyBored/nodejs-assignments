@@ -10,9 +10,9 @@
 
 - **+20** The application code that worked with `albums` instance divided into modules by its purpose according to Nest.js architecture rules (e.g.: *.router.js* handle request and response,  *.service.js* handles business logic, *.repository.js* handels data storage etc.)
 
-- **+20** The application code that worked with `movies` instance divided into modules by its purpose according to Nest.js architecture rules (e.g.: *.router.js* handle request and response,  *.service.js* handles business logic, *.repository.js* handels data storage etc.)
+- **+20** The application code that worked with `movie` instance divided into modules by its purpose according to Nest.js architecture rules (e.g.: *.router.js* handle request and response,  *.service.js* handles business logic, *.repository.js* handels data storage etc.)
 
-- **+20** The application code that worked with `books` instance divided into modules by its purpose according to Nest.js architecture rules (e.g.: *.router.js* handle request and response,  *.service.js* handles business logic, *.repository.js* handels data storage etc.)
+- **+20** The application code that worked with `book` instance divided into modules by its purpose according to Nest.js architecture rules (e.g.: *.router.js* handle request and response,  *.service.js* handles business logic, *.repository.js* handels data storage etc.)
 
 - **+20** The application code that worked with `favourites` instance divided into modules by its purpose according to Nest.js architecture rules (e.g.: *.router.js* handle request and response,  *.service.js* handles business logic, *.repository.js* handels data storage etc.)
 

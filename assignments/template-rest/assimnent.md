@@ -101,14 +101,14 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
       * `POST /albums/:id/track/:trackId` - add track to the album
       * `DELETE /albums/:id/track/:trackId` - delete track from the album
 
-    * `Movies` (`/movies` route)
+    * `Movie` (`/movie` route)
       * `GET /movie` - get movie list
       * `POST /movie` - create new movie
       * `GET /movie/:id` - get movie by id
       * `PUT /movie/:id` - update movie info
       * `DELETE /movie/:id` - delete movie by id
 
-    * `Books` (`/books` route)
+    * `Book` (`/book` route)
       * `GET /book` - get book list
       * `POST /book` - create new book
       * `GET /book/:id` - get book by id
