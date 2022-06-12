@@ -39,8 +39,8 @@ Your task is to implement simple CRUD API using in-memory database underneath.
 3. Requests to non-existing endpoints (e.g. `some-non/existing/resource`) should be handled (server should answer with `status code` **404** and corresponding human-friendly message)
 4. Errors on the server side that occur during the processing of a request should be handled and processed correctly (server should answer with `status code` **500** and corresponding human-friendly message)
 5. Value of `port` on which application is running should be stored in `.env` file
-6. There should be 2 modes of running application **development** and **production**:
-    - The application is launched in development mode using `nodemon` (there is a `npm` script `start:dev`)
+6. There should be 2 modes of running application (**development** and **production**):
+    - The application is run in development mode using `nodemon` (there is a `npm` script `start:dev`)
     - The application is run in production mode (there is a `npm` script `start:prod` that starts the build process and then runs the bundled file)
 7. There could be some tests for API (not less than **3** scenarios). Example of test scenario:
     1. Get all records with a `GET` `api/users` request (an empty array is expected)

@@ -3,12 +3,12 @@
 ## Basic Scope
 
 - **+10** The repository with the application contains a `Readme.md` file containing detailed instructions for installing, running and using the application
-- **+10** **GET** `api/person` implemented properly
-- **+10** **GET** `api/person/${personId}` implemented properly
-- **+10** **POST** `api/person` implemented properly
-- **+10** **PUT** `api/person/{personId}` implemented properly
-- **+10** **DELETE** `api/person/${personId}` implemented properly
-- **+6** Persons are stored in the form described in the technical requirements
+- **+10** **GET** `api/user` implemented properly
+- **+10** **GET** `api/user/${userId}` implemented properly
+- **+10** **POST** `api/user` implemented properly
+- **+10** **PUT** `api/user/{userId}` implemented properly
+- **+10** **DELETE** `api/user/${userId}` implemented properly
+- **+6** Users are stored in the form described in the technical requirements
 - **+6** Value of `port` on which application is running is stored in `.env` file
 
 ## Advanced Scope
