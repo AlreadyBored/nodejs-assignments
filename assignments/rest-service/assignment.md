@@ -9,86 +9,78 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 **Create an application, the application should operate with the following resources:**
 
 - `User` (with attributes):
-  ```javascript
-  {  
-    id,
-    login,
-    password,
-    version,
-    createdAt,
-    updatedAt 
+  ```typescript
+  interface User {  
+    id: string; // uuid v4
+    login: string;
+    password: string;
+    version: number; // integer number, increments on update
+    createdAt: number; // timestamp of creation
+    updatedAt: number; // timestamp of last update
   }
   ```
 
-- `CreateUserDto` (with attributes): 
-  ```javascript
-  {  
-    login, 
-    password 
+- `Artist` (with attributes):
+  ```typescript
+  interface Artist { 
+    id: string; // uuid v4
+    name: string;
+    grammy: boolean;
   }
   ```
   
 - `Track` (with attributes):
-  ```javascript
-  { 
-    id, 
-    name, 
-    singer, 
-    album, 
-    duration
+  ```typescript
+  interface Track { 
+    id: string; // uuid v4
+    name: string;
+    artistId: string; // refers to Artist
+    albumId: string | null; // refers to Album
+    duration: number; // integer number
   }
   ```
 
 - `Album` (with attributes):
-  ```javascript
-  { 
-    id, 
-    name, 
-    singer, 
-    songs, 
-    year
+  ```typescript
+  interface Album { 
+    id: string; // uuid v4
+    name: string;
+    year: number;
+    artistId: string; // refers to Artist
   }
   ```
 
-- `Movie` (with attributes):
-  ```javascript
-  {
-    id,
-    name,
-    genre,
-    duration,
-    year
-  }
-  ```
-
-  - `Book` (with attributes):
-  ```javascript
-  {
-    id,
-    name,
-    author,
-    genre,
-    year
-  }
-  ```
-
-- `Favourites` (with attributes):
-  ```javascript
-  {
-    movies,
-    tracks,
-    books
+- `Favorites` (with attributes):
+  ```typescript
+  interface Favorites {
+    artists: string[]; // favorite artists ids
+    albums: string[]; // favorite albums ids
+    tracks: string[]; // favorite tracks ids
   }
   ```
 
 **Details:**
 
-1. For `Login`, `Users`, `Albums`, `Tracks`, `Movies` , `Books` and `Favourites` REST endpoints with separate router paths should be created
+1. For `Users`, `Artists`, `Albums`, `Tracks` and `Favorites` REST endpoints with separate router paths should be created
   * `Users` (`/user` route)
     * `GET /user` - get all users
     * `GET /user/:id` - get single user by id
-    * `POST /user` - create user
-    * `PUT /user` - update user's info
+    * `POST /user` - create user (following DTO should be used)
+    `CreateUserDto`
+    ```typescript
+        interface CreateUserDto {  
+          login: string; 
+          password: string;
+        }
+    ```
+    * `PUT /user/:id` - update user's password  
+    `UpdatePasswordDto` (with attributes): 
+    ```typescript
+    interface UpdatePasswordDto {  
+      oldPassowrd: string; // previous password
+      newPassword: string; // new password
+    }
+    ```
     * `DELETE /user/:id` - delete user
   
   * `Tracks` (`/track` route)
@@ -104,33 +96,17 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
     * `POST /album` - create new album
     * `PUT /album/:id` - update album info
     * `DELETE /album/:id` - delete album
-    * `POST /album/:id/track/:trackId` - add track to the album
-    * `DELETE /album/:id/track/:trackId` - delete track from the album
 
-  * `Movies` (`/movie` route)
-    * `GET /movie` - get all movies
-    * `GET /movie/:id` - get single movie by id
-    * `POST /movie` - create new movie
-    * `PUT /movie/:id` - update movie info
-    * `DELETE /movie/:id` - delete movie by id
+  * `Favorites`
+    * `GET /favs` - get all favorites
+    * `POST /favs/track/:id` - add track to the favorites
+    * `DELETE /favs/track/:id` - delete track from favorites
+    * `POST /favs/movie/:id` - add movie to the favorites
+    * `DELETE /favs/movie/:id` - delete movie from favorites
+    * `POST /favs/book/:id` - add book to the favorites
+    * `DELETE /favs/book/:id` - delete book from favorites
 
-  * `Books` (`/book` route)
-    * `GET /book` - get all books
-    * `GET /book/:id` - get single book by id
-    * `POST /book` - create new book
-    * `PUT /book/:id` - update book info
-    * `DELETE /book/:id` - delete book
-
-  * `Favourites`
-    * `GET /favs` - get all favourites
-    * `POST /favs/track/:id` - add track to the favourites
-    * `DELETE /favs/track/:id` - delete track from favourites
-    * `POST /favs/movie/:id` - add movie to the favourites
-    * `DELETE /favs/movie/:id` - delete movie from favourites
-    * `POST /favs/book/:id` - add book to the favourites
-    * `DELETE /favs/book/:id` - delete book from favourites
-
-2. For now, these endpoints should operate only with **in-memory** (hardcoded) data, in the next tasks we will use a DB for it. You may organize your modules with the consideration that the data source will be changed soon.
+2. For now, these endpoints should operate only with **in-memory** (hardcoded) data, in the next tasks we will use a DB for it. You should organize your modules with the consideration that the data source will be changed soon.
 
 3. An `application/json` format should be used for request and response body.
 
