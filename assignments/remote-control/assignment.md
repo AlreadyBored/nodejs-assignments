@@ -17,7 +17,7 @@ The backend should be able to do the following:
 
 - Task can be implemented on Javascript or Typescript
 - Use 16 LTS version of Node.js
-- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` are allowed
+- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and unit testing frameworks (Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
 - The program is started by npm script `start` in following way:
 ```bash
 npm run start 
@@ -48,7 +48,7 @@ List of websocket commands and their syntax (<- - cmd from frontend, -> - answer
     - Send mouse coordinates
     ```bash
     <- mouse_coord
-    -> mouse coord {x px} {y px}
+    -> mouse_coord {x px} {y px}
     ```
 - Drawing
     - Draw circle with pushed left button: 
@@ -67,6 +67,6 @@ List of websocket commands and their syntax (<- - cmd from frontend, -> - answer
     - Make print screen command and send image:
     ```bash
     <- prnt_scrn
-    -> prnt scrn {bitmap buf}
+    -> prnt_scrn {base64 string (png buf)}
     ```
     
