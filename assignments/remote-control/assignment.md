@@ -11,13 +11,13 @@ The backend should be able to do the following:
 - Move mouse (Up, Down, Left, Right)
 - Draw circle, rectangle and square  
 - Send current mouse coordinates
-- Send desktop capture
+- Send desktop capture (optionally)
 
 ## Technical requirements
 
 - Task can be implemented on Javascript or Typescript
 - Use 16 LTS version of Node.js
-- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` are allowed
+- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), [Jimp](https://www.npmjs.com/package/jimp), `cross-env`, `nodemon`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` are allowed (and `jimp` for the screenshot realization)
 - The program is started by npm script `start` in following way:
 ```bash
 npm run start 
@@ -64,9 +64,9 @@ List of websocket commands and their syntax (<- - cmd from frontend, -> - answer
     <- draw_square {px}
     ```
 - Print screen
-    - Make print screen command and send image:
+    - Make print screen command and send image (a base64 buffer of the 200 px square around the mouse position):
     ```bash
     <- prnt_scrn
-    -> prnt scrn {bitmap buf}
+    -> prnt_scrn {base64 buf}
     ```
     

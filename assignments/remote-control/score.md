@@ -17,7 +17,7 @@
     - **+6** Draw rectangle implemented properly
     - **+6** Draw square implemented properly
 - Screen image
-    - **+20** Send screen image implemented properly
+    - **+30** Send screen image implemented properly (optionally)
 
 ## Advanced Scope
 
@@ -27,7 +27,7 @@
 
 ## Forfeits
 
-- **-95% of total task score** any external tools except `ws`, `robotjs`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*`
+- **-95% of total task score** any external tools except `ws`, `robotjs`, `Jimp`, `nodemon`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*`
 - **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-10** Missing PR or its description is incorrect
 - **-10** No separate development branch
