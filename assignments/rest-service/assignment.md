@@ -2,7 +2,7 @@
 
 ## Description
 
-Let's try to create a Home Library Service! `User` can create, read, update, delete data about `Books`, `Movies`, `Tracks` and `Albums`, add them to `Favourites` in their own Home Library!
+Let's try to create a Home Library Service! `Users` can create, read, update, delete data about `Artists`, `Tracks` and `Albums`, add them to `Favorites` in their own Home Library!
 
 NB! You must create new repository from [template](https://github.com/rolling-scopes-school/nodejs-course-template/generate) for this task. Its name must be nodejs2022Q2-service i.e. full link to the repository must be https://github.com/%your-gihub-id%/nodejs2022Q2-service.
 
@@ -101,10 +101,10 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
     * `GET /favs` - get all favorites
     * `POST /favs/track/:id` - add track to the favorites
     * `DELETE /favs/track/:id` - delete track from favorites
-    * `POST /favs/movie/:id` - add movie to the favorites
-    * `DELETE /favs/movie/:id` - delete movie from favorites
-    * `POST /favs/book/:id` - add book to the favorites
-    * `DELETE /favs/book/:id` - delete book from favorites
+    * `POST /favs/album/:id` - add album to the favorites
+    * `DELETE /favs/album/:id` - delete album from favorites
+    * `POST /favs/artist/:id` - add artist to the favorites
+    * `DELETE /favs/artist/:id` - delete artist from favorites
 
 2. For now, these endpoints should operate only with **in-memory** (hardcoded) data, in the next tasks we will use a DB for it. You should organize your modules with the consideration that the data source will be changed soon.
 
