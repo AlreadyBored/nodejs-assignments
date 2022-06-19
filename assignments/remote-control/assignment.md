@@ -49,8 +49,8 @@ List of websocket commands and their syntax (<- - cmd from frontend, -> - answer
     ```
     - Send mouse coordinates
     ```bash
-    <- mouse_coord
-    -> mouse_coord {x px} {y px}
+    <- mouse_position
+    -> mouse_position {x px},{y px}
     ```
 - Drawing
     - Draw circle with pushed left button: 
