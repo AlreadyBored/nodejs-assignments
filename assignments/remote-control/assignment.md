@@ -19,7 +19,7 @@ The backend should be able to do the following:
 
 - Task can be implemented on Javascript or Typescript
 - Use 16 LTS version of Node.js
-- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `nodemon`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and unit testing frameworks (Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
+- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `nodemon`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and testing tools (for example, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
 - The program is started by npm script `start` in following way:
 ```bash
 npm run start 
