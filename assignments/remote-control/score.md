@@ -27,7 +27,7 @@
 
 ## Forfeits
 
-- **-95% of total task score** any external tools except `ws`, `robotjs`, `jimp`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `nodemon`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and testing tools (for example, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer)
+- **-95% of total task score** any external tools except `ws`, `robotjs`, `jimp`, `cross-env`, `dotenv`, `typescript`, `ts-node`, `ts-node-dev`, `nodemon`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and testing tools (for example, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer)
 - **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-10** Missing PR or its description is incorrect
 - **-10** No separate development branch
