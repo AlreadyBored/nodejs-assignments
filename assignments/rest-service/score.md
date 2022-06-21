@@ -2,13 +2,16 @@
 
 ## Basic Scope
 
-- **+20** The repository with the application contains a `Readme.md` file containing detailed instructions for installing, running and using the application
-- **+20** The application code that worked with `Users` instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Tracks` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Albums` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Artists` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Favorites` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- **+10** The repository with the application contains a `Readme.md` file containing detailed instructions for installing, running and using the application
+- **+10** The application code that worked with `Users` instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- **+10** The application code that worked with `Tracks` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- **+10** The application code that worked with `Albums` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- **+10** The application code that worked with `Artists` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- **+10** The application code that worked with `Favorites` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- TDB: score for tests
 
+## Advanced Scope
+- **+6** PORT value is stored into `.env` file
 ## Forfeits
 
 - **-200** Changes in tests
