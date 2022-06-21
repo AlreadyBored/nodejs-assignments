@@ -16,6 +16,10 @@
 - [Assignment](assignments/remote-control/assignment.md)
 - [Scoring](assignments/remote-control/score.md)
 
+## GraphQL service
+- [Assignment](assignments/graphql-service/assignment.md)
+- [Scoring](assignments/graphql-service/score.md)
+
 ## REST Service: Basic
 - [Assignment](assignments/rest-service/assignment.md)
 - [Scoring](assignments/rest-service/score.md)
