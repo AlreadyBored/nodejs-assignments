@@ -80,13 +80,13 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
       - Server should answer with `status code` **201** and newly created record if request is valid
       - Server should answer with `status code` **400** and corresponding message if request `body` does not contain **required** fields
     * `PUT /user/:id` - update user's password  
-    `UpdatePasswordDto` (with attributes): 
-    ```typescript
-    interface UpdatePasswordDto {  
-      oldPassowrd: string; // previous password
-      newPassword: string; // new password
-    }
-    ```
+      `UpdatePasswordDto` (with attributes): 
+      ```typescript
+      interface UpdatePasswordDto {  
+        oldPassowrd: string; // previous password
+        newPassword: string; // new password
+      }
+      ```
       - Server should answer with` status code` **200** and updated record if request is valid
       - Server should answer with` status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
       - Server should answer with` status code` **404** and corresponding message if record with `id === userId` doesn't exist
