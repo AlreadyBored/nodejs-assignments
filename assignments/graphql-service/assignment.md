@@ -4,6 +4,8 @@
 
 Imagine we have a couple of microservices that is created for the service Musicify, a new wikipedia for Music. We need to provide a confortable and convinient service for our users for managing and retrieving data for different entities.
 
+You can find repository with microservices [here](https://github.com/rolling-scopes-school/node-graphql-service)
+
 The following entities exists:
 
 ```typescript
