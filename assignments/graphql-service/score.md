@@ -11,8 +11,6 @@
 
 ## Forfeits
 
-- **-200** Changes in tests
-- **-150** Full link to repository differs from https://github.com/%your-gihub-id%/nodejs2022Q2-service
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** No separate development branch
 - **-20** No Pull Request
