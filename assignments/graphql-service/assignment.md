@@ -26,8 +26,7 @@ interface Artist {
 interface User {
     _id: string;
     firstName: string;
-    secondName: string;
-    middleName: string;
+    lastName: string;
     password: string;
     email: string;
 }
