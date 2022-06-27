@@ -16,13 +16,9 @@ interface Artist {
     middleName: string;
     birthDate: string;
     birthPlace: string;
-    deathDate: string;
-    deathPlace: string;
     country: string;
     bandsIds: string[]
     instruments: string[];
-    pseudonims: string[]
-    labels: string[];
 }
 ```
 
@@ -42,13 +38,9 @@ interface Band {
     _id: string;
     name: string;
     origin: string;
-    yearsActive: string[];
-    labels: string[];
-    membersIds: string[];
-    pastMembers: string;
+    membersId: Member[];
     website: string;
     genresIds: string[];
-    logo: string;
 }
 ```
 
@@ -59,25 +51,44 @@ interface Genre {
     description: string;
     country: string;
     year: string;
-    subGenresIds: string[];
 }
 ```
 
 ```typescript
 interface Track {
     _id: string;
-    artists: Artist[];
-    bands: Band[];
-    year: number;
+    title: string;  
     albumId: string;
-    name: string;
-    description: string;
-    lyrics: string;
-    length: number;
-    authorsIds: number; 
+    bandsIds: string[];
+    duration: number;
+    released: number;
+    genresIds: string[];
 }
 ```
 
+```typescript
+interface Album {
+    _id: string;
+    name: string;
+    released: number;
+    artistsIds: string[];
+    bandsIds: string[];
+    trackIds: string[];
+    genresIds: string[];
+    image: string;
+}
+```
+
+```typescript
+interface Favorite {
+    _id: string;
+    userId: string;
+    bandsIds: string[];
+    genresIds: string[];
+    artistsIds: string[];
+    tracksIds: string[];
+}
+```
 
 **Details:**
 
@@ -89,6 +100,7 @@ interface Track {
     - Genres service
     - Tracks service
     - Favourites service
+    - Albums service
 
 The instruction how to launch it you can find in service readme.md.
 
@@ -102,28 +114,20 @@ type Artist {
     middleName: String
     birthDate: String
     birthPlace: String
-    deathDate: String
-    deathPlace: String
     country: String
-    bands: String
+    bands: [ID]
     instruments: String
-    pseudonims: String
-    labels: String
 }
 
 ```
 ```graphql
-type Artist {
+type Band {
     id: ID!
     name: String
     origin: String
-    yearsActive: String
-    labels: String
     members: [Member]
-    pastMembers: String
     website: String
     genres: String
-    logo: String
 }
 
 ```
@@ -134,21 +138,53 @@ type Genre {
     description: String
     country: String
     year: Int
-    subGenres: [Genre]
 }
 
 ```
-
+```graphql
 type Favourites {
-id: ID!
-name: String
-description: String
-country: String
-year: Int
-subGenres: [Genre]
+    id: ID!
+    userId: ID!
+    bands: [ID]
+    genres: [ID]
+    artists: [ID]
+    tracks: [ID]
 }
-
-3. The following queries ahould be created:
+```
+```graphql
+type Album {
+    id: ID
+    name: String
+    released: Int
+    artists: [Artist]
+    bands: [Band]
+    tracks: [Track]
+    genres: [Genre]
+    image: String
+}
+```
+```graphql
+type User {
+    id: ID!
+    firstName: String
+    secondName: String
+    middleName: String
+    password: String!
+    email: String!
+}
+```
+```graphql
+type Track {
+    id: ID!
+    title: String
+    albums: String
+    bands: [Band]
+    duration: Int
+    released: Int
+    genres: [Genre]
+}
+```
+3. The following queries should be created:
 
 - artist
 - artists
@@ -158,28 +194,43 @@ subGenres: [Genre]
 - tracks
 - band
 - bands
+- album
+- albums
+- jwt
+- user
 - favourites (available only for logged in user)
 
 The following mutation should be created:
 
-- createArtist
-- deleteArtist
-- updateArtist
-- createGenre
-- deleteGenre
-- updateGenre
-- createBand
-- deleteBand
-- updateBand
-- createTrack
-- deleteTrack
-- updateTrack
-- addTrackToFavourites
-- addBandToFavourites
-- addArtistToFavourites
-- addGenreToFavourites
+- Artists
+  - createArtist
+  - deleteArtist
+  - updateArtist
+- Genres
+  - createGenre
+  - deleteGenre
+  - updateGenre
+- Bands
+  - createBand
+  - deleteBand
+  - updateBand
+- Tracks
+  - createTrack
+  - deleteTrack
+  - updateTrack
+- Albums
+  - createAlbum
+  - deleteAlbum
+  - updateAlbum
+- Users
+  - register
+- Favourites
+  - addTrackToFavourites
+  - addBandToFavourites
+  - addArtistToFavourites
+  - addGenreToFavourites
 
-**Mutation requests must be available only for logged in users.**
+**Mutation requests must be available only for logged in users. (except Users.register)**
 
 4. Service port should be configured through env variable.
 
@@ -193,6 +244,7 @@ The following mutation should be created:
         - tracks
         - genres
         - favourites
+        - ...
 ```
 
 
