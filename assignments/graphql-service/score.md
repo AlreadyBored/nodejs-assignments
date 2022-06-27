@@ -8,6 +8,8 @@
 - **+20** The application code that worked with `Albums` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
 - **+20** The application code that worked with `Artists` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
 - **+20** The application code that worked with `Favorites` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- **+20** The application code that worked with `Genres` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
+- **+20** The application code that worked with `Bands` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
 
 ## Forfeits
 
@@ -16,4 +18,5 @@
 - **-20** No Pull Request
 - **-10** Pull Request description is incorrect
 - **-10** Every lint error after npm run lint using local config (errors, not warnings)
+- **-10** Every unimplemented query/mutation
 - **-20** Less than 3 commits in the development branch, not including commits that make changes only to `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)
