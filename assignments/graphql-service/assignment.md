@@ -114,7 +114,7 @@ type Artist {
     birthDate: String
     birthPlace: String
     country: String
-    bands: [ID]
+    bands: [Band]
     instruments: String
 }
 
@@ -126,7 +126,7 @@ type Band {
     origin: String
     members: [Member]
     website: String
-    genres: String
+    genres: [Genre]
 }
 
 ```
@@ -143,16 +143,16 @@ type Genre {
 ```graphql
 type Favourites {
     id: ID!
-    userId: ID!
-    bands: [ID]
-    genres: [ID]
-    artists: [ID]
-    tracks: [ID]
+    userId: ID
+    bands: [Band]
+    genres: [Genre]
+    artists: [Artist]
+    tracks: [Track]
 }
 ```
 ```graphql
 type Album {
-    id: ID
+    id: ID!
     name: String
     released: Int
     artists: [Artist]
@@ -167,16 +167,15 @@ type User {
     id: ID!
     firstName: String
     secondName: String
-    middleName: String
-    password: String!
+    password: String
     email: String!
 }
 ```
 ```graphql
 type Track {
     id: ID!
-    title: String
-    albums: String
+    title: String!
+    albums: [Album]
     bands: [Band]
     duration: Int
     released: Int
