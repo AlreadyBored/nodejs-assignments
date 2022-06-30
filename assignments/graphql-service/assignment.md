@@ -115,7 +115,7 @@ type Artist {
     birthPlace: String
     country: String
     bands: [Band]
-    instruments: String
+    instruments: [String]
 }
 
 ```
@@ -175,7 +175,7 @@ type User {
 type Track {
     id: ID!
     title: String!
-    albums: [Album]
+    album: Album
     bands: [Band]
     duration: Int
     released: Int
