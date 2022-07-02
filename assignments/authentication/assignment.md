@@ -2,60 +2,50 @@
 
 ## Description
 
-Your task is to implement Authentication and Authorization with JWT (Access and Refresh Tokens).
-- User can signup new account and login with personal login & password.
-– **POST** `/login` method, returns response with Access Token and Refresh Token (optional).
-– Access resource successfully with Access Token.
-– When the Access Token is expired, user cannot use it anymore.
-- Refresh Token helps to get new Access Token (optional).
+Your task is to implement Authentication and Authorization with JWT (Access and Refresh tokens)
+- User can **signup** new account with personal login & password  
+– User can **login** with personal login & password, server returns response with Access token and Refresh token (Refresh token is in advanved scope).
+- **Refresh** token helps to get new pair Access/Refresh tokens (optional)
+– User now should use valid Access token to access  resources
+– When the Access token is expired, user can't use it anymore
+- Refresh token helps to get new pair Access/Refresh tokens (optional)
 
 ## Technical requirements
 
-- Task can be implemented in Javascript or Typescript
-- Only `bcrypt` or its equivalent like `bcryptjs`, `jsonwebtoken`, `ws`, `robotjs`, `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `uuid`, `@types/*` as well as libraries used for testing are allowed
+- Task should be implemented on Typescript
 - Use 16 LTS version of Node.js
-
 
 ## Implementation details
 
-# REST service: Authentication & Authorization
+1. Endpoints
+* `Signup` (`auth/signup` route)
+    * `POST auth/signup` - send `login` and `password` to create a new `user`
+      - Server should answer with `status code` **201** and corresponding message if dto is valid
+      - Server should answer with `status code` **400** and corresponding message if dto is invalid (no `login` or `password`, or they are not a `strings`)
+* `Login` (`auth/login` route)
+    * `POST auth/login` - send `login` and `password` to get Access token and Refresh token (optionally)
+      - Server should answer with `status code` **200** and tokens if dto is valid
+      - Server should answer with `status code` **400** and corresponding message if dto is invalid (no `login` or `password`, or they are not a `strings`)
+      - Server should answer with `status code` **403** and corresponding message if authentication failed (no user with such `login`, `password` doesn't match actual one, etc.)
+* `Refresh` (`auth/refresh` route)
+    * `POST auth/refresh` - send refresh token in body as `{ refreshToken }` to get new pair of Access token and Refresh token
+      - Server should answer with `status code` **200** and tokens in body if dto is valid
+      - Server should answer with `status code` **401** and corresponding message if dto is invalid (no `refreshToken` in body)
+      - Server should answer with `status code` **403** and corresponding message if authentication failed (Refresh token is invalid or expired)
 
-1. Implement **POST** `api/auth/signup` method (instead of **POST** `api/users`) that accepts **JSON** `username`, `password`, `age`, `hobbies` and server responses with HTTP **200** code and relevant message on success.
 
-2. Once **POST** `api/auth/signup` accepts `password` property, it is replaced with **hash** (use [bcrypt package](https://www.npmjs.com/package/bcrypt) or its equivalent like `bcryptjs`) prior to be saved in data base.
+2. Once **POST** `/auth/signup` accepts `password` property, it is replaced with **hash** (for example, you can use [bcrypt package](https://www.npmjs.com/package/bcrypt) or its equivalent like `bcryptjs`) for password ecnryption, no raw passwords should be in database (NB! Password should remain hashed after any operation with service).
 
-3. Implement **POST** `api/auth/login` method which accepts **JSON** with `username` and `password` and returns **JWT** Access Token and Refresh Token (if implemented) (use [jsonwebtoken package](https://www.npmjs.com/package/jsonwebtoken)) together with other user's details in response body: 
-```
-    { 
-        userId: <uuid>,
-        username: <string>,       
-        accessToken: <jwt_token> ,
-        refreshToken: <jwt_token>
-     }
-```
+3. **JWT** Access token should contain `userId` and `login` in a **payload** and has expiration time (expiration time of Resfresh token should be longer, than Access token).
 
-4. **JWT** Access Token should contain `userId` and `username` in a **payload** and has expiration time.
-
-5. The **JWT** Access Token should be added in HTTP `Authorization` header to all requests that requires authentication. HTTP authentication must follow `Bearer` scheme, e.g.:
+4. The **JWT** Access token should be added in HTTP `Authorization` header to all requests that requires authentication. Pproxy all the requests (except `auth/signup`, `auth/login`, `/doc`, `/`) and check that HTTP `Authorization` header has the correct value of **JWT** Access token.  
+HTTP authentication must follow `Bearer` scheme:
   ```
   Authorization: Bearer <jwt_token>
   ```
+5. In case of the HTTP `Authorization` header in the request is absent or invalid or doesn’t follow `Bearer` scheme or Access token has expired, further router method execution should be stopped and lead to response with HTTP **401** code and the corresponding error message.
 
-6. Proxy all the requests (except `/signup`, `/login`, `/doc`, `/`) and check that HTTP `Authorization` header has the correct value of **JWT** Access Token.
-
-7. In case of the HTTP `Authorization` header in the request is absent or invalid or doesn’t follow `Bearer` scheme or Access Token has expired, further router method execution should be stopped and lead to response with HTTP **401** code (Unauthorized error) and the corresponding error message.
-
-
-8.  Implement **POST** `api/auth/refreshtoken` method which accepts **JSON** with Refresh Token and returns response with new Access Token together with Refresh Token (if implemented). This way user may access resource successfully with new Access Token. 
-
-9.  **JWT** Refresh Token should contain `username` in a **payload**, and should be saved as new object into database together with an `iat` (issued at) value. The Refresh Token has different value and expiration time to the Access Token. On expiration Refresh Token to be destroyed from database.
-
-10. Secrets used for signing the tokens should be stored in `.env` file.
-
-8. When Refresh Token (if implemented) is expired or inexistent, **POST** `/refreshtoken` method responses with HTTP **403** code (Forbidden error) and the corresponding error message. User needs then to make a new signin request.
-
-
-9. **Add admin user to DB** on service start with `username = admin` and `password = admin`.
+6. Secrets used for signing the tokens should be stored in `.env` file.
 
 ### `bcrypt` installation issues:
 
