@@ -116,7 +116,7 @@ type Artist {
     birthPlace: String
     country: String
     bands: [Band]
-    instruments: String
+    instruments: [String]
 }
 
 ```
