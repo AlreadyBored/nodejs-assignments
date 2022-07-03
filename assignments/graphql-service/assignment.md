@@ -58,6 +58,7 @@ interface Track {
     _id: string;
     title: string;  
     albumId: string;
+    artistsIds: string[];
     bandsIds: string[];
     duration: number;
     released: number;
@@ -175,7 +176,8 @@ type User {
 type Track {
     id: ID!
     title: String!
-    albums: [Album]
+    album: Album
+    artists: [Artist]
     bands: [Band]
     duration: Int
     released: Int
