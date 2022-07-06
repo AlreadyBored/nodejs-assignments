@@ -2,11 +2,11 @@
 
 ## Description
 
-Imagine we have a couple of microservices that is created for the service Musicify, a new wikipedia for Music. We need to provide a confortable and convinient service for our users for managing and retrieving data for different entities.
+Imagine we have a couple of microservices that are created for the service Musicify, a new wikipedia for Music. We need to provide a comfortable and convenient service for our users to manage and retrieve data for different entities.
 
 You can find repository with microservices [here](https://github.com/rolling-scopes-school/node-graphql-service)
 
-The following entities exists:
+The following entities exist:
 
 ```typescript
 interface Artist {
@@ -102,7 +102,7 @@ interface Favorite {
     - Favourites service
     - Albums service
 
-The instruction how to launch it you can find in service readme.md.
+Instructions on how to launch can be found in service readme.md file.
 
 2. The Following types should be created:
 
