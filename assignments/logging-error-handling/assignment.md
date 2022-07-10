@@ -17,5 +17,5 @@ Your task is to implement logging functionality to already existing REST service
 4. `LoggingService` should log all `errors`
 5. Add listener and logging to `uncaughtException` event
 6. Add listener and logging to `unhandledRejection` event
-7. Writing to `process.stdout` or to a file both can be used for logging. Any third-party logging library usage is prohibited.
+7. Writing to `process.stdout` or to a file both can be used for logging
 8. There should be multiple logging levels and logging level should be stored in environment variable.
