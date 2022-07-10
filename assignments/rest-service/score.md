@@ -8,14 +8,13 @@
 - **+10** The application code that worked with `Albums` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
 - **+10** The application code that worked with `Artists` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
 - **+10** The application code that worked with `Favorites` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- TDB: score for tests
+- **+10** For each successfully passed test
 
 ## Advanced Scope
-- **+6** PORT value is stored into `.env` file
-## Forfeits
+- **+10** PORT value is stored into `.env` file
 
-- **-200** Changes in tests
-- **-150** Full link to repository differs from https://github.com/%your-gihub-id%/nodejs2022Q2-service
+## Forfeits
+- **-660** Changes in tests
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** No separate development branch
 - **-20** No Pull Request

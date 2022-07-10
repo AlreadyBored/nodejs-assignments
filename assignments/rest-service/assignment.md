@@ -95,9 +95,6 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
       - Server should answer with `status code` **204** if the record is found and deleted
       - Server should answer with `status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
       - Server should answer with `status code` **404** and corresponding message if record with `id === userId` doesn't exist
-  
-
-
 
   * `Tracks` (`/track` route)
     * `GET /track` - get all tracks
@@ -195,7 +192,7 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 3. An `application/json` format should be used for request and response body.
 
-4. Do not put everything in one file - use a separate file for application creation (bootstrapping), for controllers (routers) and code related to business logic. Also split files to different modules depends on a domain (user-related, board-related, etc...).
+4. Do not put everything in one file - use a separate file for application creation (bootstrapping), for controllers (routers) and code related to business logic. Also split files to different modules depends on a domain (user-related, artist-related, etc...).
 
 5. `User`'s password should be excluded from server response.
 
