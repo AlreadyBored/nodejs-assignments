@@ -12,6 +12,7 @@
 
 ## Advanced Scope
 - **+10** PORT value is stored into `.env` file
+- **+20** OpenAPI spec in `doc` folder corresponds with assignment
 
 ## Forfeits
 - **-660** Changes in tests
