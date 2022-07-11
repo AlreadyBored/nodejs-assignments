@@ -206,6 +206,8 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 10. Incoming requests should be validated.
 
+11. You can fix and use OpenAPI file in `doc` folder.
+
 **Hints**
 
 * To generate all entities `id`s use [uuid](https://www.npmjs.com/package/uuid) package or [Node.js analogue](https://nodejs.org/dist/latest-v16.x/docs/api/crypto.html#cryptorandomuuidoptions).
