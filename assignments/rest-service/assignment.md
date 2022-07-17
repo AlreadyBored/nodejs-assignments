@@ -83,7 +83,7 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
       `UpdatePasswordDto` (with attributes): 
       ```typescript
       interface UpdatePasswordDto {  
-        oldPassowrd: string; // previous password
+        oldPassword: string; // previous password
         newPassword: string; // new password
       }
       ```
