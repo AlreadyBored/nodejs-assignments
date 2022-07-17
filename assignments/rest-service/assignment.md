@@ -90,7 +90,7 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
       - Server should answer with` status code` **200** and updated record if request is valid
       - Server should answer with` status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
       - Server should answer with` status code` **404** and corresponding message if record with `id === userId` doesn't exist
-      - Server should answer with` status code` **403** and corresponding message if `oldPassowrd` is wrong
+      - Server should answer with` status code` **403** and corresponding message if `oldPassword` is wrong
     * `DELETE /user/:id` - delete user
       - Server should answer with `status code` **204** if the record is found and deleted
       - Server should answer with `status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
