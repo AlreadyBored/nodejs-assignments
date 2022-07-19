@@ -16,9 +16,8 @@
 - **+30** Local **PostgreSQL** installation is not required for task check, connection is implemented to database stored in `docker` container  (on the basis of the previous task)
 
 ## Forfeits
-
-- **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
-- **-150 points** for changes in tests or github actions
+- **-10** for each failing test (this forfeit applied once if coincides with same forfeit in different assignments in case there are multiple assignments in task)
+- **-30% of max task score** Commits after deadline, except commits that affect only Readme.md, .gitignore, etc.(this forfeit applied once if coincides with same forfeit in different assignments in case there are multiple assignments in task)
 - **-20** for every failed test on running `npm run test`
 - **-10 points** for each error either on `npm run lint` on the basis of the **local config** or for compilation errors on the basis of the **local tsconfig** (`errors` not `warnings`).
 - **-20** No separate development branch
