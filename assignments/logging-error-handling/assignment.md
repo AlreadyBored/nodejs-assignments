@@ -2,11 +2,11 @@
 
 ## Description
 
-Your task is to implement logging functionality to already existing REST service.
+Your task is to implement logging functionality to the already existing REST service.
 
 ## Technical requirements
 
-- Only `@nestjs/common` and `@nestjs-core` Nest.js modules can be used for this assignment, other Nest.js modules are prohibited
+- Only `@nestjs/common` and `@nestjs-core` Nest.js modules can be used for the logger and error handling feature assignment, other Nest.js modules are prohibited
 - Use 16 LTS version of Node.js
 
 ## Implementation details
@@ -18,4 +18,5 @@ Your task is to implement logging functionality to already existing REST service
 5. Add listener and logging to `uncaughtException` event
 6. Add listener and logging to `unhandledRejection` event
 7. Writing to `process.stdout` or to a file both can be used for logging
-8. There should be multiple logging levels and logging level should be stored in environment variable.
+8. There should be multiple logging levels and logging level should be stored in environment variable
+9. Log file rotation should be setup with file size (kB) parameter.

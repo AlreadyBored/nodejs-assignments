@@ -4,7 +4,7 @@
 
 Your task is to implement Authentication and Authorization with JWT (Access and Refresh tokens)
 - User can **signup** new account with personal login & password  
-– User can **login** with personal login & password, server returns response with Access token and Refresh token (Refresh token is in advanved scope).
+– User can **login** with personal login & password, server returns response with Access token and Refresh token (Refresh token is in advanced scope).
 - **Refresh** token helps to get new pair Access/Refresh tokens (optional)
 – User now should use valid Access token to access  resources
 – When the Access token is expired, user can't use it anymore
@@ -34,11 +34,11 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
       - Server should answer with `status code` **403** and corresponding message if authentication failed (Refresh token is invalid or expired)
 
 
-2. Once **POST** `/auth/signup` accepts `password` property, it is replaced with **hash** (for example, you can use [bcrypt package](https://www.npmjs.com/package/bcrypt) or its equivalent like `bcryptjs`) for password ecnryption, no raw passwords should be in database (NB! Password should remain hashed after any operation with service).
+2. Once **POST** `/auth/signup` accepts `password` property, it is replaced with **hash** (for example, you can use [bcrypt package](https://www.npmjs.com/package/bcrypt) or its equivalent like `bcryptjs`) for password encryption, no raw passwords should be in database (NB! Password should remain hashed after any operation with service).
 
-3. **JWT** Access token should contain `userId` and `login` in a **payload** and has expiration time (expiration time of Resfresh token should be longer, than Access token).
+3. **JWT** Access token should contain `userId` and `login` in a **payload** and has expiration time (expiration time of Refresh token should be longer, than Access token).
 
-4. The **JWT** Access token should be added in HTTP `Authorization` header to all requests that requires authentication. Pproxy all the requests (except `auth/signup`, `auth/login`, `/doc`, `/`) and check that HTTP `Authorization` header has the correct value of **JWT** Access token.  
+4. The **JWT** Access token should be added in HTTP `Authorization` header to all requests that requires authentication. Proxy all the requests (except `auth/signup`, `auth/login`, `/doc`, `/`) and check that HTTP `Authorization` header has the correct value of **JWT** Access token.  
 HTTP authentication must follow `Bearer` scheme:
   ```
   Authorization: Bearer <jwt_token>
