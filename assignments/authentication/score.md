@@ -15,7 +15,8 @@
 
 ## Forfeits
 
-- **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
+- **-10** for each failing test with `npm run test:auth` (this forfeit applied once if coincides with same forfeit in different assignments in case there are multiple assignments in task)
+- **-30% of max task score** Commits after deadline, except commits that affect only Readme.md, .gitignore, etc.(this forfeit applied once if coincides with same forfeit in different assignments in case there are multiple assignments in task)
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
 - **-20** Less than 3 commits in the development branch, not taking into account commits, making changes only in `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)

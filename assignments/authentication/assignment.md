@@ -33,7 +33,6 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
       - Server should answer with `status code` **401** and corresponding message if dto is invalid (no `refreshToken` in body)
       - Server should answer with `status code` **403** and corresponding message if authentication failed (Refresh token is invalid or expired)
 
-
 2. Once **POST** `/auth/signup` accepts `password` property, it is replaced with **hash** (for example, you can use [bcrypt package](https://www.npmjs.com/package/bcrypt) or its equivalent like `bcryptjs`) for password encryption, no raw passwords should be in database (NB! Password should remain hashed after any operation with service).
 
 3. **JWT** Access token should contain `userId` and `login` in a **payload** and has expiration time (expiration time of Refresh token should be longer, than Access token).
