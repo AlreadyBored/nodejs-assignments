@@ -1,7 +1,11 @@
 # Scoring: File Manager
 ## Basic Scope
+- General
+    -**+6** Application accepts username and prints proper message
+    -**+10** Application exits if user pressed `ctrl+c` or sent `.exit` command and proper message is printed
 - Operations fail
     - **+20** Attempts to perform an operation on a non-existent file or work on a non-existent path result in the operation fail
+    - **+10** Operation fail doesn't crash application
 - Navigation & working directory operations implemented properly
     - **+10** Go upper from current directory
     - **+10** Go to dedicated folder from current directory
@@ -22,8 +26,8 @@
 - Hash calculation implemented properly
     - **+20** Calculate hash for file 
 - Compress and decompress operations
-    - **+20** Compress file (using Brotli algorytm)
-    - **+20** Decompress file (using Brotli algorytm)
+    - **+20** Compress file (using Brotli algorithm)
+    - **+20** Decompress file (using Brotli algorithm)
 
 ## Advanced Scope
 

@@ -16,18 +16,26 @@
 - [Assignment](assignments/remote-control/assignment.md)
 - [Scoring](assignments/remote-control/score.md)
 
+## GraphQL service
+- [Assignment](assignments/graphql-service/assignment.md)
+- [Scoring](assignments/graphql-service/score.md)
+
+## REST Service: Basic
+- [Assignment](assignments/rest-service/assignment.md)
+- [Scoring](assignments/rest-service/score.md)
+
 ## REST service: Database & ORM
 - [Assignment](assignments/database-orm/assignment.md)
 - [Scoring](assignments/database-orm/score.md)
 
-##  Logging & Error handling
+## REST service: Logging & Error handling
 - [Assignment](assignments/logging-error-handling/assignment.md)
 - [Scoring](assignments/logging-error-handling/score.md)
 
-## Authentication & Authorization
+## REST service: Authentication & Authorization
 - [Assignment](assignments/authentication/assignment.md)
 - [Scoring](assignments/authentication/score.md)
 
-## Containerization
+## REST service: Containerization
 - [Assignment](assignments/containerization/assignment.md)
 - [Scoring](assignments/containerization/score.md)

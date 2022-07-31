@@ -4,6 +4,8 @@
 
 Your task is to implement remote control backend using `RobotJS` library and websocket.
 
+User interface for your remote control backend is [here](https://github.com/rolling-scopes-school/remote-control)
+
 The backend should be able to do the following:
 
 - Start websocket server
@@ -11,13 +13,13 @@ The backend should be able to do the following:
 - Move mouse (Up, Down, Left, Right)
 - Draw circle, rectangle and square  
 - Send current mouse coordinates
-- Send desktop capture
+- Send desktop capture (optionally)
 
 ## Technical requirements
 
 - Task can be implemented on Javascript or Typescript
 - Use 16 LTS version of Node.js
-- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` are allowed
+- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), [jimp](https://www.npmjs.com/package/jimp), `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `nodemon`, `dotenv`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and testing tools (for example, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
 - The program is started by npm script `start` in following way:
 ```bash
 npm run start 
@@ -47,8 +49,8 @@ List of websocket commands and their syntax (<- - cmd from frontend, -> - answer
     ```
     - Send mouse coordinates
     ```bash
-    <- mouse_coord
-    -> mouse coord {x px} {y px}
+    <- mouse_position
+    -> mouse_position {x px},{y px}
     ```
 - Drawing
     - Draw circle with pushed left button: 
@@ -64,9 +66,9 @@ List of websocket commands and their syntax (<- - cmd from frontend, -> - answer
     <- draw_square {px}
     ```
 - Print screen
-    - Make print screen command and send image:
+    - Make print screen command and send image (a base64 buffer of the 200 px square around the mouse position):
     ```bash
     <- prnt_scrn
-    -> prnt scrn {bitmap buf}
+    -> prnt_scrn {base64 string (png buf)}
     ```
     
