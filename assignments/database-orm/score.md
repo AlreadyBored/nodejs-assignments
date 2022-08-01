@@ -18,7 +18,6 @@
 ## Forfeits
 - **-10** for each failing test (this forfeit applied once if coincides with same forfeit in different assignments in case there are multiple assignments in task)
 - **-30% of max task score** Commits after deadline, except commits that affect only Readme.md, .gitignore, etc.(this forfeit applied once if coincides with same forfeit in different assignments in case there are multiple assignments in task)
-- **-20** for every failed test on running `npm run test`
 - **-10 points** for each error either on `npm run lint` on the basis of the **local config** or for compilation errors on the basis of the **local tsconfig** (`errors` not `warnings`).
 - **-20** No separate development branch
 - **-20** No Pull Request
