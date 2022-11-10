@@ -210,4 +210,4 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 **Hints**
 
-* To generate all entities `id`s use [uuid](https://www.npmjs.com/package/uuid) package or [Node.js analogue](https://nodejs.org/dist/latest-v16.x/docs/api/crypto.html#cryptorandomuuidoptions).
+* To generate all entities `id`s use [uuid](https://www.npmjs.com/package/uuid) package or [Node.js analogue](https://nodejs.org/dist/latest-v18.x/docs/api/crypto.html#cryptorandomuuidoptions).

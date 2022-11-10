@@ -13,7 +13,7 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
 ## Technical requirements
 
 - Task should be implemented on Typescript
-- Use 16 LTS version of Node.js
+- Use 18 LTS version of Node.js
 
 ## Implementation details
 
