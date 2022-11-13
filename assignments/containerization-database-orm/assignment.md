@@ -1,16 +1,16 @@
 ## REST service: Containerization, Docker and Database & ORM
 
-## Description
-
-# 1) Containerization, Docker
-
-Your task is to build and run multi-container application using Docker.
-
 
 ## Prerequisites
 
 1. Install [Docker](https://docs.docker.com/engine/install/)
 2. Create `Docker Hub` account [Docker Hub](https://hub.docker.com/)
+
+## Description
+
+# 1) Containerization, Docker
+
+Your task is to build and run multi-container application using Docker.
 
 # 2) Database & ORM
 
