@@ -1,13 +1,14 @@
 # REST service: Logging & Error Handling
 
-## Description
-
-Your task is to implement logging functionality to the already existing REST service.
 
 ## Technical requirements
 
 - Only `@nestjs/common` and `@nestjs-core` Nest.js modules can be used for the logger and error handling feature assignment, other Nest.js modules are prohibited
 - Use 18 LTS version of Node.js
+
+## Description
+
+Your task is to implement logging functionality to the already existing REST service.
 
 ## Implementation details
 

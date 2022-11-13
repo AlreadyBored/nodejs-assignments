@@ -6,6 +6,9 @@
 1. Install [Docker](https://docs.docker.com/engine/install/)
 2. Create `Docker Hub` account [Docker Hub](https://hub.docker.com/)
 
+## Technical requirements
+- Use 18 LTS version of Node.js
+
 ## Description
 
 # 1) Containerization, Docker
@@ -16,8 +19,6 @@ Your task is to build and run multi-container application using Docker.
 
 Your task is to implement PostgreSQL database as source of data for your application and TypeORM / Prisma to communicate with your database.
 
-## Technical requirements
-- Use 18 LTS version of Node.js
 
 ## Implementation details
 
