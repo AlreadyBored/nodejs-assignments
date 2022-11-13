@@ -38,6 +38,7 @@
 
 - **-20** In case specific image is not used (it is required to use images like `postgres` and `node`, but not `ubuntu` with installation of `node` or `postgres`)
 - **-20** Postgres container is not configured as dependency for application container
+- **-10** for each failing test with `npm run test` (this forfeit applied once if coincides with same forfeit in different assignments in case there are multiple assignments in task)
 - **-20** `docker-compose.yml` contains hardcoded variables
 - **-30% of total task score** Commits after deadline, except commits that affect only Readme.md, .gitignore, etc.
 - **-20** Missing PR 
@@ -45,3 +46,4 @@
 - **-20** No separate development branch
 - **-10** for each failing test with `npm run test` 
 - **-20** Less than 3 commits in the development branch, not taking into account commits, making changes only in `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)
+- **-10 points** for each error either on `npm run lint` on the basis of the **local config** or for compilation errors on the basis of the **local tsconfig** (`errors` not `warnings`).
