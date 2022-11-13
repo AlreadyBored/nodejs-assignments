@@ -17,11 +17,10 @@ to implement Authentication and Authorization with JWT (Access and Refresh token
 - Refresh token helps to get new pair Access/Refresh tokens (optional)
 
 
-
 ## Technical requirements
 
 - Only `@nestjs/common` and `@nestjs-core` Nest.js modules can be used for the logger and error handling feature assignment, other Nest.js modules are prohibited
-- Use 16 LTS version of Node.js
+- Use 18 LTS version of Node.js
 
 ## Implementation details
 

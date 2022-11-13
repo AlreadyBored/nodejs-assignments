@@ -7,7 +7,7 @@ Your task is to implement logging functionality to the already existing REST ser
 ## Technical requirements
 
 - Only `@nestjs/common` and `@nestjs-core` Nest.js modules can be used for the logger and error handling feature assignment, other Nest.js modules are prohibited
-- Use 16 LTS version of Node.js
+- Use 18 LTS version of Node.js
 
 ## Implementation details
 

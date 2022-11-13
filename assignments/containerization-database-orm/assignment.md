@@ -17,7 +17,7 @@ Your task is to build and run multi-container application using Docker.
 Your task is to implement PostgreSQL database as source of data for your application and TypeORM / Prisma to communicate with your database.
 
 ## Technical requirements
-- Use 16 LTS version of Node.js
+- Use 18 LTS version of Node.js
 
 ## Implementation details
 
