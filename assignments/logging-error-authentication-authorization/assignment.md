@@ -2,13 +2,13 @@
 
 ## Description
 
-Your task is as following:
+# 1) Logging & Error Handling.
 
-1) Logging & Error Handling: 
-to implement logging functionality to the already existing REST service.
+Your task is to implement logging functionality to the already existing REST service.
 
-2) Authentication and Authorization:
-to implement Authentication and Authorization with JWT (Access and Refresh tokens).
+# 2) Authentication and Authorization
+
+Your task is to implement Authentication and Authorization with JWT (Access and Refresh tokens).
 - User can **signup** new account with personal login & password  
 – User can **login** with personal login & password, server returns response with Access token and Refresh token (Refresh token is in advanced scope).
 - **Refresh** token helps to get new pair Access/Refresh tokens (optional)
