@@ -12,6 +12,13 @@
 
 # 2) Database (PostgreSQL) & ORM
 
+- **+20** `Users` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.  
+- **+20** `Artists` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
+- **+20** `Albums` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
+- **+20** `Tracks` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
+- **+20** `Favorites` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.
+
+
 ## Advanced Scope
 
 # 1) Containerization, Docker
