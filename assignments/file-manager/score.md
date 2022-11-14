@@ -9,7 +9,7 @@
 - Navigation & working directory operations implemented properly
     - **+10** Go upper from current directory
     - **+10** Go to dedicated folder from current directory
-    - **+10** List all files and folders in current directory
+    - **+20** List all files and folders in current directory
 - Basic operations with files implemented properly
     - **+10** Read file and print it's content in console
     - **+10** Create empty file
@@ -31,7 +31,8 @@
 
 ## Advanced Scope
 
-- **+50** All files operations with reading/writing should be performed using Streams API
+- **+30** All operations marked as to be implemented using certain streams should be performed using Streams API
+- **+20** No synchronous Node.js API with asynchronous analogues is used (e.g. not used `readFileSync` instead of `readFile`)  
 - **+20** Codebase is written in ESM modules instead of CommonJS
 - **+20** Codebase is separated (at least 7 modules)
 
