@@ -1,5 +1,9 @@
 # Scoring: Node.js basics
 
+## Check
+For check simplification you have npm-scripts in `package.json`.  
+NB! Some scripts have predefined data (e.g. environment variables, CLI arguments). Feel free to change it during the check if necessary.
+
 ## Basic Scope
 
 - File system (src/fs)
