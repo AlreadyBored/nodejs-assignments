@@ -10,7 +10,7 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 - `User` (with attributes):
   ```typescript
-  interface User {  
+  interface User {
     id: string; // uuid v4
     login: string;
     password: string;
@@ -22,16 +22,16 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 - `Artist` (with attributes):
   ```typescript
-  interface Artist { 
+  interface Artist {
     id: string; // uuid v4
     name: string;
     grammy: boolean;
   }
   ```
-  
+
 - `Track` (with attributes):
   ```typescript
-  interface Track { 
+  interface Track {
     id: string; // uuid v4
     name: string;
     artistId: string | null; // refers to Artist
@@ -42,7 +42,7 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 - `Album` (with attributes):
   ```typescript
-  interface Album { 
+  interface Album {
     id: string; // uuid v4
     name: string;
     year: number;
@@ -70,19 +70,19 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
       - Server should answer with `status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
       - Server should answer with `status code` **404** and corresponding message if record with `id === userId` doesn't exist
     * `POST /user` - create user (following DTO should be used)
-    `CreateUserDto`
-    ```typescript
-        interface CreateUserDto {  
-          login: string; 
-          password: string;
-        }
-    ```
-      - Server should answer with `status code` **201** and newly created record if request is valid
-      - Server should answer with `status code` **400** and corresponding message if request `body` does not contain **required** fields
-    * `PUT /user/:id` - update user's password  
-      `UpdatePasswordDto` (with attributes): 
+      `CreateUserDto`
       ```typescript
-      interface UpdatePasswordDto {  
+          interface CreateUserDto {
+            login: string;
+            password: string;
+          }
+      ```
+        - Server should answer with `status code` **201** and newly created record if request is valid
+        - Server should answer with `status code` **400** and corresponding message if request `body` does not contain **required** fields
+    * `PUT /user/:id` - update user's password
+      `UpdatePasswordDto` (with attributes):
+      ```typescript
+      interface UpdatePasswordDto {
         oldPassword: string; // previous password
         newPassword: string; // new password
       }
