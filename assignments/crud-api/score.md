@@ -20,7 +20,7 @@
 
 ## Hacker Scope
 - **+30** There are tests for API (not less than **3** scenarios)
-- **+30** There is horizontal scaling for application with a **load balancer**
+- **+50** There is horizontal scaling for application with a **load balancer**
 
 ## Forfeits
 
