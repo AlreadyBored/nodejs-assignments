@@ -31,7 +31,7 @@ For example 1st subtask **create.js** located in _fs_ folder:
 ## Steps to check subtask
 
 - According to this subtask after running this function there should be file named `fresh.txt` created in _files_ folder ( At the beggining there was no such file, if found - delete it).
-- Open this file `fresh.txt` and you have to see below text created by the function after you run it:
+- Open this file `fresh.txt` and you have to see following text created by the function after you run it:
   _I am fresh and young_.
 - Try to run `node fs/create.js` again and the error _FS operation failed_ must be thrown.
 - If all above works as expected then add _+6_ points to the total score as written in `Score calculation`.
