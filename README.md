@@ -3,6 +3,7 @@
 ## Node.js basics
 - [Assignment](assignments/nodejs-basics/assignment.md)
 - [Scoring](assignments/nodejs-basics/score.md)
+- [Cross-Check manual](assignments/nodejs-basics/cross-check-manual.md)
 
 ## File Manager
 - [Assignment](assignments/file-manager/assignment.md)
