@@ -1,8 +1,8 @@
 # Scoring: File Manager
 ## Basic Scope
 - General
-    -**+6** Application accepts username and prints proper message
-    -**+10** Application exits if user pressed `ctrl+c` or sent `.exit` command and proper message is printed
+    - **+6** Application accepts username and prints proper message
+    - **+10** Application exits if user pressed `ctrl+c` or sent `.exit` command and proper message is printed
 - Operations fail
     - **+20** Attempts to perform an operation on a non-existent file or work on a non-existent path result in the operation fail
     - **+10** Operation fail doesn't crash application
