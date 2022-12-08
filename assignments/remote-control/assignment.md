@@ -2,7 +2,7 @@
 
 ## Description
 
-Your task is to implement remote control backend using `RobotJS` library and websocket.
+Your task is to implement remote control backend using `nutjs.dev` library and websocket.
 
 User interface for your remote control backend is [here](https://github.com/rolling-scopes-school/remote-control)
 
@@ -19,7 +19,7 @@ The backend should be able to do the following:
 
 - Task can be implemented on Javascript or Typescript
 - Use 18 LTS version of Node.js
-- Only [ws](https://www.npmjs.com/package/ws), [robotjs](https://www.npmjs.com/package/robotjs), [jimp](https://www.npmjs.com/package/jimp), `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `nodemon`, `dotenv`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and testing tools (for example, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
+- Only [ws](https://www.npmjs.com/package/ws), [nutjs.dev](https://www.npmjs.com/package/@nut-tree/nut-js), `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `nodemon`, `dotenv`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and testing tools (for example, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
 - The program is started by npm script `start` in following way:
 ```bash
 npm run start 
@@ -27,7 +27,6 @@ npm run start
 - After starting the program displays websocket parameters
 - After program work finished the program should end websocket work correctly  
 - After each received command program should display the command and result
-- All commands should be ended with **\0**
 
 List of websocket commands and their syntax (<- - cmd from frontend, -> - answer):
 - Navigation over the x and y axis
