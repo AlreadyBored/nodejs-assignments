@@ -17,7 +17,7 @@ interface Artist {
     birthDate: string;
     birthPlace: string;
     country: string;
-    bandsIds: string[]
+    bandsIds: string[];
     instruments: string[];
 }
 ```
@@ -37,7 +37,7 @@ interface Band {
     _id: string;
     name: string;
     origin: string;
-    membersId: Member[];
+    membersIds: string[];
     website: string;
     genresIds: string[];
 }
@@ -56,7 +56,7 @@ interface Genre {
 ```typescript
 interface Track {
     _id: string;
-    title: string;  
+    title: string;
     albumId: string;
     artistsIds: string[];
     bandsIds: string[];
