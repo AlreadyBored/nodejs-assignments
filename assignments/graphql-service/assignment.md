@@ -37,7 +37,7 @@ interface Band {
     _id: string;
     name: string;
     origin: string;
-    membersIds: string[];
+    members: Member[];
     website: string;
     genresIds: string[];
 }
