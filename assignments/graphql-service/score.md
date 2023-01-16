@@ -1,16 +1,12 @@
-# Scoring: Graphql Service
+# Scoring: Graphql
 
 ## Basic Scope
-
-- **+20** The repository with the application contains a `Readme.md` file containing detailed instructions for installing, running and using the application
-- **+20** The application code that worked with `Users` instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Tracks` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Albums` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Artists` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Favorites` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Genres` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+20** The application code that worked with `Bands` instance instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)
-- **+10** Every implemented query/mutation
+- **+72** REST endpoint are implemented according to description
+- **+72** Requests 2.1-2.9 are implemented according to description
+- **+54** Requests 2.10-2.14 are implemented according to description
+- **+54** Requests 2.15-2.19 are implemented according to description
+- **+72** `n+1` GraphQL problem is solved using `dataloader` package
+- **+36** the complexity of the GraphQL queries is limited by their depth with `graphql-depth-limit` package
 
 ## Forfeits
 
