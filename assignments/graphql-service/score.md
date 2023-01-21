@@ -1,16 +1,17 @@
 # Scoring: Graphql
 
 ## Basic Scope
-- **+72** REST endpoint are implemented according to description
-- **+72** Requests 2.1-2.9 are implemented according to description
-- **+54** Requests 2.10-2.14 are implemented according to description
-- **+54** Requests 2.15-2.19 are implemented according to description
-- **+72** `n+1` GraphQL problem is solved using `dataloader` package
-- **+36** the complexity of the GraphQL queries is limited by their depth with `graphql-depth-limit` package
+- **+72** Task 1: restful endpoints.
+- **+72** Subtasks 2.1-2.7: get gql queries.
+- **+54** Subtasks 2.8-2.11: create gql queries.
+- **+54** Subtasks 2.12-2.17: update gql queries.
+- **+72** Task 3: solve `n+1` graphql problem.
+- **+36** Task 4: limit the complexity of the graphql queries.
 
 ## Forfeits
-
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
+- **-60% of max task score** Samples of POST body for gql requests were not provided for those subtasks that were declared to be completed.
+- **-100% of max task score** Tests have been modified.
 - **-20** No separate development branch
 - **-20** No Pull Request
 - **-10** Pull Request description is incorrect
