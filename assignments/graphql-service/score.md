@@ -5,8 +5,8 @@
 - **+72** Subtasks 2.1-2.7: get gql queries.
 - **+54** Subtasks 2.8-2.11: create gql queries.
 - **+54** Subtasks 2.12-2.17: update gql queries.
-- **+72** Task 3: solve `n+1` graphql problem.
-- **+36** Task 4: limit the complexity of the graphql queries.
+- **+88** Task 3: solve `n+1` graphql problem.
+- **+20** Task 4: limit the complexity of the graphql queries.
 
 ## Forfeits
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
