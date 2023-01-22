@@ -1,7 +1,7 @@
 ## Assignment: Graphql
 
 ## Source repository
-For [this repository](https://github.com/nosbog/rsschool-nodejs-task-graphql) to start the task.  
+Fork [this repository](https://github.com/nosbog/rsschool-nodejs-task-graphql) to start the task.  
 
 ### Tasks:
 1. Add logic to the restful endpoints (users, posts, profiles, member-types folders in ./src/routes).  
