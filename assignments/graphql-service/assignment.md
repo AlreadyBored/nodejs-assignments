@@ -37,6 +37,7 @@ If the properties of the entity are not specified, then return the id of it.
 
 3. Solve `n+1` graphql problem with [dataloader](https://www.npmjs.com/package/dataloader) package in all places where it should be used.  
    You can use only one "findMany" call per loader to consider this task completed.  
+   It's ok to leave the use of the dataloader even if only one entity was requested. But additionally (no extra score) you can optimize the behavior for such cases => +1 db call is allowed per loader.  
    3.1. List where the dataloader was used with links to the lines of code (creation in gql context and call in resolver).  
 4. Limit the complexity of the graphql queries by their depth with [graphql-depth-limit](https://www.npmjs.com/package/graphql-depth-limit) package.   
    4.1. Provide a link to the line of code where it was used.  
