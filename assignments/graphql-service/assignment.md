@@ -9,7 +9,7 @@ For [this repository](https://github.com/nosbog/rsschool-nodejs-task-graphql) to
 2. Add logic to the graphql endpoint (graphql folder in ./src/routes).  
 Constraints and logic for gql queries should be done based on restful implementation.  
 For each subtask provide an example of POST body in the PR.  
-All dynamic values should be sent vie "variables" field.  
+All dynamic values should be sent via "variables" field.  
 If the properties of the entity are not specified, then return the id of it.  
 `userSubscribedTo` - these are users that the current user is following.  
 `subscribedToUser` - these are users who are following the current user.  
