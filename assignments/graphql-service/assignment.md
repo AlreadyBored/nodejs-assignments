@@ -61,7 +61,7 @@ Relation fields are only stored in dependent/child entities. E.g. profile stores
 You are also responsible for verifying that the relations are real. E.g. "userId" belongs to the real user.  
 So when you delete dependent entity, you automatically delete relations with its parents.  
 But when you delete parent entity, you need to delete relations from child entities yourself to keep the data relevant.   
-(In the next rss-school task, you will use a full-fledged database that also can automatically remove relations when the parent is deleted)  
+(In the next rss-school task, you will use a full-fledged database that also can automatically remove child entities when the parent is deleted, verify keys ownership and instead of arrays for storing keys, you will use additional "join" tables)  
 
 To determine that all your restful logic works correctly => run the script "npm run test".  
 But be careful because these tests are integration (E.g. to test "delete" logic => it creates the entity via a "create" endpoint).  
