@@ -157,7 +157,7 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
     * `GET /favs` - get all favorites
       - Server should answer with `status code` **200** and all favorite records (**not their ids**), split by entity type:
       ```typescript
-      interface FavoritesRepsonse{
+      interface FavoritesResponse{
         artists: Artist[];
         albums: Album[];
         tracks: Track[];
