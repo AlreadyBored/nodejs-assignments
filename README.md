@@ -9,6 +9,10 @@
 - [Assignment](assignments/file-manager/assignment.md)
 - [Scoring](assignments/file-manager/score.md)
 
+## Basic Testing
+- [Assignment](assignments/basic-testing/assignment.md)
+- [Scoring](assignments/basic-testing/score.md)
+
 ## Simple CRUD API
 - [Assignment](assignments/crud-api/assignment.md)
 - [Scoring](assignments/crud-api/score.md)

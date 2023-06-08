@@ -17,7 +17,7 @@ Your task is to implement simple CRUD API using in-memory database underneath.
     - **GET** `api/users` is used to get all persons
         - Server should answer with `status code` **200** and all users records
     - **GET** `api/users/{userId}` 
-        - Server should answer with `status code` **200** and and record with `id === userId` if it exists
+        - Server should answer with `status code` **200** and record with `id === userId` if it exists
         - Server should answer with `status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
         - Server should answer with `status code` **404** and corresponding message if record with `id === userId` doesn't exist
     - **POST** `api/users` is used to create record about new user and store it in database
