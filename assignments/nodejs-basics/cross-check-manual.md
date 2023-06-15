@@ -18,7 +18,9 @@
 
 3. Open project in Visual Studio Code or any other code editor.
 
-4. Start to check subtasks according to the assignment description.
+4. Switch from main branch to branch with solution, if you haven't done it yet.
+
+5. Start to check subtasks according to the assignment description.
    For check simplification students expected to have npm-scripts in `package.json` how to run every subtask.
    If not, follow below instruction:
 
