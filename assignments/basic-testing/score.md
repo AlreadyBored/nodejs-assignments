@@ -6,9 +6,9 @@ For check simplification you have pre-implemented npm-scripts in `package.json`
 ## Basic Scope
 
 For each implemented test-case:
-- **+10** if test case is implemented correctly
-- **+5** if test case is implemented incorrectly
-- **0** if testcase is not implemented
+- **+6** if test case is implemented correctly
+- **+3** if test case is implemented incorrectly
+- **0** if test case is not implemented
 
 Test case is considered to be correctly implemented if:  
 - Actually tests what's described in its title
