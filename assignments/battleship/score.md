@@ -23,14 +23,11 @@
 - Game
     - **+8** Attack
     - **+4** Random attack
-- Bot
-    - **+20** Make bot for single play (optionally) 
-
 
 ## Advanced Scope
-
 - **+30** Task implemented on Typescript 
 - **+20** Codebase is separated (at least 4 modules)
+- **+30** Make bot for single play (optionally) 
 
 ## Forfeits
 
