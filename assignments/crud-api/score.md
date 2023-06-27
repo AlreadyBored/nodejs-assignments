@@ -24,7 +24,7 @@
 
 ## Forfeits
 
-- **-95% of total task score** any external tools except `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack` and its plugins, `prettier` and it's plugins, `uuid`, `@types/*` as well as libraries used for testing
+- **-95% of total task score** any external tools except `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `eslint` and its plugins, `webpack` and its plugins, `prettier` and it's plugins, `uuid`, `@types/*` as well as libraries used for testing
 - **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
