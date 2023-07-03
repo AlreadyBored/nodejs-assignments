@@ -4,7 +4,7 @@
 
 Your task is to implement battleship game backend using websocket.
 
-Player interface for your battleship backend is [here](https://github.com/rolling-scopes-school/battleship). You should clone or copy this repository and write the code there.
+Player interface for your battleship backend is [here](https://github.com/rolling-scopes-school/websockets-ui). You should clone or copy this repository and write the code there.
 
 The backend should be able to do the following:
 - Start websocket server
