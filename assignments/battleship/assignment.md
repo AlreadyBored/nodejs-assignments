@@ -182,7 +182,31 @@ npm run start
                 },
             id: 0,
         }
-        ```
+        ```        
+    - Start game (only after server receives both player's ships positions)\        
+        ```->```
+        ```ts
+        {
+            type: "start_game",
+            data:
+                {
+                    ships:
+                        [
+                            {
+                                position: {
+                                    x: <number>,
+                                    y: <number>,
+                                },
+                                direction: <boolean>,
+                                length: <number>,
+                                type: "small"|"medium"|"large"|"huge",
+                            }
+                        ],
+                    currentPlayerIndex: <number>,
+                },
+            id: 0,
+        }
+        ```  
 - Game
     - Attack\
         ```<-```
