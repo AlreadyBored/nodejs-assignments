@@ -56,6 +56,7 @@ npm run start
 8. Player wins if he have killed all enemies ships
 
 ## List of websocket commands (requests/responses) and their syntax (<- - cmd from frontend, -> - answer):
+## data value should be a **json string**
 - Player
     - Login or create player\
         ```<-```
@@ -144,10 +145,12 @@ npm run start
                         {
                             roomId: <number>,
                             roomUsers:
-                                {
-                                    name: <string>,
-                                    index: <number>,
-                                },
+                                [
+                                    {
+                                        name: <string>,
+                                        index: <number>,
+                                    }
+                                ],
                         },
                     ]
                 },
