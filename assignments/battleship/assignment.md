@@ -56,7 +56,8 @@ npm run start
 8. Player wins if he have killed all enemies ships
 
 ## List of websocket commands (requests/responses) and their syntax (<- - cmd from frontend, -> - answer):
-## data value should be a **json string**
+###  - data value should be a **json string**
+###  - id should be always 0
 - Player
     - Login or create player\
         ```<-```
@@ -85,7 +86,7 @@ npm run start
             id: 0,
         }
         ```
-    - Update winners\
+    - Update winners (for all after every winners table update)\
         ```->```
         ```ts
         {
@@ -101,7 +102,7 @@ npm run start
         }
         ```
 - Room
-    - Create new room\
+    - Create new room (create game room and add yourself there)\
         ```<-```
         ```ts
         {
@@ -110,7 +111,7 @@ npm run start
             id: 0,
         }
         ```
-    - Add user to room\
+    - Add user to room (add youself to somebodys room, then remove room from rooms list)\
         ```<-```
         ```ts
         {
@@ -134,7 +135,7 @@ npm run start
             id: 0,
         }
         ```
-    - Update room state\
+    - Update room state (send rooms list, where only one player inside)\
         ```->```
         ```ts
         {
@@ -253,7 +254,7 @@ npm run start
             id: 0,
         }
         ```
-    - Change player's turn\
+    - Change player's turn (send after game start and every shoot result)\
         ```->```
         ```ts
         {
