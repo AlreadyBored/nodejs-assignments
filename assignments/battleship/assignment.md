@@ -110,11 +110,11 @@ npm run start
             id: 0,
         }
         ```
-    - Add player to room\
+    - Add user to room\
         ```<-```
         ```ts
         {
-            type: "add_player_to_room",
+            type: "add_user_to_room",
             data:
                 {
                     indexRoom: <number>,
