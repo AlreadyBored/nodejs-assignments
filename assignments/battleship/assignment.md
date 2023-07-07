@@ -216,7 +216,7 @@ npm run start
             type: "attack",
             data:
                 {
-                    gameID: <number>,
+                    gameId: <number>,
                     x: <number>,
                     y: <number>,
                     indexPlayer: <number>, /* id of the player in the current game */
@@ -249,7 +249,7 @@ npm run start
             type: "randomAttack",
             data:
                 {
-                    gameID: <number>,
+                    gameId: <number>,
                     indexPlayer: <number>, /* id of the player in the current game */
                 },
             id: 0,
