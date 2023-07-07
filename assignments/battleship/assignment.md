@@ -129,7 +129,7 @@ npm run start
             type: "create_game",
             data:
                 {
-                    idGame: <number>,
+                    idGame: <number>,  \* player id in the game *\
                     idPlayer: <number>,
                 },
             id: 0,
@@ -179,7 +179,7 @@ npm run start
                                 type: "small"|"medium"|"large"|"huge",
                             }
                         ],
-                    indexPlayer: <number>,
+                    indexPlayer: <number>, /* id of the player in the current game */
                 },
             id: 0,
         }
@@ -203,7 +203,7 @@ npm run start
                                 type: "small"|"medium"|"large"|"huge",
                             }
                         ],
-                    currentPlayerIndex: <number>,
+                    currentPlayerIndex: <number>, /* id of the player in the current game who have sent his ships */
                 },
             id: 0,
         }
@@ -219,7 +219,7 @@ npm run start
                     gameID: <number>,
                     x: <number>,
                     y: <number>,
-                    indexPlayer: <number>,
+                    indexPlayer: <number>, /* id of the player in the current game */
                 },
             id: 0,
         }
@@ -236,7 +236,7 @@ npm run start
                         x: <number>,
                         y: <number>,
                     },
-                    currentPlayer: <number>,
+                    currentPlayer: <number>, /* id of the player in the current game */
                     status: "miss"|"killed"|"shot",
                 },
             id: 0,
@@ -250,7 +250,7 @@ npm run start
             data:
                 {
                     gameID: <number>,
-                    indexPlayer: <number>,
+                    indexPlayer: <number>, /* id of the player in the current game */
                 },
             id: 0,
         }
