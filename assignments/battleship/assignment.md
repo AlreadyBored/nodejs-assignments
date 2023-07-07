@@ -224,6 +224,7 @@ npm run start
             id: 0,
         }
         ```
+    - Attack feedback (should be sent after every shot, miss and after kill sent miss for all cells around ship too)\    
         ```->```
         ```ts
         {
@@ -254,7 +255,7 @@ npm run start
             id: 0,
         }
         ```
-    - Change player's turn (send after game start and every shoot result)\
+    - Info about player's turn (send after game start and every attack, miss or kill result)\
         ```->```
         ```ts
         {
