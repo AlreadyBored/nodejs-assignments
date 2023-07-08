@@ -126,7 +126,7 @@ npm run start
         ```->```
         ```ts
         {
-            type: "create_game",
+            type: "create_game", //send for both players in the room
             data:
                 {
                     idGame: <number>,  
