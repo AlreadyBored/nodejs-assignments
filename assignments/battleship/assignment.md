@@ -129,8 +129,8 @@ npm run start
             type: "create_game",
             data:
                 {
-                    idGame: <number>,  \* player id in the game *\
-                    idPlayer: <number>,
+                    idGame: <number>,  
+                    idPlayer: <number>, \* player id in the game *\
                 },
             id: 0,
         }
