@@ -141,20 +141,18 @@ npm run start
         {
             type: "update_room",
             data:
-                {
-                    [
-                        {
-                            roomId: <number>,
-                            roomUsers:
-                                [
-                                    {
-                                        name: <string>,
-                                        index: <number>,
-                                    }
-                                ],
-                        },
-                    ]
-                },
+                [
+                    {
+                        roomId: <number>,
+                        roomUsers:
+                            [
+                                {
+                                    name: <string>,
+                                    index: <number>,
+                                }
+                            ],
+                    },
+                ],
             id: 0,
         }
         ```
