@@ -1,4 +1,8 @@
 ## Assignment: Graphql
+
+## Source repository
+Fork [this repository](https://github.com/nosbog/rsschool-nodejs-task-graphql) to start the task.  
+
 ### Tasks:
 1. Add logic to the graphql endpoint: ./src/routes/graphql.  
 Constraints and logic for gql queries should be done based on restful implementation.  

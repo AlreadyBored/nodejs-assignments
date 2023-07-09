@@ -14,7 +14,6 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
 - **Refresh** token helps to get new pair Access/Refresh tokens (optional)
 – User now should use valid Access token to access  resources
 – When the Access token is expired, user can't use it anymore
-- Refresh token helps to get new pair Access/Refresh tokens (optional)
 
 
 ## Technical requirements

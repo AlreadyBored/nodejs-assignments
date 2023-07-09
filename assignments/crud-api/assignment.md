@@ -7,7 +7,7 @@ Your task is to implement simple CRUD API using in-memory database underneath.
 ## Technical requirements
 
 - Task can be implemented on Javascript or Typescript
-- Only `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `eslint` and its plugins, `webpack-cli`, `webpack` and its plugins, `prettier`, `uuid`, `@types/*` as well as libraries used for testing are allowed
+- Only `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `eslint` and its plugins, `webpack-cli`, `webpack` and its plugins, `prettier`, `uuid`, `@types/*` as well as libraries used for testing are allowed
 - Use 18 LTS version of Node.js
 - Prefer asynchronous API whenever possible
 
@@ -40,7 +40,7 @@ Your task is to implement simple CRUD API using in-memory database underneath.
 4. Errors on the server side that occur during the processing of a request should be handled and processed correctly (server should answer with `status code` **500** and corresponding human-friendly message)
 5. Value of `port` on which application is running should be stored in `.env` file
 6. There should be 2 modes of running application (**development** and **production**):
-    - The application is run in development mode using `nodemon` (there is a `npm` script `start:dev`)
+    - The application is run in development mode using `nodemon` or `ts-node-dev` (there is a `npm` script `start:dev`)
     - The application is run in production mode (there is a `npm` script `start:prod` that starts the build process and then runs the bundled file)
 7. There could be some tests for API (not less than **3** scenarios). Example of test scenario:
     1. Get all records with a `GET` `api/users` request (an empty array is expected)
@@ -49,13 +49,13 @@ Your task is to implement simple CRUD API using in-memory database underneath.
     4. We try to update the created record with a `PUT` `api/users/{userId}`request (a response is expected containing an updated object with the same `id`)
     5. With a `DELETE` `api/users/{userId}` request, we delete the created object by `id` (confirmation of successful deletion is expected)
     6. With a `GET` `api/users/{userId}` request, we are trying to get a deleted object by `id` (expected answer is that there is no such object)
-8. There could be implemented horizontal scaling for application (there is a `npm` script `start:multi` that starts multiple instances of your application using the Node.js `Cluster` API (equal to the number of logical processor cores on the host machine, each listening on port PORT + n) with a **load balancer** that distributes requests across them (using Round-robin algorithm). For example: host machine has 4 cores, `PORT` is 4000. On run `npm run start:multi` it works following way
+8. There could be implemented horizontal scaling for application, there should be `npm` script `start:multi` that starts multiple instances of your application using the Node.js `Cluster` API (equal to the number of available parallelism - 1 on the host machine, each listening on port PORT + n) with a **load balancer** that distributes requests across them (using Round-robin algorithm). For example: available parallelism is 4, `PORT` is 4000. On run `npm run start:multi` it works following way
 - On `localhost:4000/api` load balancer is listening for requests
-- On `localhost:4001/api`, `localhost:4002/api`, `localhost:4003/api`, `localhost:4004/api` workers are listening for requests from load balancer
+- On `localhost:4001/api`, `localhost:4002/api`, `localhost:4003/api` workers are listening for requests from load balancer
 - When user sends request to `localhost:4000/api`, load balancer sends this request to `localhost:4001/api`, next user request is sent to `localhost:4002/api` and so on.
-- After sending request to `localhost:4004/api` load balancer starts from the first worker again (sends request to `localhost:4001/api`)
+- After sending request to `localhost:4003/api` load balancer starts from the first worker again (sends request to `localhost:4001/api`)
 - State of db should be consistent between different workers, for example:
     1. First `POST` request addressed to `localhost:4001/api` creates user
     2. Second `GET` request addressed to `localhost:4002/api` should return created user
     3. Third `DELETE` request addressed to `localhost:4003/api` deletes created user
-    4. Fourth `GET` request addressed to `localhost:4004/api` should return **404** status code for created user
+    4. Fourth `GET` request addressed to `localhost:4001/api` should return **404** status code for created user

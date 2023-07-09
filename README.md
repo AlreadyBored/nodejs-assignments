@@ -9,13 +9,17 @@
 - [Assignment](assignments/file-manager/assignment.md)
 - [Scoring](assignments/file-manager/score.md)
 
+## Basic Testing
+- [Assignment](assignments/basic-testing/assignment.md)
+- [Scoring](assignments/basic-testing/score.md)
+
 ## Simple CRUD API
 - [Assignment](assignments/crud-api/assignment.md)
 - [Scoring](assignments/crud-api/score.md)
 
-## Remote control
-- [Assignment](assignments/remote-control/assignment.md)
-- [Scoring](assignments/remote-control/score.md)
+## Battleship backend
+- [Assignment](assignments/battleship/assignment.md)
+- [Scoring](assignments/battleship/score.md)
 
 ## GraphQL service
 - [Assignment](assignments/graphql-service/assignment.md)
