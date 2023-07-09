@@ -1,12 +1,10 @@
 # Scoring: Graphql
 
 ## Basic Scope
-- **+72** REST endpoint are implemented according to description
-- **+72** Requests 2.1-2.9 are implemented according to description
-- **+54** Requests 2.10-2.14 are implemented according to description
-- **+54** Requests 2.15-2.19 are implemented according to description
-- **+72** `n+1` GraphQL problem is solved using `dataloader` package
-- **+36** the complexity of the GraphQL queries is limited by their depth with `graphql-depth-limit` package
+- **+144** 1.1 queries
+- **+90** 1.2 mutations
+- **+18** 2.1 depth limit
+- **+108** 3.1 n+1
 
 ## Forfeits
 
