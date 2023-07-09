@@ -8,6 +8,7 @@
 
 ## Forfeits
 
+- **-100% of max task score** Fails: npm run test-integrity
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** No separate development branch
 - **-20** No Pull Request
