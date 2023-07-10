@@ -13,11 +13,12 @@ Constraints and logic for gql queries should be done based on restful implementa
    2.1. npm run test-rule  
 3. Solve `n+1` graphql problem with [dataloader](https://www.npmjs.com/package/dataloader).  
    You can use only one "findMany" call per loader to consider this task completed.  
-   It's ok to leave the use of the dataloader even if only one entity was requested. But additionally (no extra score) you can optimize the behavior for such cases => +1 db call is allowed per loader.  
+   It's ok to leave the use of the dataloader even if only one entity was requested.  
    3.1. npm run test-loader    
 
 ### Info:  
-You should only modify the code inside the folder ./src/routes/graphql.  
+It is forbidden to add new npm dependencies.  
+You should only modify/add the code inside the folder ./src/routes/graphql.  
 You are responsible for using style configs that are in the repository.  
 Make sure the important files have not been changed: npm run test-integrity.  
 If the test was partially completed, then it is considered not completed.  
