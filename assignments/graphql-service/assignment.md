@@ -13,8 +13,10 @@ Constraints and logic for gql queries should be done based on restful implementa
    2.1. npm run test-rule  
 3. Solve `n+1` graphql problem with [dataloader](https://www.npmjs.com/package/dataloader).  
    You can use only one "findMany" call per loader to consider this task completed.  
-   It's ok to leave the use of the dataloader even if only one entity was requested.  
-   3.1. npm run test-loader    
+   3.1. npm run test-loader  
+   3.2. npm run test-loader-prime  
+   Further optimizations to successfully pass the tests.  
+   You can use [graphql-parse-resolve-info](https://github.com/graphile/graphile-engine/tree/master/packages/graphql-parse-resolve-info) package to parse GraphQLResolveInfo.  
 
 ### Info:  
 It is forbidden to add new npm dependencies.  

@@ -1,10 +1,15 @@
 # Scoring: Graphql
 
 ## Basic Scope
-- **+144** 1.1 npm run test-queries
-- **+90** 1.2 npm run test-mutations
-- **+18** 2.1 npm run test-rule
-- **+108** 3.1 npm run test-loader
+- **+144** 1.1 npm run test-queries  
+- **+90** 1.2 npm run test-mutations  
+- **+18** 2.1 npm run test-rule  
+- **+80** 3.1 npm run test-loader  
+- **+28** 3.2 npm run test-loader-prime  
+
+## Info  
+If the test was partially completed, then it is considered not completed.  
+If the one test was not completed, then the subsequent ones are considered not completed.  
 
 ## Forfeits
 - **-100% of max task score** Fails: npm run test-integrity
