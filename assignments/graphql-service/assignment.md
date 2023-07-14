@@ -18,7 +18,6 @@ Constraints and logic for gql queries should be done based on restful implementa
    Further optimizations to successfully pass the tests.  
    You can use [graphql-parse-resolve-info](https://github.com/graphile/graphile-engine/tree/master/packages/graphql-parse-resolve-info) package to parse GraphQLResolveInfo.  
 
-
 ### Info:  
 It is forbidden to add new npm dependencies.  
 You should only modify/add the code inside the folder ./src/routes/graphql.  
