@@ -15,8 +15,10 @@ Constraints and logic for gql queries should be done based on restful implementa
    You can use only one "findMany" call per loader to consider this task completed.  
    3.1. npm run test-loader  
    3.2. npm run test-loader-prime  
-   Further optimizations to successfully pass the tests.  
-   You can use [graphql-parse-resolve-info](https://github.com/graphile/graphile-engine/tree/master/packages/graphql-parse-resolve-info) package to parse GraphQLResolveInfo.  
+   When you query all users, you don't have to use the database again when you want to find subs.  
+   Pre-place users in the appropriate dataloader cache.  
+   To determine if a user is a sub you need to do the appropriate join ([include](https://www.prisma.io/docs/reference/api-reference/prisma-client-reference#include)).  
+   But only do a join when you need it. You can use [graphql-parse-resolve-info](https://github.com/graphile/graphile-engine/tree/master/packages/graphql-parse-resolve-info) package to parse GraphQLResolveInfo to determine if subs are expected in the response.  
 
 ### Info:  
 It is forbidden to add new npm dependencies.  
