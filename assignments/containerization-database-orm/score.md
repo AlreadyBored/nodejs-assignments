@@ -41,7 +41,7 @@
 - **-10** for each failing test with `npm run test` 
 - **-20** `docker-compose.yml` contains hardcoded variables
 - **-30% of total task score** Commits after deadline, except commits that affect only Readme.md, .gitignore, etc.
-- **-40** No Pull Request  
+- **-40** No Pull Request created  
 - **-20** PR description is incorrect
 - **-40** No separate development branch
 - **-10** for each failing test with `npm run test` 
