@@ -2,13 +2,13 @@
 
 ## Technical requirements
 
-- Use 18 LTS version of Node.js
+- Use 20 LTS version of Node.js
 
 # How to check student's project
 
 1. Clone repository with the project to check with `git clone [HTTPS]` or download it.
-   (where HTTPS is the GitHub URL of the project to be used to clone. To get it:
-   a) go to GitHub repository that you want to clone;
+   (where HTTPS is the GitHub URL of the project to be used to clone. To get it:  
+   a) go to GitHub repository that you want to clone  
    b) click _Code_ and copy given URL.)
 
 2. Open following files:
