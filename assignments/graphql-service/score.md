@@ -1,17 +1,19 @@
 # Scoring: Graphql
 
 ## Basic Scope
-- **+72** Task 1: restful endpoints.
-- **+72** Subtasks 2.1-2.7: get gql queries.
-- **+54** Subtasks 2.8-2.11: create gql queries.
-- **+54** Subtasks 2.12-2.17: update gql queries.
-- **+88** Task 3: solve `n+1` graphql problem.
-- **+20** Task 4: limit the complexity of the graphql queries.
+- **+144** 1.1 npm run test-queries  
+- **+90** 1.2 npm run test-mutations  
+- **+18** 2.1 npm run test-rule  
+- **+80** 3.1 npm run test-loader  
+- **+28** 3.2 npm run test-loader-prime  
+
+## Info  
+If the test was partially completed, then it is considered not completed.  
+If the one test was not completed, then the subsequent ones are considered not completed.  
 
 ## Forfeits
+- **-100% of max task score** Fails: npm run test-integrity
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
-- **-60% of max task score** Samples of POST body for gql requests were not provided for those subtasks that were declared to be completed.
-- **-100% of max task score** Tests have been modified.
 - **-20** No separate development branch
 - **-20** No Pull Request
 - **-10** Pull Request description is incorrect

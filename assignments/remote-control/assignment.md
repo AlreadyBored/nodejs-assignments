@@ -4,7 +4,7 @@
 
 Your task is to implement remote control backend using `nutjs.dev` library and websocket.
 
-User interface for your remote control backend is [here](https://github.com/rolling-scopes-school/remote-control). You should clone this repository and write the code there.
+User interface for your remote control backend is [here](https://github.com/rolling-scopes-school/websockets-ui/tree/remote-control). You should clone this repository and write the code there.
 
 The backend should be able to do the following:
 
