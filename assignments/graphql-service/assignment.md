@@ -68,7 +68,7 @@ But be careful because these tests are integration (E.g. to test "delete" logic 
 
 ### Description for the 2 task:  
 You are free to create your own gql environment as long as you use predefined graphql endpoint (./src/routes/graphql/index.ts).  
-(or stick to the [default code-first](https://github.dev/graphql/graphql-js/blob/ffa18e9de0ae630d7e5f264f72c94d497c70016b/src/__tests__/starWarsSchema.ts))  
+(or stick to the [default code-first](https://github.dev/graphql/graphql-js/blob/ffa20e9de0ae630d7e5f264f72c94d497c70016b/src/__tests__/starWarsSchema.ts))  
 
 ### Description for the 3 task:
 If you have chosen a non-default gql environment, then the connection of some functionality may differ, be sure to report this in the PR.  
