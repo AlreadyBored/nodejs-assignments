@@ -35,7 +35,7 @@ npm run start
 1. personal response
     - reg - player registration/login
 2. response for the game room
-    - create_game - game id and enemy id
+    - create_game - game id and player id (unique id for user in this game)
     - start_game - informationa about game and player's ships positions    
     - turn - who is shooting now
     - attack - coordinates of shot and status
@@ -111,7 +111,7 @@ npm run start
             id: 0,
         }
         ```
-    - Add user to room (add youself to somebodys room, then remove room from rooms list)\
+    - Add user to room (add youself to somebodys room, then remove the room from available rooms list)\
         ```<-```
         ```ts
         {
@@ -130,7 +130,7 @@ npm run start
             data:
                 {
                     idGame: <number>,  
-                    idPlayer: <number>, \* player id in the game *\
+                    idPlayer: <number>, \* id for player in the game session, who have sent add_user_to_room request, not enemy *\
                 },
             id: 0,
         }
@@ -177,7 +177,7 @@ npm run start
                                 type: "small"|"medium"|"large"|"huge",
                             }
                         ],
-                    indexPlayer: <number>, /* id of the player in the current game */
+                    indexPlayer: <number>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -201,7 +201,7 @@ npm run start
                                 type: "small"|"medium"|"large"|"huge",
                             }
                         ],
-                    currentPlayerIndex: <number>, /* id of the player in the current game who have sent his ships */
+                    currentPlayerIndex: <number>, /* id of the player in the current game session, who have sent his ships */
                 },
             id: 0,
         }
@@ -217,7 +217,7 @@ npm run start
                     gameId: <number>,
                     x: <number>,
                     y: <number>,
-                    indexPlayer: <number>, /* id of the player in the current game */
+                    indexPlayer: <number>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -234,7 +234,7 @@ npm run start
                         x: <number>,
                         y: <number>,
                     },
-                    currentPlayer: <number>, /* id of the player in the current game */
+                    currentPlayer: <number>, /* id of the player in the current game session */
                     status: "miss"|"killed"|"shot",
                 },
             id: 0,
@@ -248,7 +248,7 @@ npm run start
             data:
                 {
                     gameId: <number>,
-                    indexPlayer: <number>, /* id of the player in the current game */
+                    indexPlayer: <number>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -260,7 +260,7 @@ npm run start
             type: "turn",
             data:
                 {
-                    currentPlayer: <number>,
+                    currentPlayer: <number>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -272,7 +272,7 @@ npm run start
             type: "finish",
             data:
                 {
-                    winPlayer: <number>,
+                    winPlayer: <number>, /* id of the player in the current game session */
                 },
             id: 0,
         }
