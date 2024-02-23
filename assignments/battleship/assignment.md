@@ -79,7 +79,7 @@ npm run start
             data:
                 {
                     name: <string>,
-                    index: <number>,
+                    index: <number | string>,
                     error: <bool>,
                     errorText: <string>,
                 },
@@ -118,7 +118,7 @@ npm run start
             type: "add_user_to_room",
             data:
                 {
-                    indexRoom: <number>,
+                    indexRoom: <number | string>,
                 },
             id: 0,
         }
@@ -129,8 +129,8 @@ npm run start
             type: "create_game", //send for both players in the room
             data:
                 {
-                    idGame: <number>,  
-                    idPlayer: <number>, \* id for player in the game session, who have sent add_user_to_room request, not enemy *\
+                    idGame: <number | string>,  
+                    idPlayer: <number | string>, \* id for player in the game session, who have sent add_user_to_room request, not enemy *\
                 },
             id: 0,
         }
@@ -143,12 +143,12 @@ npm run start
             data:
                 [
                     {
-                        roomId: <number>,
+                        roomId: <number | string>,
                         roomUsers:
                             [
                                 {
                                     name: <string>,
-                                    index: <number>,
+                                    index: <number | string>,
                                 }
                             ],
                     },
@@ -164,7 +164,7 @@ npm run start
             type: "add_ships",
             data:
                 {
-                    gameId: <number>,
+                    gameId: <number | string>,
                     ships:
                         [
                             {
@@ -177,7 +177,7 @@ npm run start
                                 type: "small"|"medium"|"large"|"huge",
                             }
                         ],
-                    indexPlayer: <number>, /* id of the player in the current game session */
+                    indexPlayer: <number | string>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -189,7 +189,7 @@ npm run start
             type: "start_game",
             data:
                 {
-                    ships:
+                    ships: /* player's ships, not enemy's */
                         [
                             {
                                 position: {
@@ -201,7 +201,7 @@ npm run start
                                 type: "small"|"medium"|"large"|"huge",
                             }
                         ],
-                    currentPlayerIndex: <number>, /* id of the player in the current game session, who have sent his ships */
+                    currentPlayerIndex: <number | string>, /* id of the player in the current game session, who have sent his ships */
                 },
             id: 0,
         }
@@ -214,10 +214,10 @@ npm run start
             type: "attack",
             data:
                 {
-                    gameId: <number>,
+                    gameId: <number | string>,
                     x: <number>,
                     y: <number>,
-                    indexPlayer: <number>, /* id of the player in the current game session */
+                    indexPlayer: <number | string>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -234,7 +234,7 @@ npm run start
                         x: <number>,
                         y: <number>,
                     },
-                    currentPlayer: <number>, /* id of the player in the current game session */
+                    currentPlayer: <number | string>, /* id of the player in the current game session */
                     status: "miss"|"killed"|"shot",
                 },
             id: 0,
@@ -247,8 +247,8 @@ npm run start
             type: "randomAttack",
             data:
                 {
-                    gameId: <number>,
-                    indexPlayer: <number>, /* id of the player in the current game session */
+                    gameId: <number | string>,
+                    indexPlayer: <number | string>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -260,7 +260,7 @@ npm run start
             type: "turn",
             data:
                 {
-                    currentPlayer: <number>, /* id of the player in the current game session */
+                    currentPlayer: <number | string>, /* id of the player in the current game session */
                 },
             id: 0,
         }
@@ -272,7 +272,7 @@ npm run start
             type: "finish",
             data:
                 {
-                    winPlayer: <number>, /* id of the player in the current game session */
+                    winPlayer: <number | string>, /* id of the player in the current game session */
                 },
             id: 0,
         }
