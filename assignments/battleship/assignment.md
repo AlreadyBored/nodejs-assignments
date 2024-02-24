@@ -226,7 +226,7 @@ npm run start
         ```->```
         ```ts
         {
-            type: "attack";,
+            type: "attack",
             data:
                 {
                     position:
