@@ -126,11 +126,11 @@ npm run start
         ```->```
         ```ts
         {
-            type: "create_game", //send for both players in the room
+            type: "create_game", //send for both players in the room, after they are connected to the room
             data:
                 {
                     idGame: <number | string>,  
-                    idPlayer: <number | string>, \* id for player in the game session, who have sent add_user_to_room request, not enemy *\
+                    idPlayer: <number | string>, \* generated bu server id for player in the game session, not enemy (unique id for every player) *\
                 },
             id: 0,
         }
