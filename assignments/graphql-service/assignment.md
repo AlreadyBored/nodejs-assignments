@@ -9,7 +9,7 @@ Constraints and logic for gql queries should be done based on restful implementa
    1.1. npm run test-queries  
    1.2. npm run test-mutations    
 2. Limit the complexity of the graphql queries by their depth with [graphql-depth-limit](https://www.npmjs.com/package/graphql-depth-limit) package.  
-   Use value "5" for package.  
+   Use value "5" for the package.  
    2.1. npm run test-rule  
 3. Solve `n+1` graphql problem with [dataloader](https://www.npmjs.com/package/dataloader).  
    You can use only one "findMany" call per loader to consider this task completed.  
@@ -23,6 +23,7 @@ Constraints and logic for gql queries should be done based on restful implementa
 ### Info:  
 It is forbidden to add new npm dependencies.  
 You should only modify/add the code inside the folder ./src/routes/graphql.  
+Do not create files with the name "index.ts". This name is reserved for fastify plugins.  
 You are responsible for using style configs that are in the repository.  
 Make sure the important files have not been changed: npm run test-integrity.  
 If the test was partially completed, then it is considered not completed.  
@@ -39,6 +40,6 @@ Steps to get started:
 
 Useful things:
 - Database GUI: npx prisma studio
-- Tests modify the db, so if it seems to you that the db has become too large,
-  you can clear it: npx prisma migrate reset (also triggers seeding)
-- Swagger: /docs
+- Reset database: npx prisma migrate reset (this command triggers db seeding)
+- To test an existing rest api (swagger): [::1]:8000/docs
+- For ease of test of graphql you can use [api platform](https://learning.postman.com/docs/sending-requests/graphql/graphql-overview/) that can fetch [introspection](https://graphql.org/learn/introspection/)
