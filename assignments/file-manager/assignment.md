@@ -61,6 +61,10 @@ List of operations and their syntax:
     ```bash
     add new_file_name
     ```
+    - Create new directory in current working directory: 
+    ```bash
+    mkdir new_directory_name
+    ```
     - Rename file (content should remain unchanged): 
     ```bash
     rn path_to_file new_filename
