@@ -1,3 +1,7 @@
+# [Course program module 1 (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/modules/rest/logging-error-handling/README.md)
+
+# [Course program module 2 (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/modules/rest/authentication-jwt/README.md)
+
 # REST service: Logging & Error Handling and Authentication and Authorization
 
 ## Description
