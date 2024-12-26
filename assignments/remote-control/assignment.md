@@ -1,3 +1,5 @@
+# [Course program module (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/modules/websocket/README.md)
+
 # Assignment: Websocket Remote Control
 
 ## Description

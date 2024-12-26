@@ -1,3 +1,5 @@
+# [Course program module (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/modules/testing/README.md)
+
 # Assignment: Basic testing
 
 ## Description

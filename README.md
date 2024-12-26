@@ -1,3 +1,5 @@
+# [Course program (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/README.md)
+
 # Node.js Assignments
 
 ## Node.js basics
