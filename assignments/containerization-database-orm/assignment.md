@@ -1,4 +1,4 @@
-# [Course program module 1 (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/modules/rest/containerization/README.md
+# [Course program module 1 (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/modules/rest/containerization/README.md)
 
 # [Course program module 2 (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/modules/rest/database-orm/README.md)
 
