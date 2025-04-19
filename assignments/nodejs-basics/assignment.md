@@ -22,11 +22,12 @@ Assignment contains several nested folders inside `src`. Your task is to impleme
 ### File system (src/fs)
 
 You should implement several functions in dedicated files
+
 - `create.js` - implement function that creates new file `fresh.txt` with content `I am fresh and young` inside of the `files` folder (if file already exists `Error` with message `FS operation failed` must be thrown)
 - `copy.js` - implement function that copies folder `files` files with all its content into folder `files_copy` at the same level (if `files` folder doesn't exist or `files_copy` has already been created `Error` with message `FS operation failed` must be thrown)
 - `rename.js` - implement function that renames file `wrongFilename.txt` to `properFilename` with extension `.md` (if there's no file `wrongFilename.txt` or `properFilename.md` already exists `Error` with message `FS operation failed` must be thrown)
 - `delete.js` - implement function that deletes file `fileToRemove.txt` (if there's no file `fileToRemove.txt` `Error` with message `FS operation failed` must be thrown)
-- `list.js` - implement function that prints all array of filenames from `files` folder into console (if `files` folder doesn't exist `Error` with message `FS operation failed` must be thrown)
+- `list.js` - implement function that prints array of all filenames from `files` folder into console (if `files` folder doesn't exists `Error` with message `FS operation failed` must be thrown)
 - `read.js` - implement function that prints content of the `fileToRead.txt` into console (if there's no file `fileToRead.txt` `Error` with message `FS operation failed` must be thrown)
 
 ### Command line interface(src/cli)
@@ -69,8 +70,8 @@ You should implement several functions in dedicated files
 
 - `worker.js` - extend given function to work with data received from main thread and implement function which sends result of the computation to the main thread
 - `main.js` - implement function that creates number of worker threads (equal to the number of host machine logical CPU cores) from file `worker.js` and able to send data to those threads and to receive result of the computation from them. You should send incremental number starting from `10` to each `worker`. For example: on host machine with **4** cores you should create **4** workers and send **10** to first `worker`, **11** to second `worker`, **12** to third `worker`, **13** to fourth `worker`. After all workers will finish, function should log array of results into console. The results are array of objects with 2 properties:
-    - `status` - `'resolved'` in case of successfully received value from `worker` or `'error'` in case of error in `worker`
-    - `data` - value from `worker` in case of success or `null` in case of error in worker  
+  - `status` - `'resolved'` in case of successfully received value from `worker` or `'error'` in case of error in `worker`
+  - `data` - value from `worker` in case of success or `null` in case of error in worker
 
 The results in the array must be in the same order that the workers were created
 
@@ -79,5 +80,5 @@ The results in the array must be in the same order that the workers were created
 You should implement several functions in dedicated files
 
 - `cp.js` - implement function `spawnChildProcess` that receives array of arguments `args` and creates child process from file `script.js`, passing these `args` to it. This function should create IPC-channel between `stdin` and `stdout` of master process and child process:
-    - child process `stdin` should receive input from master process `stdin`
-    - child process `stdout` should send data to master process `stdout`
+  - child process `stdin` should receive input from master process `stdin`
+  - child process `stdout` should send data to master process `stdout`
