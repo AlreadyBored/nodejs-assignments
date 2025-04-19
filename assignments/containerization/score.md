@@ -10,7 +10,7 @@
 
 ## Advanced Scope
 
-- **+20** Final size of the Docker image with application is less than 500 MB
+- **+20** Final size of the Docker image with application is less than 650 MB
 - **+10** Implemented npm script for vulnerabilities scanning (free solution)
 - **+20** Your built image is pushed to DockerHub
 
