@@ -50,7 +50,7 @@ test('should return "Yes" for even numbers', () => {
 });
 ```
 - Stable (multiple runs produce same test result)
-- Isolated (don't rely on external data/don't perform API calls)
+- Isolated (don't rely on external data/don't perform external API calls)
 
 ## Forfeits
 

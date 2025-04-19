@@ -13,7 +13,7 @@ Assignment contains several nested folders inside `src`. Your task is to impleme
 ## Technical requirements
 
 - Any external tools and libraries are prohibited
-- Use 22.x.x version (22.9.0 or upper) of Node.js
+- Use 22.x.x version (22.14.0 or upper) of Node.js
 - Don't change signature of pre-written functions (e.g. don't rename them, don't make them synchronous, etc.)
 - Prefer asynchronous API whenever possible
 
@@ -24,7 +24,7 @@ Assignment contains several nested folders inside `src`. Your task is to impleme
 You should implement several functions in dedicated files
 
 - `create.js` - implement function that creates new file `fresh.txt` with content `I am fresh and young` inside of the `files` folder (if file already exists `Error` with message `FS operation failed` must be thrown)
-- `copy.js` - implement function that copies folder `files` files with all its content into folder `files_copy` at the same level (if `files` folder doesn't exists or `files_copy` has already been created `Error` with message `FS operation failed` must be thrown)
+- `copy.js` - implement function that copies folder `files` files with all its content into folder `files_copy` at the same level (if `files` folder doesn't exist or `files_copy` has already been created `Error` with message `FS operation failed` must be thrown)
 - `rename.js` - implement function that renames file `wrongFilename.txt` to `properFilename` with extension `.md` (if there's no file `wrongFilename.txt` or `properFilename.md` already exists `Error` with message `FS operation failed` must be thrown)
 - `delete.js` - implement function that deletes file `fileToRemove.txt` (if there's no file `fileToRemove.txt` `Error` with message `FS operation failed` must be thrown)
 - `list.js` - implement function that prints array of all filenames from `files` folder into console (if `files` folder doesn't exists `Error` with message `FS operation failed` must be thrown)
@@ -80,5 +80,5 @@ The results in the array must be in the same order that the workers were created
 You should implement several functions in dedicated files
 
 - `cp.js` - implement function `spawnChildProcess` that receives array of arguments `args` and creates child process from file `script.js`, passing these `args` to it. This function should create IPC-channel between `stdin` and `stdout` of master process and child process:
-  - child process `stdin` should receive input from master process `stdin`
-  - child process `stdout` should send data to master process `stdout`
+- child process `stdin` should receive input from master process `stdin`
+- child process `stdout` should send data to master process `stdout`

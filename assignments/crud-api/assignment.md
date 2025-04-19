@@ -10,7 +10,7 @@ Your task is to implement simple CRUD API using in-memory database underneath.
 
 - Task can be implemented on Javascript or Typescript
 - Only `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `eslint` and its plugins, `webpack-cli`, `webpack` and its plugins and loaders, `prettier`, `uuid`, `@types/*` as well as libraries used for testing are allowed
-- Use 22.x.x version (22.9.0 or upper) of Node.js
+- Use 22.x.x version (22.14.0 or upper) of Node.js
 - Prefer asynchronous API whenever possible
 
 ## Implementation details
