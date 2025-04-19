@@ -10,7 +10,7 @@
 2. Create `Docker Hub` account [Docker Hub](https://hub.docker.com/)
 
 ## Technical requirements
-- Use 22.x.x version (22.9.0 or upper) of Node.js
+- Use 22.x.x version (22.14.0 or upper) of Node.js
 
 ## Description
 

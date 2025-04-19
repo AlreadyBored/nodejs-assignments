@@ -23,7 +23,7 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
 ## Technical requirements
 
 - Only `@nestjs/common` and `@nestjs-core` Nest.js modules can be used for the logger and error handling feature assignment, other Nest.js modules are prohibited
-- Use 22.x.x version (22.9.0 or upper) of Node.js
+- Use 22.x.x version (22.14.0 or upper) of Node.js
 
 ## Implementation details
 
