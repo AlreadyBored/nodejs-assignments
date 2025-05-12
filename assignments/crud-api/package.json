@@ -1,0 +1,37 @@
+{
+  "name": "simple-crud-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node dist/app.js",
+    "start:multi": "cross-env NODE_ENV=production node dist/cluster.js",
+    "dev": "cross-env NODE_ENV=development ts-node-dev src/app.ts",
+    "dev:multi": "cross-env NODE_ENV=development ts-node src/cluster.ts",
+    "build": "cross-env NODE_ENV=production tsc && webpack",
+    "test": "cross-env NODE_ENV=test jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-proxy": "^1.18.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.12",
+    "@types/uuid": "^10.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.26.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.8",
+    "webpack-cli": "^6.0.1"
+  }
+}
