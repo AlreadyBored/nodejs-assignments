@@ -42,7 +42,7 @@ Your task is to implement simple CRUD API using in-memory database underneath.
 4. Errors on the server side that occur during the processing of a request should be handled and processed correctly (server should answer with `status code` **500** and corresponding human-friendly message)
 5. Value of `port` on which application is running should be stored in `.env` file
 
-- **Important:** The `.env` file itself should not be committed to the repository as it is considered a security bad practice
+- **Important:** The `.env` file itself should not be committed to the repository as it is considered a security bad practice. Please consider to add `.env` file in `.gitignore`.
 
   - Instead, create and commit `.env.example` file that contains a list of required environment variables without their values
   - Example of `.env.example` contents:
