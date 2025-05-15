@@ -44,11 +44,11 @@ Your task is to implement simple CRUD API using in-memory database underneath.
 
 - **Important:** The `.env` file itself should not be committed to the repository as it is considered a security bad practice. Please consider to add `.env` file in `.gitignore`.
 
-  - Instead, create and commit `.env.example` file that contains a list of required environment variables without their values
+  - Instead, create and commit `.env.example` file that contains a list of required environment variables with reasonable default values
   - Example of `.env.example` contents:
 
     ```
-    PORT=
+    PORT=4000
     ```
 
 6. There should be 2 modes of running application (**development** and **production**):
