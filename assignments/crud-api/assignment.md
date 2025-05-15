@@ -26,9 +26,9 @@ Your task is to implement simple CRUD API using in-memory database underneath.
         - Server should answer with `status code` **201** and newly created record
         - Server should answer with `status code` **400** and corresponding message if request `body` does not contain **required** fields
     - **PUT** `api/users/{userId}` is used to update existing user
-        - Server should answer with`status code` **200** and updated record
-        - Server should answer with`status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
-        - Server should answer with`status code` **404** and corresponding message if record with `id === userId` doesn't exist
+        - Server should answer with `status code` **200** and updated record
+        - Server should answer with `status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
+        - Server should answer with `status code` **404** and corresponding message if record with `id === userId` doesn't exist
     - **DELETE** `api/users/{userId}` is used to delete existing user from database
         - Server should answer with `status code` **204** if the record is found and deleted
         - Server should answer with `status code` **400** and corresponding message if `userId` is invalid (not `uuid`)
