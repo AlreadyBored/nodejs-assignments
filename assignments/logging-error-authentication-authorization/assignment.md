@@ -63,7 +63,7 @@ Your task is to implement Authentication and Authorization with JWT (Access and 
 
 3. **JWT** Access token should contain `userId` and `login` in a **payload** and has expiration time (expiration time of Refresh token should be longer, than Access token).
 
-4. The **JWT** Access token should be added in HTTP `Authorization` header to all requests that requires authentication. Proxy all the requests (except `auth/signup`, `auth/login`, `/auth/refresh`, `/doc`, `/`) and check that HTTP `Authorization` header has the correct value of **JWT** Access token.  
+4. The **JWT** Access token should be added in HTTP `Authorization` header to all requests that requires authentication. Proxy all the requests (except `auth/signup`, `auth/login`, `/doc`, `/`) and check that HTTP `Authorization` header has the correct value of **JWT** Access token.  
 HTTP authentication must follow `Bearer` scheme:
   ```
   Authorization: Bearer <jwt_token>
