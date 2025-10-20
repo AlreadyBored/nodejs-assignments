@@ -13,7 +13,7 @@ Assignment contains several nested folders inside `src`. Your task is to impleme
 ## Technical requirements
 
 - Any external tools and libraries are prohibited
-- Use 22.x.x version (22.14.0 or upper) of Node.js
+- Use 24.x.x version (24.14.0 or upper) of Node.js
 - Don't change signature of pre-written functions (e.g. don't rename them, don't make them synchronous, etc.)
 - Prefer asynchronous API whenever possible
 

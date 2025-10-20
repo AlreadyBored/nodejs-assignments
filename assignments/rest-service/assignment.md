@@ -212,4 +212,4 @@ NB! You must create new repository from [template](https://github.com/rolling-sc
 
 **Hints**
 
-* To generate all entities `id`s use [Node.js randomUUID](https://nodejs.org/dist/latest-v22.x/docs/api/crypto.html#cryptorandomuuidoptions).
+* To generate all entities `id`s use [Node.js randomUUID](https://nodejs.org/dist/latest-v24.x/docs/api/crypto.html#cryptorandomuuidoptions).

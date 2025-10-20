@@ -2,7 +2,7 @@
 
 ## Technical requirements
 
-- Use 22.x.x version (22.14.0 or upper) of Node.js
+- Use 24.x.x version (24.14.0 or upper) of Node.js
 
 # How to check student's project
 
