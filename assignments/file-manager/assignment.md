@@ -29,7 +29,7 @@ npm run start -- --username=your_username
 `Thank you for using File Manager, Username, goodbye!`  
 - At the start of the program and after each end of input/operation current working directory should be printed in following way:  
 `You are currently in path_to_working_directory`  
-- Starting working directory is current user's home directory (for example, on Windows it's something like `system_drive/Users/Username`)
+- Starting working directory is current system user's home directory (for example, on Windows it's something like `system_drive/Users/Username`)
 - By default program should prompt user in console to print commands and wait for results  
 - In case of unknown operation or invalid input (missing mandatory arguments, wrong data in arguments, etc.) `Invalid input` message should be shown and user should be able to enter another command
 - In case of error during execution of operation `Operation failed` message should be shown and user should be able to enter another command (e.g. attempt to perform an operation on a non-existent file or work on a non-existent path should result in the operation fail)
