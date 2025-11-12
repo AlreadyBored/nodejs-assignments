@@ -21,7 +21,7 @@ The backend should be able to do the following:
 
 - Task can be implemented on Javascript or Typescript
 - Use 24.x.x version (24.14.0 or upper) of Node.js
-- Only [ws](https://www.npmjs.com/package/ws), `cross-env`, `typescript`, `tsx`, `ts-node`, `ts-node-dev`, `nodemon`, `dotenv`, `eslint` and its plugins, `webpack` and its plugins, `prettier`, `@types/*` and testing tools (for example, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
+- Only [ws](https://www.npmjs.com/package/ws), `cross-env`, `typescript`, `tsx`, `ts-node`, `ts-node-dev`, `nodemon`, `dotenv`, `eslint` and its plugins, `bundler` and its plugins, `prettier`, `@types/*` and testing tools (for example, Vitest, Jest, Mocha, AVA, Jasmine, Cypress, Storybook, Puppeteer) are allowed
 - The program is started by npm script `start` in following way:
 - All requests and responses must be sent as JSON string
 
