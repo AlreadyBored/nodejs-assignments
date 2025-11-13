@@ -10,7 +10,8 @@
 2. Create `Docker Hub` account [Docker Hub](https://hub.docker.com/)
 
 ## Technical requirements
-- Use 24.x.x version (24.14.0 or upper) of Node.js
+
+- Use 24.x.x version (24.10.0 or upper) of Node.js
 
 ## Description
 
@@ -22,7 +23,6 @@ Your task is to build and run multi-container application using Docker.
 
 Your task is to implement PostgreSQL database as source of data for your application and TypeORM / Prisma to communicate with your database.
 
-
 ## Implementation details
 
 # 1) Containerization, Docker
@@ -31,8 +31,8 @@ Your task is to implement PostgreSQL database as source of data for your applica
 2. Create `Dockerfile` that will be used for building image of `PostgreSQL` database.
 3. Create `Dockerfile` that will be used for building image of your application.
 4. Create `docker-compose.yml` file that will be used for running multi-container application (your application and `PostgreSQL` database). Specify custom network that will be used for communication between application and database containers.
-6. Build images and scan it for security vulnerabilities.
-7. Push built images to your personal or private repository on `Docker Hub`.
+5. Build images and scan it for security vulnerabilities.
+6. Push built images to your personal or private repository on `Docker Hub`.
 
 # 2) Database (PostgreSQL) & ORM
 
