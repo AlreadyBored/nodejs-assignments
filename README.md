@@ -1,48 +1,50 @@
-# [Course program (for RS School students)](https://github.com/rolling-scopes-school/tasks/blob/master/node/README.md)
+# Node.js Assignments v2
 
-# Node.js Assignments
+## Node.js Fundamentals
+- [Assignment](assignments-v2/01-nodejs-fundamentals/assignment.md)
+- [Scoring](assignments-v2/01-nodejs-fundamentals/score.md)
 
-## Node.js basics
-- [Assignment](assignments/nodejs-basics/assignment.md)
-- [Scoring](assignments/nodejs-basics/score.md)
-- [Cross-Check manual](assignments/nodejs-basics/cross-check-manual.md)
+## CRUD API
+- [Assignment](assignments-v2/02-crud-api/assignment.md)
+- [Scoring](assignments-v2/02-crud-api/score.md)
 
-## File Manager
-- [Assignment](assignments/file-manager/assignment.md)
-- [Scoring](assignments/file-manager/score.md)
+## Fastify REST API
+- [Assignment](assignments-v2/03-fastify-rest-api/assignment.md)
+- [Scoring](assignments-v2/03-fastify-rest-api/score.md)
 
-## Basic Testing
-- [Assignment](assignments/basic-testing/assignment.md)
-- [Scoring](assignments/basic-testing/score.md)
-
-## Simple CRUD API
-- [Assignment](assignments/crud-api/assignment.md)
-- [Scoring](assignments/crud-api/score.md)
-
-## Battleship backend
-- [Assignment](assignments/battleship/assignment.md)
-- [Scoring](assignments/battleship/score.md)
-
-## GraphQL service
-- [Assignment](assignments/graphql-service/assignment.md)
-- [Scoring](assignments/graphql-service/score.md)
-
-## REST Service: Basic
-- [Assignment](assignments/rest-service/assignment.md)
-- [Scoring](assignments/rest-service/score.md)
-
-## REST service: Database & ORM
-- [Assignment](assignments/database-orm/assignment.md)
-- [Scoring](assignments/database-orm/score.md)
-
-## REST service: Logging & Error handling
-- [Assignment](assignments/logging-error-handling/assignment.md)
-- [Scoring](assignments/logging-error-handling/score.md)
+## REST service: Database & Prisma ORM
+- [Assignment](assignments-v2/04-database-prisma/assignment.md)
+- [Scoring](assignments-v2/04-database-prisma/score.md)
 
 ## REST service: Authentication & Authorization
-- [Assignment](assignments/authentication/assignment.md)
-- [Scoring](assignments/authentication/score.md)
+- [Assignment](assignments-v2/05-auth-jwt/assignment.md)
+- [Scoring](assignments-v2/05-auth-jwt/score.md)
 
-## REST service: Containerization
-- [Assignment](assignments/containerization/assignment.md)
-- [Scoring](assignments/containerization/score.md)
+## REST service: Testing
+- [Assignment](assignments-v2/06a-testing/assignment.md)
+- [Scoring](assignments-v2/06a-testing/score.md)
+
+## REST service: Logging & Error Handling
+- [Assignment](assignments-v2/06b-logging-errors/assignment.md)
+- [Scoring](assignments-v2/06b-logging-errors/score.md)
+
+## REST service: Containerization & Docker
+- [Assignment](assignments-v2/07-docker/assignment.md)
+- [Scoring](assignments-v2/07-docker/score.md)
+
+## WebSocket: Live Quiz Game
+- [Assignment](assignments-v2/08-websockets/assignment.md)
+- [Scoring](assignments-v2/08-websockets/score.md)
+
+## AI/LLM Integration
+- [Assignment](assignments-v2/09-ai-llm-integration/assignment.md)
+- [Scoring](assignments-v2/09-ai-llm-integration/score.md)
+
+## AI RAG & Vector Database
+- [Assignment](assignments-v2/10-ai-rag-vectordb/assignment.md)
+- [Scoring](assignments-v2/10-ai-rag-vectordb/score.md)
+
+---
+
+## Previous version
+- [Assignments v1](Assignments_v1.md)
