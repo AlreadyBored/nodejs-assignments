@@ -6,7 +6,7 @@
 
 Let's try to create a Home Library Service! `Users` can create, read, update, delete data about `Artists`, `Tracks` and `Albums`, add them to `Favorites` in their own Home Library!
 
-NB! You must create new repository from [template](https://github.com/rolling-scopes-school/nodejs-course-template/generate) for this task. Its name must be nodejs2025Q2-service i.e. full link to the repository must be https://github.com/%your-gihub-id%/nodejs2025Q2-service.
+NB! You must create new repository from [template](https://github.com/rolling-scopes-school/nodejs-course-template/generate) for this task. Its name must match the current period of the course (for example, for Node JS 2025 Q2 it'll be `nodejs2025Q2-service`), i.e. full link to the repository must be https://github.com/%your-gihub-id%/nodejs2025Q2-service.
 
 **Create an application, the application should operate with the following resources:**
 
