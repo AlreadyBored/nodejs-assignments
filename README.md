@@ -1,8 +1,12 @@
 # Node.js Assignments v2
 
-## Node.js Fundamentals
-- [Assignment](assignments-v2/01-nodejs-fundamentals/assignment.md)
-- [Scoring](assignments-v2/01-nodejs-fundamentals/score.md)
+## Node.js Basics
+- [Assignment](assignments-v2/01a-nodejs-basics/assignment.md)
+- [Scoring](assignments-v2/01a-nodejs-basics/score.md)
+
+## Data Processing CLI
+- [Assignment](assignments-v2/01b-data-processing-cli/assignment.md)
+- [Scoring](assignments-v2/01b-data-processing-cli/score.md)
 
 ## CRUD API
 - [Assignment](assignments-v2/02-crud-api/assignment.md)
