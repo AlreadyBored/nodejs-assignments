@@ -18,8 +18,8 @@
 - **+20** `json-to-csv` command works correctly (headers from object keys, values as rows, uses Streams)
 - **+12** `count` command works correctly (lines, words, characters counted via Streams, output format matches specification)
 - **+12** `hash` command works correctly (SHA256 by default, supports `md5` and `sha512` via `--algorithm` option, uses Streams)
-- **+8** `compress` command works correctly (gzip compression via Streams)
-- **+8** `decompress` command works correctly (gzip decompression via Streams, result matches original)
+- **+8** `encrypt` command works correctly (AES-256-GCM, key derivation from password+salt, Streams, output format matches spec)
+- **+8** `decrypt` command works correctly (AES-256-GCM, key derivation from password+salt, Streams, authTag verified, result matches original)
 
 ### Path Resolution
 - **+15** All file paths in commands are correctly resolved relative to current working directory

@@ -194,38 +194,54 @@ sha256: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
 - If the input file doesn't exist, print `Operation failed`
 - If the algorithm is not supported, print `Operation failed`
 
-#### 5. `compress` — Compress a file
+#### 5. `encrypt` — Encrypt a file
 
-Compress a file using gzip.
+Encrypt a file using `AES-256-GCM`.
 
 ```bash
-compress --input file.txt --output file.txt.gz
+encrypt --input file.txt --output file.txt.enc --password mySecret
 ```
 
 - `--input` — path to the input file (**required**)
-- `--output` — path to the output compressed file (**required**)
+- `--output` — path to the output encrypted file (**required**)
+- `--password` — password used to derive the encryption key (**required**)
+
+**Output file format (binary):**
+- First 16 bytes: `salt`
+- Next 12 bytes: `iv`
+- Then: `ciphertext`
+- Last 16 bytes: `authTag`
 
 **Behavior:**
-- Must use `zlib.createGzip()` with Streams API
+- Must derive a 32-byte key from `password` and `salt`
+- Must encrypt using `AES-256-GCM`
+- Must use Streams API end-to-end
+- You must not load the full file into memory. The only allowed in-memory buffering is:
+  - the header (first 28 bytes = `salt` + `iv`)
+  - the authentication tag (last 16 bytes)
 - Paths are relative to the current working directory or can be absolute
 - If the input file doesn't exist, print `Operation failed`
 
-#### 6. `decompress` — Decompress a file
+#### 6. `decrypt` — Decrypt a file
 
-Decompress a gzip file.
+Decrypt a file produced by `encrypt`.
 
 ```bash
-decompress --input file.txt.gz --output file.txt
+decrypt --input file.txt.enc --output file.txt --password mySecret
 ```
 
-- `--input` — path to the input compressed file (**required**)
+- `--input` — path to the input encrypted file (**required**)
 - `--output` — path to the output file (**required**)
+- `--password` — password used to derive the encryption key (**required**)
 
 **Behavior:**
-- Must use `zlib.createGunzip()` with Streams API
-- The decompressed result must match the original file content exactly
+- Must parse `salt` (first 16 bytes) and `iv` (next 12 bytes) from the input
+- Must parse `authTag` (last 16 bytes) from the input
+- Must decrypt using `AES-256-GCM` with authentication tag verification
+- Must use Streams API end-to-end
+- The decrypted result must match the original file content exactly
 - Paths are relative to the current working directory or can be absolute
-- If the input file doesn't exist, print `Operation failed`
+- If the input file doesn't exist or auth fails, print `Operation failed`
 
 #### 7. `sort-large` — Sort a large file using Worker Threads
 
@@ -262,8 +278,8 @@ src/
     jsonToCsv.js   — json-to-csv command handler
     count.js       — count command handler
     hash.js        — hash command handler
-    compress.js    — compress command handler
-    decompress.js  — decompress command handler
+    encrypt.js     — encrypt command handler
+    decrypt.js     — decrypt command handler
     sortLarge.js   — sort-large command handler
   workers/
     sortWorker.js  — worker thread for sort-large command
