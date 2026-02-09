@@ -243,28 +243,59 @@ decrypt --input file.txt.enc --output file.txt --password mySecret
 - Paths are relative to the current working directory or can be absolute
 - If the input file doesn't exist or auth fails, print `Operation failed`
 
-#### 7. `sort-large` — Sort a large file using Worker Threads
+#### 7. `log-stats` — Analyze a large log file using Worker Threads
 
-Sort a large text file line by line in alphabetical order, using Worker Threads for parallel processing.
+Compute statistics for a large log file using Worker Threads for parallel processing.
 
 ```bash
-sort-large --input huge.txt --output sorted.txt
+log-stats --input logs.txt --output stats.json
 ```
 
-- `--input` — path to the input text file (**required**)
-- `--output` — path to the output sorted file (**required**)
+- `--input` — path to the input log file (**required**)
+- `--output` — path to the output JSON file (**required**)
+
+**Log line format (space-separated):**
+```
+<isoTimestamp> <level> <service> <statusCode> <responseTimeMs> <method> <path>
+```
+
+**Example line:**
+```
+2026-02-01T12:34:56.789Z INFO user-service 200 123 GET /api/users
+```
+
+**Output format (JSON):**
+```
+{
+  "total": 1000,
+  "levels": { "INFO": 700, "WARN": 200, "ERROR": 100 },
+  "status": { "2xx": 800, "3xx": 50, "4xx": 120, "5xx": 30 },
+  "topPaths": [
+    { "path": "/api/users", "count": 120 },
+    { "path": "/api/orders", "count": 95 }
+  ],
+  "avgResponseTimeMs": 137.42
+}
+```
 
 **Behavior:**
-1. Read the input file and split it into N chunks (where N = number of CPU cores)
-2. Send each chunk to a Worker Thread for sorting
-3. Each Worker sorts its chunk alphabetically and returns the sorted lines
-4. The main thread merges the sorted chunks using a merge-sort merge step
-5. Write the final sorted result to the output file
+1. Split the input file into N chunks (where N = number of CPU cores), ensuring chunks start and end on line boundaries
+2. Send each chunk to a Worker Thread for parsing and partial aggregation
+3. Each Worker returns partial stats: counts by level, counts by status class, path counts, total lines, response time sum
+4. The main thread merges partial stats and computes final `avgResponseTimeMs`
+5. Write the JSON result to the output file
 
-- Must use Worker Threads (`worker_threads` module)
-- The number of workers should equal the number of logical CPU cores (`os.cpus().length`)
+- Must use Worker Threads for parallel processing
+- The number of workers should equal the number of logical CPU cores
 - Paths are relative to the current working directory or can be absolute
 - If the input file doesn't exist, print `Operation failed`
+
+**Test data generator:**
+Use the provided script to generate a large log file for testing:
+
+```bash
+node scripts/generate-logs.js --output workspace/logs.txt --lines 500000
+```
 
 ## Project Structure
 
@@ -280,9 +311,9 @@ src/
     hash.js        — hash command handler
     encrypt.js     — encrypt command handler
     decrypt.js     — decrypt command handler
-    sortLarge.js   — sort-large command handler
+    logStats.js    — log-stats command handler
   workers/
-    sortWorker.js  — worker thread for sort-large command
+    logWorker.js   — worker thread for log-stats command
   utils/
     pathResolver.js  — resolve paths relative to current working directory
     argParser.js     — parse command line arguments
@@ -294,8 +325,8 @@ src/
 - Use `stream.pipeline` (from `stream/promises`) to connect streams and handle errors properly
 - For CSV parsing in the Transform stream, handle the first line (headers) separately from data lines
 - For `json-to-csv`, you'll need to buffer the JSON input to parse it, but write the CSV output via a stream
-- For `sort-large`, use `os.cpus().length` to determine the number of workers
-- For merging sorted arrays, implement a k-way merge: compare the first element of each sorted chunk, pick the smallest, advance that chunk's pointer
+- For `log-stats`, make sure chunks start/end on line boundaries to avoid partial log lines
+- For merging stats, sum counters and merge path maps before computing `topPaths`
 - Always resolve file paths relative to the current working directory before performing operations
 - Use `path.resolve()` to combine current working directory with relative paths
 - Use `process.cwd()` is NOT appropriate here - maintain your own current working directory variable

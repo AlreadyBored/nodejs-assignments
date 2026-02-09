@@ -27,11 +27,11 @@
 
 ## Advanced Scope
 
-- **+25** `sort-large` command works correctly:
-    - **+5** File is split into chunks equal to the number of CPU cores
-    - **+10** Each chunk is sorted in a separate Worker Thread
-    - **+10** Sorted chunks are merged correctly (k-way merge)
-    - **+5** Final output file contains all lines sorted alphabetically
+- **+25** `log-stats` command works correctly:
+    - **+5** File is split into chunks equal to the number of CPU cores (line boundaries preserved)
+    - **+10** Each chunk is processed in a separate Worker Thread
+    - **+5** Partial stats are merged correctly (counters, maps, totals)
+    - **+5** Final output JSON matches the specification
 - **+15** Project structure follows the specification (separate files for navigation, commands, utilities, worker)
 - **+20** Interactive REPL implementation:
     - **+10** Maintains application state (current working directory) across commands
