@@ -3,17 +3,19 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const { parseArgs } = require('node:util');
 
-const args = process.argv.slice(2);
-const getArg = (name, fallback) => {
-  const idx = args.indexOf(name);
-  if (idx === -1 || idx + 1 >= args.length) return fallback;
-  return args[idx + 1];
-};
+const { values } = parseArgs({
+  options: {
+    output: { type: 'string' },
+    lines: { type: 'string', default: '100000' },
+    seed: { type: 'string', default: '123456' }
+  }
+});
 
-const output = getArg('--output');
-const lines = Number(getArg('--lines', '100000'));
-const seed = Number(getArg('--seed', '123456'));
+const output = values.output;
+const lines = Number(values.lines);
+const seed = Number(values.seed);
 
 if (!output || !Number.isFinite(lines) || lines <= 0) {
   process.stderr.write('Usage: node scripts/generate-logs.js --output <path> --lines <count> [--seed <number>]\n');
