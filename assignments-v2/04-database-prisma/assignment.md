@@ -4,7 +4,7 @@
 
 Your task is to replace the in-memory data storage in the Knowledge Hub API with a real **PostgreSQL** database, using **Prisma** as the ORM to communicate with it.
 
-This is a continuation of the Fastify REST API assignment (Week 3). You will work in the same `nodejs2025Q2-knowledge-hub` repository.
+This is a continuation of the Nest.js Knowledge Hub API assignment (Week 3). You will work in the same `nodejs2025Q2-knowledge-hub` repository.
 
 ## Technical requirements
 

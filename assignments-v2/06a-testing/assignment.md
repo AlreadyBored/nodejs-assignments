@@ -9,7 +9,8 @@ This is a continuation of the Authentication & Authorization assignment (Week 5)
 ## Technical requirements
 
 - Use [Vitest](https://vitest.dev/) as the testing framework
-- Use Fastify's built-in [`inject()`](https://fastify.dev/docs/latest/Guides/Testing/) method (powered by `light-my-request`) for integration tests
+- Use Nest testing tools (`@nestjs/testing`) and HTTP-level integration tests against the application instance (for example, with `supertest`)
+- `supertest` can be used for integration tests
 - Use 24.x.x version (24.10.0 or upper) of Node.js
 
 ## Implementation details
@@ -23,7 +24,7 @@ This is a continuation of the Authentication & Authorization assignment (Week 5)
 
 2. **Integration Tests**
 
-   Write integration tests for API endpoints using Fastify's `inject()` method. Implement **at least 3** complete test scenarios:
+   Write integration tests for API endpoints using a real Nest application instance (`createNestApplication`) and HTTP requests. Implement **at least 3** complete test scenarios:
 
    **Scenario 1: Full Article lifecycle**
    1. Signup a new user via `POST /auth/signup`

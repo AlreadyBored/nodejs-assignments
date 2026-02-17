@@ -8,18 +8,18 @@ This is a continuation of the previous assignments. You will work in the same `n
 
 ## Technical requirements
 
-- Only Fastify's built-in Pino logger should be used for logging — no additional logging libraries are allowed
+- Use Nest's logging facilities (built-in `Logger` or a custom Nest-compatible logger)
 - Use 24.x.x version (24.10.0 or upper) of Node.js
 
 ## Implementation details
 
-1. **Pino Logger Configuration**
+1. **Logger Configuration**
 
-   Configure Fastify's built-in Pino logger with the following settings:
-   - Log level should be configurable via the `LOG_LEVEL` environment variable (default: `info`)
-   - Supported levels: `trace`, `debug`, `info`, `warn`, `error`, `fatal`
-   - In development mode, use `pino-pretty` for human-readable output
-   - In production mode, use structured JSON format
+   Configure application logging with the following settings:
+   - Log level should be configurable via the `LOG_LEVEL` environment variable (default: `log`)
+   - Supported levels: `log`, `debug`, `warn`, `error`, `verbose`
+   - In development mode, logs should be human-readable
+   - In production mode, logs should be machine-parseable (structured)
 
 2. **Request/Response Logging**
 
@@ -30,7 +30,7 @@ This is a continuation of the previous assignments. You will work in the same `n
 
 3. **Custom Error Handler**
 
-   Implement a custom error handler using Fastify's `setErrorHandler`:
+   Implement a global exception handling layer in Nest (for example, using an exception filter):
    - Catch all unhandled errors during request processing
    - Log the error with full stack trace at `error` level
    - Return a proper HTTP response with the appropriate status code and a JSON body:
@@ -60,7 +60,7 @@ This is a continuation of the previous assignments. You will work in the same `n
 5. **Process Error Handling**
 
    Add listeners for unhandled errors at the process level:
-   - `uncaughtException` — log the error at `fatal` level and perform graceful shutdown (close the server, close database connections, then exit with code 1)
+   - `uncaughtException` — log the error at `error` level and perform graceful shutdown (close the server, close database connections, then exit with code 1)
    - `unhandledRejection` — log the error at `error` level and perform graceful shutdown
 
 6. **Log File Rotation**
@@ -69,12 +69,12 @@ This is a continuation of the previous assignments. You will work in the same `n
    - Implement log file rotation based on file size
    - The maximum file size should be configurable via the `LOG_MAX_FILE_SIZE` environment variable (in kilobytes, default: `1024` = 1MB)
    - When the log file exceeds the maximum size, it should be renamed with a timestamp suffix (e.g., `app.log` → `app-2025-06-15T10-30-00.log`) and a new `app.log` should be created
-   - Use `pino.destination` or `pino.transport` with a file target
+   - Implement file logging and rotation in your logger layer
 
 7. **Environment Variables**
 
    Add the following to `.env.example`:
    ```
-   LOG_LEVEL=info
+   LOG_LEVEL=log
    LOG_MAX_FILE_SIZE=1024
    ```

@@ -8,13 +8,13 @@
 - [Assignment](assignments-v2/01b-data-processing-cli/assignment.md)
 - [Scoring](assignments-v2/01b-data-processing-cli/score.md)
 
-## CRUD API
+## CRUD API (Fastify)
 - [Assignment](assignments-v2/02-crud-api/assignment.md)
 - [Scoring](assignments-v2/02-crud-api/score.md)
 
-## Fastify REST API
-- [Assignment](assignments-v2/03-fastify-rest-api/assignment.md)
-- [Scoring](assignments-v2/03-fastify-rest-api/score.md)
+## Nest.js Knowledge Hub API
+- [Assignment](assignments-v2/03-kh-rest-api/assignment.md)
+- [Scoring](assignments-v2/03-kh-rest-api/score.md)
 
 ## REST service: Database & Prisma ORM
 - [Assignment](assignments-v2/04-database-prisma/assignment.md)

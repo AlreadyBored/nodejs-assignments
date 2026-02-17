@@ -2,10 +2,10 @@
 
 ## Basic Scope
 
-- **+10** Fastify Pino logger is configured with configurable log level via `LOG_LEVEL` env variable
+- **+10** Nest logger is configured with configurable log level via `LOG_LEVEL` env variable
 - **+10** Incoming requests are logged (method, URL, query parameters, body)
 - **+10** Outgoing responses are logged (status code, response time)
-- **+10** Custom error handler is implemented via `setErrorHandler` — catches errors, logs them, returns proper HTTP responses
+- **+10** Global exception handling is implemented (exception filter or equivalent) — catches errors, logs them, returns proper HTTP responses
 - **+10** Custom error classes are implemented (`NotFoundError`, `ValidationError`, `UnauthorizedError`, `ForbiddenError`) with `statusCode` property
 - **+10** Custom error classes are used in route handlers instead of manually setting status codes
 

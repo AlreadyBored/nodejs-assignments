@@ -72,7 +72,7 @@ This is a continuation of the previous assignments. You will work in the same `n
    - Building the application image
    - Starting the PostgreSQL database
    - Running Prisma migrations (`npx prisma migrate deploy`)
-   - Starting the Fastify server
+   - Starting the Nest.js server
 
    Consider using a startup script or Docker Compose `entrypoint` to ensure the database is ready before running migrations and starting the app.
 

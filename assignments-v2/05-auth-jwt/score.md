@@ -6,7 +6,7 @@
 - **+20** Route `POST /auth/login` implemented correctly (validates credentials, returns tokens, returns 200/400/403)
 - **+10** User `password` is saved into the database as a hash (bcrypt)
 - **+20** Access Token is implemented, JWT payload contains `userId`, `login`, and `role`, secret key is saved in `.env`
-- **+30** Authentication is required for access to all routes except `/auth/signup`, `/auth/login`, `/auth/refresh`, `/doc`, and `/`. Implemented via Fastify `onRequest` hook or `preHandler`.
+- **+30** Authentication is required for access to all routes except `/auth/signup`, `/auth/login`, `/auth/refresh`, `/doc`, and `/`. Implemented via Nest guards or middleware.
 
 ## Advanced Scope
 
