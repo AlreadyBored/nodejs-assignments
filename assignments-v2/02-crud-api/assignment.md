@@ -2,12 +2,13 @@
 
 ## Description
 
-Your task is to implement a simple CRUD API for a **Product Catalog** using an in-memory database underneath. You must use **only the built-in Node.js `http` module** — no frameworks are allowed.
+Your task is to implement a simple CRUD API for a **Product Catalog** using an in-memory database underneath. Use **Fastify** as the framework.
 
 ## Technical requirements
 
 - Task can be implemented in JavaScript or TypeScript
-- Only `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `tsx`, linter and its plugins, bundler and its plugins and loaders, formatter and its plugins, `uuid`, `@types/*` as well as libraries used for testing are allowed
+- Use [Fastify](https://fastify.dev/) as the web framework
+- Only `fastify`, `@fastify/*` plugins, `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `tsx`, linter and its plugins, bundler and its plugins and loaders, formatter and its plugins, `uuid`, `@types/*` as well as libraries used for testing are allowed
 - Use 24.x.x version (24.10.0 or upper) of Node.js
 - Prefer asynchronous API whenever possible
 
@@ -40,7 +41,7 @@ Your task is to implement a simple CRUD API for a **Product Catalog** using an i
     - `category` — product category (`string`, **required**, e.g. `"electronics"`, `"books"`, `"clothing"`)
     - `inStock` — whether the product is in stock (`boolean`, **required**)
 
-3. Requests to non-existing endpoints (e.g. `some-non/existing/resource`) should be handled (server should answer with `status code` **404** and corresponding human-friendly message)
+3. Requests to non-existing endpoints (e.g. `/some-non/existing/resource`) should be handled (server should answer with `status code` **404** and corresponding human-friendly message)
 
 4. Errors on the server side that occur during the processing of a request should be handled and processed correctly (server should answer with `status code` **500** and corresponding human-friendly message)
 
