@@ -49,7 +49,11 @@ You should implement several functions in dedicated files:
   - On unknown command, print `Unknown command`
   - On `Ctrl+C` or end of input, print `Goodbye!` and exit
 
-- `progress.js` — implement a function that simulates a progress bar in the terminal. The bar should go from 0% to 100% over approximately 5 seconds, updating in place (using `\r`) every 100ms. The output format should be: `[████████████████████          ] 67%` (30-character bar). When complete, print `Done!` on a new line.
+- `progress.js` — implement a function that simulates a progress bar in the terminal. The bar should go from 0% to 100%, updating in place (using `\r`). Parameters can be customized via CLI options:
+  - `--duration <milliseconds>` — total duration in milliseconds (default: 5000)
+  - `--interval <milliseconds>` — update interval in milliseconds (default: 100)
+  - `--length <number>` — progress bar character length (default: 30)
+  The output format should be: `[████████████████████          ] 67%`. When complete, print `Done!` on a new line.
 
 ### Modules (src/modules)
 
