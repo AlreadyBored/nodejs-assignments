@@ -1,8 +1,8 @@
 # Node.js Assignments v2
 
 ## Node.js Basics
-- [Assignment](assignments-v2/01a-nodejs-basics/assignment.md)
-- [Scoring](assignments-v2/01a-nodejs-basics/score.md)
+- [Assignment](assignments-v2/01a-nodejs-fundamentals/assignment.md)
+- [Scoring](assignments-v2/01a-nodejs-fundamentals/score.md)
 
 ## Data Processing CLI
 - [Assignment](assignments-v2/01b-data-processing-cli/assignment.md)
