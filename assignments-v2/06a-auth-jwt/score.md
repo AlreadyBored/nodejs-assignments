@@ -1,5 +1,8 @@
 # Scoring: Authentication & Authorization
 
+Max total score: 172
+
+
 ## Basic Scope
 
 - **+20** Route `POST /auth/signup` implemented correctly (creates user, validates input, returns 201/400)
@@ -10,8 +13,8 @@
 
 ## Advanced Scope
 
-- **+25** Route `POST /auth/refresh` implemented correctly (validates refresh token, returns new token pair, returns 200/401/403)
-- **+15** Correct handling of expired/invalid tokens (returns 401 with descriptive message)
+- **+26** Route `POST /auth/refresh` implemented correctly (validates refresh token, returns new token pair, returns 200/401/403)
+- **+16** Correct handling of expired/invalid tokens (returns 401 with descriptive message)
 - **+10** RBAC is implemented (viewer: read-only, editor: own content, admin: full access). Returns 403 for unauthorized operations.
 
 ## Hacker Scope

@@ -1,5 +1,8 @@
 # Scoring: Authentication & Authorization
 
+Max total score: 170
+
+
 ## Basic Scope
 
 - **+30** Route `/auth/signup` implemented correctly, related logic is divided between controller and corresponding service

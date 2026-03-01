@@ -1,5 +1,8 @@
 ## REST service: Containerization, Docker
 
+Max total score: 180
+
+
 ## Basic Scope
 
 - **+20** `Readme.md` has instruction how to run application

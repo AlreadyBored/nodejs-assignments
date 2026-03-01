@@ -1,5 +1,8 @@
 # Scoring: Websocket remote control
 
+Max total score: 164
+
+
 ## Basic Scope
 
 - Websocket

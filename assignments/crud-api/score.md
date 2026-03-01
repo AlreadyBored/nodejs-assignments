@@ -1,5 +1,8 @@
 # Scoring: CRUD API
 
+Max total score: 222
+
+
 ## Basic Scope
 
 - **+10** The repository with the application contains a `Readme.md` file containing detailed instructions for

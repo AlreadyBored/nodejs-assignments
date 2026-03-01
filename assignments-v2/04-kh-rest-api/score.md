@@ -1,5 +1,8 @@
 # Scoring: Nest.js Knowledge Hub API
 
+Max total score: 142
+
+
 ## Basic Scope
 
 - **+10** The repository with the application contains a `Readme.md` file containing detailed instructions for installing, running and using the application
@@ -11,9 +14,9 @@
 
 ## Advanced Scope
 
-- **+15** DTO validation is used for all request bodies (validation decorators + validation pipe)
+- **+16** DTO validation is used for all request bodies (validation decorators + validation pipe)
 - **+10** Article filtering by `status`, `categoryId`, and `tag` query parameters works correctly
-- **+15** OpenAPI documentation is generated via `@nestjs/swagger` and accessible at `/doc`
+- **+16** OpenAPI documentation is generated via `@nestjs/swagger` and accessible at `/doc`
 - **+10** Cascading behavior on delete is implemented correctly (User delete → articles nullified + comments removed; Category delete → articles nullified; Article delete → comments removed)
 
 ## Hacker Scope

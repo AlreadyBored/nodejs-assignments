@@ -1,5 +1,8 @@
 # Scoring: Node.js Basics
 
+Max total score: 190
+
+
 ## Check
 
 For check simplification you have npm-scripts in `package.json`.
