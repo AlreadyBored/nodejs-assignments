@@ -4,7 +4,7 @@
 
 Your task is to extend the existing **Knowledge Hub API** with a Retrieval-Augmented Generation (RAG) layer that answers user questions using content stored in the service database.
 
-This assignment is a continuation of Assignment `08` and previous Knowledge Hub assignments. You will work in the same repository created in assignment `03`.
+This assignment is a continuation of Assignment `09` and previous Knowledge Hub assignments. You will work in the same repository created in assignment `05`.
 
 The key idea: RAG should be built on top of existing Knowledge Hub entities (primarily articles), not as an isolated standalone app.
 

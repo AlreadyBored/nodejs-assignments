@@ -4,9 +4,9 @@
 
 Your task is to prepare the Knowledge Hub API runtime environment using Docker.
 
-This assignment is a continuation of the Nest.js Knowledge Hub API assignment (Week 3). You will work in the same repository created in assignment `03`.
+This assignment is a continuation of the Nest.js Knowledge Hub API assignment (Week 5). You will work in the same repository created in assignment `05`.
 
-The main goal of this step is to configure containerized infrastructure early: application container + PostgreSQL container. In the next assignment (`04b`), you will connect Prisma to this database and move from in-memory storage to SQL.
+The main goal of this step is to configure containerized infrastructure early: application container + PostgreSQL container. In the next assignment (`06b`), you will connect Prisma to this database and move from in-memory storage to SQL.
 
 ## Prerequisites
 
@@ -112,5 +112,5 @@ The main goal of this step is to configure containerized infrastructure early: a
 ## Hints
 
 - Use `depends_on` with `condition: service_healthy` to improve startup order
-- You will reuse the same PostgreSQL container setup in assignment `04b`
+- You will reuse the same PostgreSQL container setup in assignment `06b`
 - Check image size with: `docker images <image-name>`
