@@ -4,7 +4,7 @@
 
 Your task is to extend the existing **Nest.js Knowledge Hub API** with AI-powered capabilities that work with real data from the service database.
 
-This assignment is a continuation of previous Knowledge Hub assignments. You will work in the same repository created in assignment `03`.
+This assignment is a continuation of previous Knowledge Hub assignments. You will work in the same repository created in assignment `05`.
 
 The main goal is to integrate a **specific free LLM API** (Google Gemini API) into the service architecture and expose practical AI endpoints for existing Knowledge Hub entities.
 

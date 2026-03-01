@@ -13,36 +13,36 @@
 - [Scoring](assignments-v2/03-crud-api/score.md)
 
 ## WebSocket: Live Quiz Game
-- [Assignment](assignments-v2/08-websockets/assignment.md)
-- [Scoring](assignments-v2/08-websockets/score.md)
+- [Assignment](assignments-v2/04-websockets/assignment.md)
+- [Scoring](assignments-v2/04-websockets/score.md)
 
 ## Nest.js Knowledge Hub API
-- [Assignment](assignments-v2/04-kh-rest-api/assignment.md)
-- [Scoring](assignments-v2/04-kh-rest-api/score.md)
+- [Assignment](assignments-v2/05-kh-rest-api/assignment.md)
+- [Scoring](assignments-v2/05-kh-rest-api/score.md)
 
 ## REST service: Containerization & Docker (Foundation)
-- [Assignment](assignments-v2/05a-docker/assignment.md)
-- [Scoring](assignments-v2/05a-docker/score.md)
+- [Assignment](assignments-v2/06a-docker/assignment.md)
+- [Scoring](assignments-v2/06a-docker/score.md)
 
 ## REST service: Database & Prisma ORM
-- [Assignment](assignments-v2/05b-database-prisma/assignment.md)
-- [Scoring](assignments-v2/05b-database-prisma/score.md)
+- [Assignment](assignments-v2/06b-database-prisma/assignment.md)
+- [Scoring](assignments-v2/06b-database-prisma/score.md)
 
 ## REST service: Authentication & Authorization
-- [Assignment](assignments-v2/06a-auth-jwt/assignment.md)
-- [Scoring](assignments-v2/06a-auth-jwt/score.md)
+- [Assignment](assignments-v2/07a-auth-jwt/assignment.md)
+- [Scoring](assignments-v2/07a-auth-jwt/score.md)
 
 ## Basic Testing
-- [Assignment](assignments-v2/06b-basic-testing/assignment.md)
-- [Scoring](assignments-v2/06b-basic-testing/score.md)
+- [Assignment](assignments-v2/07b-basic-testing/assignment.md)
+- [Scoring](assignments-v2/07b-basic-testing/score.md)
 
 ## REST service: Testing
-- [Assignment](assignments-v2/07a-testing/assignment.md)
-- [Scoring](assignments-v2/07a-testing/score.md)
+- [Assignment](assignments-v2/08a-testing/assignment.md)
+- [Scoring](assignments-v2/08a-testing/score.md)
 
 ## REST service: Logging & Error Handling
-- [Assignment](assignments-v2/07b-logging-errors/assignment.md)
-- [Scoring](assignments-v2/07b-logging-errors/score.md)
+- [Assignment](assignments-v2/08b-logging-errors/assignment.md)
+- [Scoring](assignments-v2/08b-logging-errors/score.md)
 
 ## Knowledge Hub.AI: LLM Integration
 - [Assignment](assignments-v2/09-ai-llm-integration/assignment.md)

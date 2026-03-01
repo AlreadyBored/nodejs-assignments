@@ -4,9 +4,9 @@
 
 Your task is to write unit tests for the Knowledge Hub API using [Vitest](https://vitest.dev/) testing framework.
 
-This is a continuation of the previous assignments. You will work in the same repository created in assignment `03`.
+This is a continuation of the previous assignments. You will work in the same repository created in assignment `05`.
 
-> Note: Integration tests for the Knowledge Hub API are provided by the course and have been running since assignment `03`. Your responsibility is to ensure that your changes never break the existing integration test suite. In this assignment, you focus exclusively on **unit testing** the application.
+> Note: Integration tests for the Knowledge Hub API are provided by the course and have been running since assignment `05`. Your responsibility is to ensure that your changes never break the existing integration test suite. In this assignment, you focus exclusively on **unit testing** the application.
 
 ## Technical requirements
 

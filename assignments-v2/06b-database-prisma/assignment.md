@@ -4,13 +4,13 @@
 
 Your task is to replace the in-memory data storage in the Knowledge Hub API with a real **PostgreSQL** database, using **Prisma** as the ORM.
 
-This assignment is a continuation of `04a` (Containerization & Docker Foundation). You will work in the same repository created in assignment `03` and reuse the PostgreSQL container configured in `04a`.
+This assignment is a continuation of `06a` (Containerization & Docker Foundation). You will work in the same repository created in assignment `05` and reuse the PostgreSQL container configured in `06a`.
 
 ## Technical requirements
 
 - Task should be implemented in TypeScript
 - Use 24.x.x version (24.10.0 or upper) of Node.js
-- PostgreSQL should run in Docker (reuse setup from `04a`)
+- PostgreSQL should run in Docker (reuse setup from `06a`)
 
 ## Implementation details
 
@@ -64,9 +64,9 @@ This assignment is a continuation of `04a` (Containerization & Docker Foundation
      - docker app + docker db: `postgresql://user:password@db:5432/knowledge_hub?schema=public`
    - `.env` must not be committed, `.env.example` must be present
 
-7. **Reuse Docker setup from `04a`**
+7. **Reuse Docker setup from `06a`**
 
-   - Use existing `docker-compose.yml` with PostgreSQL service from assignment `04a`
+   - Use existing `docker-compose.yml` with PostgreSQL service from assignment `06a`
    - Ensure Prisma can connect to this DB and migrations run successfully
 
 8. **Replace In-Memory Storage**
@@ -86,4 +86,3 @@ This assignment is a continuation of `04a` (Containerization & Docker Foundation
 - Use `npx prisma migrate reset` to reset DB and re-run seed
 - Use `include`/`select` to avoid over-fetching
 - Use `prisma.$transaction` for multi-step write operations
-

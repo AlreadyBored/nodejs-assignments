@@ -10,7 +10,7 @@ Max total score: 154
 - **+10** Many-to-many relation between `Article` and `Tag` is implemented
 - **+10** Prisma migrations are created and committed to the repository
 - **+10** `DATABASE_URL` is stored in `.env` (`.env.example` is committed)
-- **+10** Existing Dockerized PostgreSQL setup from `04a` is reused successfully
+- **+10** Existing Dockerized PostgreSQL setup from `06a` is reused successfully
 - **+10** `GET /user` works with real database
 - **+10** `GET /article` works with real database (including filtering by status, categoryId, tag)
 - **+6** `GET /category` works with real database
