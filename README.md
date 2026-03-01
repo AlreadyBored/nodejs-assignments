@@ -44,11 +44,11 @@
 - [Assignment](assignments-v2/07-websockets/assignment.md)
 - [Scoring](assignments-v2/07-websockets/score.md)
 
-## AI/LLM Integration
+## Knowledge Hub.AI: LLM Integration
 - [Assignment](assignments-v2/08-ai-llm-integration/assignment.md)
 - [Scoring](assignments-v2/08-ai-llm-integration/score.md)
 
-## AI RAG & Vector Database
+## Knowledge Hub.AI: RAG & Vector Database
 - [Assignment](assignments-v2/09-ai-rag-vectordb/assignment.md)
 - [Scoring](assignments-v2/09-ai-rag-vectordb/score.md)
 
