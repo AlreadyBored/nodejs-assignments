@@ -2,70 +2,85 @@
 
 ## Description
 
-Your task is to write unit and integration tests for the Knowledge Hub API using [Vitest](https://vitest.dev/) testing framework.
+Your task is to write unit tests for the Knowledge Hub API using [Vitest](https://vitest.dev/) testing framework.
 
-This is a continuation of the Authentication & Authorization assignment (Week 5). You will work in the same `nodejs2025Q2-knowledge-hub` repository.
+This is a continuation of the previous assignments. You will work in the same repository created in assignment `03`.
+
+> Note: Integration tests for the Knowledge Hub API are provided by the course and have been running since assignment `03`. Your responsibility is to ensure that your changes never break the existing integration test suite. In this assignment, you focus exclusively on **unit testing** the application.
 
 ## Technical requirements
 
 - Use [Vitest](https://vitest.dev/) as the testing framework
-- Use Nest testing tools (`@nestjs/testing`) and HTTP-level integration tests against the application instance (for example, with `supertest`)
-- `supertest` can be used for integration tests
+- Use `@nestjs/testing` for module instantiation in unit tests
 - Use 24.x.x version (24.10.0 or upper) of Node.js
 
 ## Implementation details
 
-1. **Unit Tests**
+1. **Services**
 
-   Write unit tests for the service/business logic layer:
-   - User service: validation of signup data, password hashing verification, role assignment
-   - Article service: validation of article creation data, status transitions (e.g. draft → published → archived), tag management logic
-   - Auth logic: JWT token generation, token verification, RBAC permission checks
+   Write unit tests for all service classes. Each service must be tested in isolation — all dependencies (database, external services) must be mocked.
 
-2. **Integration Tests**
+   - **User service**: signup data validation, password hashing, role assignment, user not found, duplicate login
+   - **Article service**: article creation validation, status transitions (`draft → published → archived`), invalid transitions, tag management, filtering logic (`status`, `categoryId`, `tag`)
+   - **Auth service**: JWT token generation, token verification, refresh token rotation, expired/invalid token handling, RBAC permission checks
 
-   Write integration tests for API endpoints using a real Nest application instance (`createNestApplication`) and HTTP requests. Implement **at least 3** complete test scenarios:
+2. **Guards**
 
-   **Scenario 1: Full Article lifecycle**
-   1. Signup a new user via `POST /auth/signup`
-   2. Login via `POST /auth/login` to get an access token
-   3. Create a category via `POST /category`
-   4. Create an article with tags via `POST /article` (expect **201** with the created record)
-   5. Get the created article via `GET /article/:id` (expect the created record)
-   6. Update the article via `PUT /article/:id` (expect the updated record with same `id`)
-   7. Delete the article via `DELETE /article/:id` (expect **204**)
-   8. Try to get the deleted article via `GET /article/:id` (expect **404**)
+   Write unit tests for all custom guards:
+   - **JWT Auth Guard**: valid token passes, missing/malformed/expired token throws `UnauthorizedException`
+   - **Roles Guard**: correct role grants access, insufficient role throws `ForbiddenException`, missing `@Roles()` metadata defaults correctly
 
-   **Scenario 2: Authentication & Authorization flow**
-   1. Try to access `GET /article` without a token (expect **401**)
-   2. Signup a new user via `POST /auth/signup`
-   3. Login via `POST /auth/login` to get tokens
-   4. Access `GET /article` with a valid token (expect **200**)
-   5. Refresh tokens via `POST /auth/refresh` (expect new token pair)
-   6. Access `GET /article` with the new access token (expect **200**)
-   7. Try to access `GET /article` with the old (now invalid) refresh token for refresh (expect **403**)
+3. **Pipes**
 
-   **Scenario 3: Cascading operations & filtering**
-   1. Login as admin
-   2. Create a category via `POST /category`
-   3. Create multiple articles with different statuses and tags
-   4. Filter articles by status via `GET /article?status=published` (expect only published articles)
-   5. Filter articles by tag via `GET /article?tag=nodejs` (expect only articles with that tag)
-   6. Delete the category via `DELETE /category/:id` (expect **204**)
-   7. Get the articles that were in that category (expect `categoryId` to be `null`)
+   Write unit tests for any custom pipes:
+   - **ParseUUID pipe** (or equivalent): valid UUID passes through, invalid string throws `BadRequestException`
 
-3. **Mocking**
+4. **Interceptors & Filters**
 
-   - For unit tests, mock database calls (Prisma Client) to isolate business logic
+   - **Response interceptors** (e.g. password stripping from User responses): verify the field is absent in output
+   - **Exception filters** (if custom): verify the correct HTTP status and error shape is returned for known exceptions
+
+5. **DTO Validation**
+
+   Test that DTO classes with `class-validator` decorators behave correctly:
+   - Required fields missing → validation fails
+   - Invalid enum values → validation fails
+   - Valid payload → validation passes
+
+   Use `validateOrReject` / `validate` from `class-validator` directly — no HTTP layer needed.
+
+6. **Mocking**
+
+   - Mock the data access layer (Prisma Client or repository layer) in all unit tests to isolate business logic from the database
    - Use Vitest's built-in mocking capabilities (`vi.mock`, `vi.fn`, `vi.spyOn`)
+   - Do not perform any real database calls or HTTP requests in unit tests
 
-4. **NPM Scripts**
+7. **Edge Cases**
+
+   Cover the following edge cases explicitly:
+   - Invalid or malformed UUIDs
+   - Missing required fields
+   - Duplicate user login/signup
+   - Expired or tampered JWT tokens
+   - Operations forbidden by role (e.g. viewer trying to create/delete)
+   - Accessing or modifying a non-existent resource
+
+8. **NPM Scripts**
 
    - `npm run test` — runs all tests
+   - `npm run test:unit` — runs only unit tests
    - `npm run test:coverage` — runs all tests with coverage report
-   - Target coverage: **> 60%** for lines and branches
 
-5. **Test Configuration**
+9. **Coverage Thresholds**
 
-   - Create a `vitest.config.ts` (or configure in `vite.config.ts`) with proper settings
-   - Tests should be placed in `__tests__/` directories or in files with `.test.ts` / `.spec.ts` suffix
+   Configure coverage thresholds in `vitest.config.ts`. Tests must meet:
+   - Lines: **≥ 90%**
+   - Branches: **≥ 85%**
+
+   `npm run test:coverage` must exit with a non-zero code if thresholds are not met.
+
+10. **Test Configuration**
+
+    - Create a `vitest.config.ts` with proper settings
+    - Tests should be placed in `__tests__/` directories or in files with `.test.ts` / `.spec.ts` suffix
+    - Unit tests should live separately from any integration tests (e.g. `src/**/*.unit.spec.ts` or `src/__tests__/unit/`)

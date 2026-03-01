@@ -4,7 +4,7 @@
 
 Your task is to implement Authentication and Authorization with JWT (Access and Refresh tokens) for the Knowledge Hub API.
 
-This is a continuation of the Database & Prisma assignment (`04b`). You will work in the same `nodejs2025Q2-knowledge-hub` repository.
+This is a continuation of the Database & Prisma assignment (`04b`). You will work in the same repository created in assignment `03`.
 
 ## Technical requirements
 

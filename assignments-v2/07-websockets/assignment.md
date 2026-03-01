@@ -8,7 +8,6 @@ Your task is to implement a backend for a real-time **Live Quiz Game** using Web
 
 - Task can be implemented in JavaScript or TypeScript
 - Use 24.x.x version (24.10.0 or upper) of Node.js
-- Only [ws](https://www.npmjs.com/package/ws), `cross-env`, `typescript`, `tsx`, `ts-node`, `ts-node-dev`, `nodemon`, `dotenv`, linter and formatter and their plugins, bundler and its plugins, `@types/*` and testing tools are allowed
 - The program is started by npm script `start`:
   ```bash
   npm run start

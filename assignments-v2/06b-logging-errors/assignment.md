@@ -4,7 +4,7 @@
 
 Your task is to implement production-ready logging and error handling for the Knowledge Hub API.
 
-This is a continuation of the previous assignments. You will work in the same `nodejs2025Q2-knowledge-hub` repository.
+This is a continuation of the previous assignments. You will work in the same repository created in assignment `03`.
 
 ## Technical requirements
 

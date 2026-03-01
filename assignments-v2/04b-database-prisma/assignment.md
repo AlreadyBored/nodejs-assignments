@@ -4,7 +4,7 @@
 
 Your task is to replace the in-memory data storage in the Knowledge Hub API with a real **PostgreSQL** database, using **Prisma** as the ORM.
 
-This assignment is a continuation of `04a` (Containerization & Docker Foundation). You will work in the same `nodejs2025Q2-knowledge-hub` repository and reuse the PostgreSQL container configured in `04a`.
+This assignment is a continuation of `04a` (Containerization & Docker Foundation). You will work in the same repository created in assignment `03` and reuse the PostgreSQL container configured in `04a`.
 
 ## Technical requirements
 

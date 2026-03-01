@@ -10,7 +10,7 @@ Your task is to create a REST API for a **Knowledge Hub** platform using the Nes
 - Use Nest.js as the application framework
 - Use 24.x.x version (24.10.0 or upper) of Node.js
 
-NB! You must create a new repository from the starter template for this task. Its name must be `nodejs2025Q2-knowledge-hub`, i.e. full link to the repository must be `https://github.com/%your-github-id%/nodejs2025Q2-knowledge-hub`.
+NB! You must create a new repository from [template](https://github.com/rolling-scopes-school/nodejs-course-template/generate) for this task. Its name must match the current period of the course (for example, for Node.js 2026 Q1 it'll be `nodejs-2026q1-knowledge-hub`), i.e. full link to the repository must be `https://github.com/%your-github-id%/nodejs-2026q1-knowledge-hub`.
 
 **Create an application that operates with the following resources:**
 
