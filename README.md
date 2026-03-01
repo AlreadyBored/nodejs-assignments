@@ -25,8 +25,12 @@
 - [Scoring](assignments-v2/04b-database-prisma/score.md)
 
 ## REST service: Authentication & Authorization
-- [Assignment](assignments-v2/05-auth-jwt/assignment.md)
-- [Scoring](assignments-v2/05-auth-jwt/score.md)
+- [Assignment](assignments-v2/05a-auth-jwt/assignment.md)
+- [Scoring](assignments-v2/05a-auth-jwt/score.md)
+
+## Basic Testing
+- [Assignment](assignments-v2/05b-basic-testing/assignment.md)
+- [Scoring](assignments-v2/05b-basic-testing/score.md)
 
 ## REST service: Testing
 - [Assignment](assignments-v2/06a-testing/assignment.md)
@@ -37,16 +41,16 @@
 - [Scoring](assignments-v2/06b-logging-errors/score.md)
 
 ## WebSocket: Live Quiz Game
-- [Assignment](assignments-v2/08-websockets/assignment.md)
-- [Scoring](assignments-v2/08-websockets/score.md)
+- [Assignment](assignments-v2/07-websockets/assignment.md)
+- [Scoring](assignments-v2/07-websockets/score.md)
 
 ## AI/LLM Integration
-- [Assignment](assignments-v2/09-ai-llm-integration/assignment.md)
-- [Scoring](assignments-v2/09-ai-llm-integration/score.md)
+- [Assignment](assignments-v2/08-ai-llm-integration/assignment.md)
+- [Scoring](assignments-v2/08-ai-llm-integration/score.md)
 
 ## AI RAG & Vector Database
-- [Assignment](assignments-v2/10-ai-rag-vectordb/assignment.md)
-- [Scoring](assignments-v2/10-ai-rag-vectordb/score.md)
+- [Assignment](assignments-v2/09-ai-rag-vectordb/assignment.md)
+- [Scoring](assignments-v2/09-ai-rag-vectordb/score.md)
 
 ---
 
