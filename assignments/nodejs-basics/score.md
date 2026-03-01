@@ -1,5 +1,8 @@
 # Scoring: Node.js basics
 
+Max total score: 206
+
+
 ## Check
 For check simplification you have npm-scripts in `package.json`.  
 NB! Some scripts have predefined data (e.g. environment variables, CLI arguments). Feel free to change it during the check if necessary.

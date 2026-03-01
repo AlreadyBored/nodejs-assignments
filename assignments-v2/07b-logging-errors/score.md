@@ -1,5 +1,8 @@
 # Scoring: Logging & Error Handling
 
+Max total score: 100
+
+
 ## Basic Scope
 
 - **+10** Nest logger is configured with configurable log level via `LOG_LEVEL` env variable

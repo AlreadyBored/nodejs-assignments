@@ -1,5 +1,8 @@
 # Scoring: Database & Prisma ORM
 
+Max total score: 154
+
+
 ## Basic Scope
 
 - **+10** Prisma schema is defined with all required models (`User`, `Article`, `Category`, `Comment`, `Tag`)
@@ -10,8 +13,8 @@
 - **+10** Existing Dockerized PostgreSQL setup from `04a` is reused successfully
 - **+10** `GET /user` works with real database
 - **+10** `GET /article` works with real database (including filtering by status, categoryId, tag)
-- **+5** `GET /category` works with real database
-- **+5** `GET /comment` works with real database
+- **+6** `GET /category` works with real database
+- **+6** `GET /comment` works with real database
 
 ## Advanced Scope
 
@@ -23,8 +26,8 @@
 ## Hacker Scope
 
 - **+10** Indexes are added for frequently queried fields (`Article.status`, `Article.categoryId`, `Tag.name`)
-- **+5** Connection pooling is configured
-- **+5** N+1 problem is avoided by using Prisma `include` appropriately
+- **+6** Connection pooling is configured
+- **+6** N+1 problem is avoided by using Prisma `include` appropriately
 
 ## Forfeits
 

@@ -1,5 +1,8 @@
 # Scoring: Basic testing
 
+Max total score: 10
+
+
 ## Check
 For check simplification you have pre-implemented npm-scripts in `package.json`
 
@@ -7,7 +10,7 @@ For check simplification you have pre-implemented npm-scripts in `package.json`
 
 For each implemented test-case:
 - **+6** if test case is implemented correctly
-- **+3** if test case is implemented incorrectly
+- **+4** if test case is implemented incorrectly
 - **0** if test case is not implemented
 
 Test case is considered to be correctly implemented if:  

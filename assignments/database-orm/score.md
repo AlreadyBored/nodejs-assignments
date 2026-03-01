@@ -1,5 +1,8 @@
 # REST service: PostgreSQL & ORM 
 
+Max total score: 180
+
+
 ## Basic Scope
 
 - **+20** `Users` data is stored in **PostgreSQL** database and `typeorm` / `prisma`  interacts with the database to manipulate data.  

@@ -1,18 +1,21 @@
 # Scoring: Knowledge Hub AI Integration
 
+Max total score: 186
+
+
 ## Basic Scope
 
 - **+20** `POST /ai/articles/:articleId/summarize` works correctly with real article data from Knowledge Hub DB
-- **+15** `POST /ai/articles/:articleId/translate` works correctly with real article data from Knowledge Hub DB
-- **+15** `POST /ai/articles/:articleId/analyze` works correctly and returns structured analysis response
-- **+15** Gemini API integration is implemented correctly (API key via `.env`, model configurable)
+- **+16** `POST /ai/articles/:articleId/translate` works correctly with real article data from Knowledge Hub DB
+- **+16** `POST /ai/articles/:articleId/analyze` works correctly and returns structured analysis response
+- **+16** Gemini API integration is implemented correctly (API key via `.env`, model configurable)
 - **+10** Prompt templates are stored in a dedicated module (not hardcoded in controllers)
-- **+15** Request validation is implemented for AI routes (DTO + validation pipes, proper 400/404 behavior)
+- **+16** Request validation is implemented for AI routes (DTO + validation pipes, proper 400/404 behavior)
 
 ## Advanced Scope
 
-- **+15** Rate limiting is implemented for AI routes (configurable RPM, `429` + `Retry-After`)
-- **+15** Usage tracking endpoint is implemented (totals + by-endpoint counters, optional token counters)
+- **+16** Rate limiting is implemented for AI routes (configurable RPM, `429` + `Retry-After`)
+- **+16** Usage tracking endpoint is implemented (totals + by-endpoint counters, optional token counters)
 - **+10** Gemini API errors are handled gracefully (timeouts, auth errors, upstream rate limits)
 - **+10** Response caching is implemented for summarize/translate with TTL and deterministic cache key
 - **+10** Optional generic endpoint (`POST /ai/generate`) is implemented with validation and guardrails

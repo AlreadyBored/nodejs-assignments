@@ -1,4 +1,7 @@
 # Scoring: File Manager
+
+Max total score: 332
+
 ## Basic Scope
 - General
     - **+6** Application accepts username and prints proper message
@@ -12,8 +15,8 @@
     - **+20** List all files and folders in current directory
 - Basic operations with files implemented properly
     - **+10** Read file and print it's content in console
-    - **+5** Create empty file
-    - **+5** Create new directory
+    - **+6** Create empty file
+    - **+6** Create new directory
     - **+10** Rename file
     - **+10** Copy file
     - **+10** Move file

@@ -1,5 +1,8 @@
 # Scoring: Websocket battleship server
 
+Max total score: 190
+
+
 ## Basic Scope
 
 - Websocket
@@ -8,8 +11,8 @@
   - **+10** Websocket server message handler implemented properly
   - **+10** Websocket server message sender implemented properly
 - User
-  - **+5** Create user with password in temprorary database
-  - **+5** User validation
+  - **+6** Create user with password in temprorary database
+  - **+6** User validation
 - Room
   - **+6** Create game room
   - **+6** Add user to game room

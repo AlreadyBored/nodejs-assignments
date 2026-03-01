@@ -1,5 +1,8 @@
 # Scoring: Graphql
 
+Max total score: 360
+
+
 ## Basic Scope
 - **+144** 1.1 npm run test-queries  
 - **+90** 1.2 npm run test-mutations  

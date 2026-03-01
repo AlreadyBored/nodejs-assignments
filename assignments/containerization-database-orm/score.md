@@ -1,5 +1,8 @@
 ## REST service: Containerization and Database (PostgreSQL) & ORM
 
+Max total score: 360
+
+
 ## Basic Scope
 
 # 1) Containerization, Docker

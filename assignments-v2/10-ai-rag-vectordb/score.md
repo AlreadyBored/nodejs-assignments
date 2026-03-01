@@ -1,13 +1,16 @@
 # Scoring: Knowledge Hub RAG & Vector Database
 
+Max total score: 194
+
+
 ## Basic Scope
 
 - **+20** `POST /ai/rag/index` indexes Knowledge Hub article data into vector storage correctly
-- **+15** `POST /ai/rag/search` performs semantic search and returns ranked chunks with article attribution
-- **+25** `POST /ai/rag/chat` implements end-to-end RAG (retrieve relevant chunks, build grounded prompt, return answer + sources)
+- **+16** `POST /ai/rag/search` performs semantic search and returns ranked chunks with article attribution
+- **+26** `POST /ai/rag/chat` implements end-to-end RAG (retrieve relevant chunks, build grounded prompt, return answer + sources)
 - **+10** `DELETE /ai/rag/index/articles/:articleId` removes article vectors from index correctly
-- **+15** Gemini generation + Gemini embeddings are integrated correctly (configured via `.env`)
-- **+15** Chunking configuration is implemented via env (`RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`)
+- **+16** Gemini generation + Gemini embeddings are integrated correctly (configured via `.env`)
+- **+16** Chunking configuration is implemented via env (`RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`)
 
 ## Advanced Scope
 

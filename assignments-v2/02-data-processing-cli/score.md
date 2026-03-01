@@ -1,10 +1,13 @@
 # Scoring: Data Processing CLI
 
+Max total score: 296
+
+
 ## Basic Scope
 
 - **+6** Application starts with npm run start and displays welcome message
 - **+10** Application exits gracefully with `.exit` command or `Ctrl+C` and displays goodbye message
-- **+5** Current working directory is printed at startup and after each successful operation
+- **+6** Current working directory is printed at startup and after each successful operation
 - **+10** Unknown or invalid commands display `Invalid input` and application continues running
 - **+10** Operations that fail display `Operation failed` and application continues running
 
@@ -22,17 +25,17 @@
 - **+8** `decrypt` command works correctly (AES-256-GCM, key derivation from password+salt, Streams, authTag verified, result matches original)
 
 ### Path Resolution
-- **+15** All file paths in commands are correctly resolved relative to current working directory
+- **+16** All file paths in commands are correctly resolved relative to current working directory
 - **+10** All file operations properly handle errors (non-existent files, invalid paths, permission errors)
 
 ## Advanced Scope
 
-- **+25** `log-stats` command works correctly:
-    - **+5** File is split into chunks equal to the number of CPU cores (line boundaries preserved)
+- **+26** `log-stats` command works correctly:
+    - **+6** File is split into chunks equal to the number of CPU cores (line boundaries preserved)
     - **+10** Each chunk is processed in a separate Worker Thread
-    - **+5** Partial stats are merged correctly (counters, maps, totals)
-    - **+5** Final output JSON matches the specification
-- **+15** Project structure follows the specification (separate files for navigation, commands, utilities, worker)
+    - **+6** Partial stats are merged correctly (counters, maps, totals)
+    - **+6** Final output JSON matches the specification
+- **+16** Project structure follows the specification (separate files for navigation, commands, utilities, worker)
 - **+20** Interactive REPL implementation:
     - **+10** Maintains application state (current working directory) across commands
     - **+10** Properly handles readline for continuous command input

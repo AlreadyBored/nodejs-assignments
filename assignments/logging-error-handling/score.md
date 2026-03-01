@@ -1,5 +1,8 @@
 # REST service: Logging & Error Handling
 
+Max total score: 170
+
+
 ## Basic Scope
 
 - **+20** Custom `LoggingService` is implemented and used for logging

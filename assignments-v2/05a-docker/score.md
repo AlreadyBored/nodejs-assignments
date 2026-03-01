@@ -1,5 +1,8 @@
 # Scoring: Containerization & Docker (Foundation)
 
+Max total score: 166
+
+
 ## Basic Scope
 
 - **+10** `.dockerignore` file is created with appropriate entries
@@ -13,17 +16,17 @@
 
 ## Advanced Scope
 
-- **+15** Multi-stage build is used in the Dockerfile (separate build and production stages)
+- **+16** Multi-stage build is used in the Dockerfile (separate build and production stages)
 - **+10** Health checks are configured for both `app` and `db` services
-- **+5** Final application image runs as non-root user
-- **+5** Restart policies are configured correctly (`app`: `on-failure`, `db`: `unless-stopped`)
+- **+6** Final application image runs as non-root user
+- **+6** Restart policies are configured correctly (`app`: `on-failure`, `db`: `unless-stopped`)
 
 ## Hacker Scope
 
 - **+10** Security scan is performed and results are documented (no critical vulnerabilities or they are addressed)
-- **+5** Final application image size is under 200MB
-- **+5** Application image is pushed to Docker Hub and the link is in `Readme.md`
-- **+5** Optional `adminer` service is added for local database debugging (isolated to development flow)
+- **+6** Final application image size is under 200MB
+- **+6** Application image is pushed to Docker Hub and the link is in `Readme.md`
+- **+6** Optional `adminer` service is added for local database debugging (isolated to development flow)
 
 ## Forfeits
 

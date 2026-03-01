@@ -1,5 +1,8 @@
 # REST service: Logging & Error Handling and Authentication and Authorization
 
+Max total score: 340
+
+
 ## Basic Scope
 
 # 1) Logging & Error Handling:
@@ -47,5 +50,3 @@ Logs with configured level to be registered as well as other higher priority lev
 - **-20** No Pull Request
 - **-10** Pull Request description is incorrect
 - **-20** Less than 3 commits in the development branch, not including commits that make changes only to `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)
-
-
