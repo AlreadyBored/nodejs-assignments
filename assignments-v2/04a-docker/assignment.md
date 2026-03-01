@@ -65,6 +65,12 @@ The main goal of this step is to configure containerized infrastructure early: a
      - has a health check (`pg_isready`)
      - restart policy: `unless-stopped`
 
+   - **`adminer`** (optional, for local debugging):
+     - uses the official [adminer](https://hub.docker.com/_/adminer/) image
+     - available only for development (recommended via Compose profile, for example `debug`)
+     - connected to the same network as `db`
+     - maps UI port (for example `8080:8080`)
+
    - define a custom bridge network for communication between services
    - define a named volume for PostgreSQL persistence
 
@@ -108,4 +114,3 @@ The main goal of this step is to configure containerized infrastructure early: a
 - Use `depends_on` with `condition: service_healthy` to improve startup order
 - You will reuse the same PostgreSQL container setup in assignment `04b`
 - Check image size with: `docker images <image-name>`
-

@@ -178,10 +178,12 @@ Calculate a cryptographic hash of a file.
 ```bash
 hash --input file.txt
 hash --input file.txt --algorithm md5
+hash --input file.txt --save
 ```
 
 - `--input` — path to the input file (**required**)
 - `--algorithm` — hash algorithm to use (optional, default: `sha256`). Supported values: `sha256`, `md5`, `sha512`
+- `--save` — optional flag; if provided, save hash to a file next to the source file
 
 **Output format:**
 ```
@@ -193,8 +195,39 @@ sha256: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
 - Paths are relative to the current working directory or can be absolute
 - If the input file doesn't exist, print `Operation failed`
 - If the algorithm is not supported, print `Operation failed`
+- If `--save` is passed, write hash to `<inputFilename>.<algorithm>` (example: `file.txt.sha256`)
 
-#### 5. `encrypt` — Encrypt a file
+#### 5. `hash-compare` — Compare file hash with expected hash
+
+Calculate file hash and compare it with a value stored in a hash file.
+
+```bash
+hash-compare --input file.txt --hash file.txt.sha256
+hash-compare --input file.txt --hash file.txt.md5 --algorithm md5
+```
+
+- `--input` — path to the input file (**required**)
+- `--hash` — path to file with expected hash (**required**)
+- `--algorithm` — hash algorithm to use (optional, default: `sha256`). Supported values: `sha256`, `md5`, `sha512`
+
+**Output format:**
+```
+OK
+```
+or
+```
+MISMATCH
+```
+
+**Behavior:**
+- Must calculate hash of `--input` using Streams API
+- Must read expected hash value from `--hash` file
+- Comparison should be case-insensitive and ignore trailing newline in hash file
+- Paths are relative to the current working directory or can be absolute
+- If input or hash file doesn't exist, print `Operation failed`
+- If algorithm is not supported, print `Operation failed`
+
+#### 6. `encrypt` — Encrypt a file
 
 Encrypt a file using `AES-256-GCM`.
 
@@ -222,7 +255,7 @@ encrypt --input file.txt --output file.txt.enc --password mySecret
 - Paths are relative to the current working directory or can be absolute
 - If the input file doesn't exist, print `Operation failed`
 
-#### 6. `decrypt` — Decrypt a file
+#### 7. `decrypt` — Decrypt a file
 
 Decrypt a file produced by `encrypt`.
 
@@ -243,7 +276,7 @@ decrypt --input file.txt.enc --output file.txt --password mySecret
 - Paths are relative to the current working directory or can be absolute
 - If the input file doesn't exist or auth fails, print `Operation failed`
 
-#### 7. `log-stats` — Analyze a large log file using Worker Threads
+#### 8. `log-stats` — Analyze a large log file using Worker Threads
 
 Compute statistics for a large log file using Worker Threads for parallel processing.
 
@@ -309,6 +342,7 @@ src/
     jsonToCsv.js   — json-to-csv command handler
     count.js       — count command handler
     hash.js        — hash command handler
+    hashCompare.js — hash-compare command handler
     encrypt.js     — encrypt command handler
     decrypt.js     — decrypt command handler
     logStats.js    — log-stats command handler

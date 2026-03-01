@@ -17,7 +17,7 @@
 - **+20** `csv-to-json` command works correctly (headers parsed, rows converted to objects, output is valid JSON array, uses Streams)
 - **+20** `json-to-csv` command works correctly (headers from object keys, values as rows, uses Streams)
 - **+12** `count` command works correctly (lines, words, characters counted via Streams, output format matches specification)
-- **+12** `hash` command works correctly (SHA256 by default, supports `md5` and `sha512` via `--algorithm` option, uses Streams)
+- **+12** `hash` command works correctly (SHA256 by default, supports `md5` and `sha512` via `--algorithm` option, uses Streams, supports `--save` to write hash file next to input)
 - **+8** `encrypt` command works correctly (AES-256-GCM, key derivation from password+salt, Streams, output format matches spec)
 - **+8** `decrypt` command works correctly (AES-256-GCM, key derivation from password+salt, Streams, authTag verified, result matches original)
 
@@ -36,6 +36,7 @@
 - **+20** Interactive REPL implementation:
     - **+10** Maintains application state (current working directory) across commands
     - **+10** Properly handles readline for continuous command input
+- **+10** `hash-compare` command works correctly (reads expected hash from file, computes current hash with selected algorithm, returns `OK` / `MISMATCH`)
 
 ## Forfeits
 

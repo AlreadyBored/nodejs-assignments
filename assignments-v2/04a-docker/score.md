@@ -23,6 +23,7 @@
 - **+10** Security scan is performed and results are documented (no critical vulnerabilities or they are addressed)
 - **+5** Final application image size is under 200MB
 - **+5** Application image is pushed to Docker Hub and the link is in `Readme.md`
+- **+5** Optional `adminer` service is added for local database debugging (isolated to development flow)
 
 ## Forfeits
 

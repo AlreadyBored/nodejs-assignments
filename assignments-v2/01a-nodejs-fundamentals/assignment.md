@@ -6,6 +6,8 @@ Your task is to complete several tasks to learn Node.js core APIs. Each subtask 
 
 Fork the starter repository and implement the required functionality.
 
+Starter repository: https://github.com/AlreadyBored/node-nodejs-fundamentals
+
 ## Technical requirements
 
 - Any external tools and libraries are prohibited
@@ -19,21 +21,28 @@ Fork the starter repository and implement the required functionality.
 
 You should implement several functions in dedicated files:
 
-- `snapshot.js` — implement function that recursively scans the `workspace` directory and writes a `snapshot.json` file next to it. The JSON file should contain a flat array of all entries with file contents:
+- `snapshot.js` — implement function that recursively scans the `workspace` directory and writes a `snapshot.json` file next to it. The JSON file should contain `rootPath` and a flat `entries` array with file contents:
   ```json
-  [
-    { "path": "file1.txt", "type": "file", "size": 1024, "content": "file contents as base64 string" },
-    { "path": "subdir", "type": "directory" },
-    { "path": "subdir/nested.txt", "type": "file", "size": 512, "content": "nested file contents as base64 string" }
-  ]
+  {
+    "rootPath": "/home/user/workspace",
+    "entries": [
+      { "path": "file1.txt", "type": "file", "size": 1024, "content": "file contents as base64 string" },
+      { "path": "subdir", "type": "directory" },
+      { "path": "subdir/nested.txt", "type": "file", "size": 512, "content": "nested file contents as base64 string" }
+    ]
+  }
   ```
-  Paths should be relative to `workspace`. Size is in bytes (only for files). File contents should be stored as base64-encoded strings. If `workspace` doesn't exist, `Error` with message `FS operation failed` must be thrown.
+  `rootPath` is an absolute path to the original `workspace` directory. `entries[].path` values should be relative to `workspace`. Size is in bytes (only for files). File contents should be stored as base64-encoded strings. If `workspace` doesn't exist, `Error` with message `FS operation failed` must be thrown.
 
-- `restore.js` — implement function that reads `snapshot.json` and recreates the directory/file structure described in it inside a `workspace_restored` folder. Directories should be created, files should be recreated with their original content (decoded from base64). If `snapshot.json` doesn't exist, `Error` with message `FS operation failed` must be thrown. If `workspace_restored` already exists, `Error` with message `FS operation failed` must be thrown.
+- `restore.js` — implement function that reads `snapshot.json` and recreates the directory/file structure described in it inside a `workspace_restored` folder. Directories should be created, files should be recreated with their original content (decoded from base64). `rootPath` from snapshot should be treated as metadata and must not affect restore destination. If `snapshot.json` doesn't exist, `Error` with message `FS operation failed` must be thrown. If `workspace_restored` already exists, `Error` with message `FS operation failed` must be thrown.
 
 - `findByExt.js` — implement function that recursively finds all files with a specific extension inside the `workspace` directory and prints their relative paths sorted alphabetically, one per line. The extension is provided as a CLI argument `--ext <extension>` (e.g. `--ext txt` or `--ext js`). If the `--ext` argument is not provided, default to `.txt`. If `workspace` doesn't exist, `Error` with message `FS operation failed` must be thrown.
 
-- `merge.js` — implement function that reads all `.txt` files from the `workspace/parts` folder in alphabetical order by filename, concatenates their content (separated by newline), and writes the result to `workspace/merged.txt`. If the `parts` folder doesn't exist or contains no `.txt` files, `Error` with message `FS operation failed` must be thrown.
+- `merge.js` — implement function that concatenates text files and writes the result to `workspace/merged.txt`.
+  - Default behavior: read all `.txt` files from `workspace/parts` in alphabetical order by filename.
+  - Optional behavior: if CLI argument `--files <filename1,filename2,...>` is provided, merge only those files from `workspace/parts` in the provided order.
+  - If `--files` is provided, it takes precedence over automatic `.txt` discovery.
+  - If the `parts` folder doesn't exist, contains no `.txt` files (for default mode), or any requested file from `--files` does not exist, `Error` with message `FS operation failed` must be thrown.
 
 ### CLI (src/cli)
 
@@ -121,4 +130,3 @@ You should implement a function in a dedicated file:
   - pipes the child's `stderr` to `process.stderr`
   - passes environment variables from the parent process to the child process
   - when the child exits, the parent process exits with the same exit code
-

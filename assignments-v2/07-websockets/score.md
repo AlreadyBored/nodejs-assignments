@@ -21,6 +21,7 @@
 
 - **+15** Bot player is implemented for single play — automatically joins and answers questions (randomly or with a strategy)
 - **+15** Pause/resume game functionality — host can pause the game (timer stops, no answers accepted) and resume it
+- **+10** Question export/import is implemented (host-only commands, input validation, import allowed only in `waiting` state)
 
 ## Forfeits
 

@@ -178,6 +178,75 @@ interface Game {
   }
   ```
 
+- **Export Questions** (host only, optional advanced feature)
+
+  `<-`
+  ```json
+  {
+    "type": "export_questions",
+    "data": {
+      "gameId": "<string>"
+    },
+    "id": 0
+  }
+  ```
+  `->` (personal response to host)
+  ```json
+  {
+    "type": "questions_exported",
+    "data": {
+      "schemaVersion": 1,
+      "questions": [
+        {
+          "text": "<string>",
+          "options": ["<string>", "<string>", "<string>", "<string>"],
+          "correctIndex": "<number>",
+          "timeLimitSec": "<number>"
+        }
+      ]
+    },
+    "id": 0
+  }
+  ```
+
+- **Import Questions** (host only, optional advanced feature)
+
+  `<-`
+  ```json
+  {
+    "type": "import_questions",
+    "data": {
+      "gameId": "<string>",
+      "schemaVersion": 1,
+      "questions": [
+        {
+          "text": "<string>",
+          "options": ["<string>", "<string>", "<string>", "<string>"],
+          "correctIndex": "<number>",
+          "timeLimitSec": "<number>"
+        }
+      ]
+    },
+    "id": 0
+  }
+  ```
+  `->` (personal response to host)
+  ```json
+  {
+    "type": "questions_imported",
+    "data": {
+      "gameId": "<string>",
+      "totalQuestions": "<number>"
+    },
+    "id": 0
+  }
+  ```
+  Notes:
+  - only the host can export/import questions
+  - import is allowed only while game status is `waiting`
+  - server must validate imported questions using the same rules as `create_game`
+  - if you implement a companion UI, add `Export` / `Import` actions for host workflow
+
 ### Game Play Commands
 
 - **Start Game** (host only)
@@ -317,3 +386,4 @@ start_game     -->
 - Score calculation based on speed of correct answer
 - Proper handling of player disconnects (remove from game, update player list)
 - All communication via JSON strings
+- Optional advanced feature: question export/import for host

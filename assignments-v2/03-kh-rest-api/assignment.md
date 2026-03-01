@@ -180,3 +180,18 @@ NB! You must create a new repository from the starter template for this task. It
 * To generate all entities `id`s use [Node.js randomUUID](https://nodejs.org/dist/latest-v24.x/docs/api/crypto.html#cryptorandomuuidoptions).
 * Use Nest module boundaries and dependency injection to keep business logic out of controllers.
 * Use DTOs and validation pipes for request validation.
+* For finite value sets like `User.role` and `Article.status`, prefer TypeScript enums or `as const` objects to avoid magic strings across DTOs, services, and validation schemas.
+
+  ```typescript
+  export enum UserRole {
+    ADMIN = 'admin',
+    EDITOR = 'editor',
+    VIEWER = 'viewer',
+  }
+
+  export enum ArticleStatus {
+    DRAFT = 'draft',
+    PUBLISHED = 'published',
+    ARCHIVED = 'archived',
+  }
+  ```
