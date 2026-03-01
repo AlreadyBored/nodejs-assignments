@@ -4,7 +4,7 @@
 
 Your task is to write unit and integration tests for the Knowledge Hub API using [Vitest](https://vitest.dev/) testing framework.
 
-This is a continuation of the Authentication & Authorization assignment (Week 5). You will work in the same `nodejs2025Q2-knowledge-hub` repository.
+This is a continuation of the Authentication & Authorization assignment (Week 5). You will work in the same repository created in assignment `03`.
 
 ## Technical requirements
 

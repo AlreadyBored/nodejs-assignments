@@ -4,7 +4,7 @@
 
 Your task is to extend the existing **Knowledge Hub API** with a Retrieval-Augmented Generation (RAG) layer that answers user questions using content stored in the service database.
 
-This assignment is a continuation of Assignment `08` and previous Knowledge Hub assignments. You will work in the same `nodejs2025Q2-knowledge-hub` repository.
+This assignment is a continuation of Assignment `08` and previous Knowledge Hub assignments. You will work in the same repository created in assignment `03`.
 
 The key idea: RAG should be built on top of existing Knowledge Hub entities (primarily articles), not as an isolated standalone app.
 
@@ -163,7 +163,7 @@ RAG_CONVERSATION_MAX_MESSAGES=20
 
 ## Docker requirements
 
-Update `docker-compose.yml` in `nodejs2025Q2-knowledge-hub` to include vector DB service, for example:
+Update `docker-compose.yml` in your repository to include vector DB service, for example:
 
 - `vectordb` service (Qdrant or Chroma)
 - persistent volume for vector data
