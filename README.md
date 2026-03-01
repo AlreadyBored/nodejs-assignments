@@ -12,6 +12,10 @@
 - [Assignment](assignments-v2/03-crud-api/assignment.md)
 - [Scoring](assignments-v2/03-crud-api/score.md)
 
+## WebSocket: Live Quiz Game
+- [Assignment](assignments-v2/08-websockets/assignment.md)
+- [Scoring](assignments-v2/08-websockets/score.md)
+
 ## Nest.js Knowledge Hub API
 - [Assignment](assignments-v2/04-kh-rest-api/assignment.md)
 - [Scoring](assignments-v2/04-kh-rest-api/score.md)
@@ -39,10 +43,6 @@
 ## REST service: Logging & Error Handling
 - [Assignment](assignments-v2/07b-logging-errors/assignment.md)
 - [Scoring](assignments-v2/07b-logging-errors/score.md)
-
-## WebSocket: Live Quiz Game
-- [Assignment](assignments-v2/08-websockets/assignment.md)
-- [Scoring](assignments-v2/08-websockets/score.md)
 
 ## Knowledge Hub.AI: LLM Integration
 - [Assignment](assignments-v2/09-ai-llm-integration/assignment.md)
