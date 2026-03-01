@@ -1,4 +1,4 @@
-# Scoring: Node.js Basics
+# Scoring: Node.js Fundamentals
 
 Max total score: 190
 

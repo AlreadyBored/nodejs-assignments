@@ -1,6 +1,6 @@
 # Node.js Assignments v2
 
-## Node.js Basics
+## Node.js Fundamentals
 - [Assignment](assignments-v2/01-nodejs-fundamentals/assignment.md)
 - [Scoring](assignments-v2/01-nodejs-fundamentals/score.md)
 
