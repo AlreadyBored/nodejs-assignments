@@ -1,4 +1,4 @@
-# Scoring: Containerization & Docker
+# Scoring: Containerization & Docker (Foundation)
 
 ## Basic Scope
 
@@ -6,15 +6,17 @@
 - **+20** `Dockerfile` for the application is created and builds successfully
 - **+20** `docker-compose.yml` is created with `app` and `db` services
 - **+10** Application and database communicate over a custom Docker network
-- **+20** Application fully works when started via `docker-compose up --build` (API responds, database operations work)
+- **+10** PostgreSQL data is persisted via a named volume
+- **+10** Application fully works when started via `docker-compose up --build` (API responds)
+- **+10** Database container is healthy and accessible from the application
+- **+10** Database-related variables are provided via `.env` / `.env.example`
 
 ## Advanced Scope
 
 - **+15** Multi-stage build is used in the Dockerfile (separate build and production stages)
 - **+10** Health checks are configured for both `app` and `db` services
-- **+10** Named volume is used for PostgreSQL data persistence
-- **+10** Custom bridge network is defined for inter-service communication
-- **+5** Environment variables are properly configured via `.env` file
+- **+5** Final application image runs as non-root user
+- **+5** Restart policies are configured correctly (`app`: `on-failure`, `db`: `unless-stopped`)
 
 ## Hacker Scope
 

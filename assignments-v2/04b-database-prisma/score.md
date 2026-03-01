@@ -6,8 +6,8 @@
 - **+10** All relations are correctly defined (one-to-many for User→Article, User→Comment, Category→Article, Article→Comment)
 - **+10** Many-to-many relation between `Article` and `Tag` is implemented
 - **+10** Prisma migrations are created and committed to the repository
-- **+10** PostgreSQL runs inside a Docker container via `docker-compose.yml`
 - **+10** `DATABASE_URL` is stored in `.env` (`.env.example` is committed)
+- **+10** Existing Dockerized PostgreSQL setup from `04a` is reused successfully
 - **+10** `GET /user` works with real database
 - **+10** `GET /article` works with real database (including filtering by status, categoryId, tag)
 - **+5** `GET /category` works with real database

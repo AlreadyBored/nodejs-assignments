@@ -16,9 +16,13 @@
 - [Assignment](assignments-v2/03-kh-rest-api/assignment.md)
 - [Scoring](assignments-v2/03-kh-rest-api/score.md)
 
+## REST service: Containerization & Docker (Foundation)
+- [Assignment](assignments-v2/04a-docker/assignment.md)
+- [Scoring](assignments-v2/04a-docker/score.md)
+
 ## REST service: Database & Prisma ORM
-- [Assignment](assignments-v2/04-database-prisma/assignment.md)
-- [Scoring](assignments-v2/04-database-prisma/score.md)
+- [Assignment](assignments-v2/04b-database-prisma/assignment.md)
+- [Scoring](assignments-v2/04b-database-prisma/score.md)
 
 ## REST service: Authentication & Authorization
 - [Assignment](assignments-v2/05-auth-jwt/assignment.md)
@@ -31,10 +35,6 @@
 ## REST service: Logging & Error Handling
 - [Assignment](assignments-v2/06b-logging-errors/assignment.md)
 - [Scoring](assignments-v2/06b-logging-errors/score.md)
-
-## REST service: Containerization & Docker
-- [Assignment](assignments-v2/07-docker/assignment.md)
-- [Scoring](assignments-v2/07-docker/score.md)
 
 ## WebSocket: Live Quiz Game
 - [Assignment](assignments-v2/08-websockets/assignment.md)
