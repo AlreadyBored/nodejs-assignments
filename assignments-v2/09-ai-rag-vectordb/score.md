@@ -1,28 +1,27 @@
-# Scoring: AI RAG & Vector Database — Smart Knowledge Base
+# Scoring: Knowledge Hub RAG & Vector Database
 
 ## Basic Scope
 
-- **+20** `POST /api/documents` works correctly: accepts title and content, splits into chunks, generates embeddings, stores in memory, returns document info with chunksCount
-- **+10** `GET /api/documents` returns the list of all uploaded documents
-- **+10** `DELETE /api/documents/:id` removes the document and all associated chunks/embeddings
-- **+20** In-memory vector storage is implemented with cosine similarity search
-- **+25** `POST /api/chat` implements the full RAG pipeline: embed question → find similar chunks → inject into prompt → generate answer with source attribution
-- **+15** Source attribution in chat responses correctly identifies which documents/chunks were used
+- **+20** `POST /ai/rag/index` indexes Knowledge Hub article data into vector storage correctly
+- **+15** `POST /ai/rag/search` performs semantic search and returns ranked chunks with article attribution
+- **+25** `POST /ai/rag/chat` implements end-to-end RAG (retrieve relevant chunks, build grounded prompt, return answer + sources)
+- **+10** `DELETE /ai/rag/index/articles/:articleId` removes article vectors from index correctly
+- **+15** Gemini generation + Gemini embeddings are integrated correctly (configured via `.env`)
+- **+15** Chunking configuration is implemented via env (`RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`)
 
 ## Advanced Scope
 
-- **+15** `POST /api/search` (semantic search) endpoint works correctly — returns top-K chunks ranked by similarity
-- **+15** Conversation memory is implemented — `conversationId` tracks multi-turn dialogues, history is included in prompts
-- **+10** `DELETE /api/documents/:id` correctly removes all associated embeddings from the vector store (search results no longer include deleted document's chunks)
-- **+10** Document metadata filtering: `POST /api/search` accepts optional `metadata` filter to narrow results
-- **+10** Chunk size and overlap are configurable via `.env` variables (`CHUNK_SIZE`, `CHUNK_OVERLAP`)
-- **+10** ChromaDB is used via Docker instead of in-memory vector storage
+- **+20** External vector DB is used via Docker Compose (separate container, healthy startup, app connectivity)
+- **+10** Retrieval supports metadata-aware filtering (status/category/tags)
+- **+10** Conversation memory for RAG chat is implemented with configurable max history size
+- **+10** Reindex strategy handles updates/deletes consistently (no stale vectors in results)
+- **+10** Resilient error handling for vector DB/Gemini outages (`503` + logs)
 
 ## Hacker Scope
 
-- **+10** Hybrid search: combines keyword matching (simple text search) with semantic similarity, merging and re-ranking results
-- **+10** Re-ranking: after initial retrieval, re-rank chunks using a secondary scoring method (e.g., ask the LLM to rate relevance, or use reciprocal rank fusion)
-- **+10** Large document handling: documents larger than 50KB are processed via streaming chunking without loading the entire content into memory at once
+- **+10** Hybrid retrieval (semantic + lexical) with merged ranking
+- **+10** Secondary re-ranking strategy improves relevance of top chunks
+- **+10** Incremental indexing pipeline (index only changed articles, with idempotent behavior)
 
 ## Forfeits
 
@@ -31,4 +30,7 @@
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
 - **-20** Less than 3 commits in the development branch, not including commits that make changes only to `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)
+- **-15** RAG remains in-memory only and does not use external vector DB container
+- **-10** Gemini integration is missing or replaced with a different LLM provider
+- **-10** README does not contain complete runbook (Gemini setup + vector DB startup + indexing flow)
 - **-5** The `.env` file with actual API key is present in the repository (should be `.env.example` instead)

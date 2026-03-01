@@ -1,28 +1,27 @@
-# Scoring: AI/LLM Integration — AI Content Assistant
+# Scoring: Knowledge Hub AI Integration
 
 ## Basic Scope
 
-- **+15** `POST /api/summarize` endpoint works correctly (sends text to LLM, returns summary with originalLength and summaryLength)
-- **+15** `POST /api/translate` endpoint works correctly (sends text to LLM, returns translation with detectedLanguage)
-- **+15** `POST /api/analyze-code` endpoint works correctly (sends code to LLM, returns analysis, suggestions array, and severity)
-- **+15** `POST /api/chat` endpoint works correctly (sends message to LLM, returns response)
-- **+15** OpenAI SDK is properly integrated (API key from `.env`, model configurable)
-- **+10** Prompt templates are stored in a dedicated module (not hardcoded in route handlers)
-- **+15** JSON Schema validation is used for all request bodies (returns 400 for invalid input)
+- **+20** `POST /ai/articles/:articleId/summarize` works correctly with real article data from Knowledge Hub DB
+- **+15** `POST /ai/articles/:articleId/translate` works correctly with real article data from Knowledge Hub DB
+- **+15** `POST /ai/articles/:articleId/analyze` works correctly and returns structured analysis response
+- **+15** Gemini API integration is implemented correctly (API key via `.env`, model configurable)
+- **+10** Prompt templates are stored in a dedicated module (not hardcoded in controllers)
+- **+15** Request validation is implemented for AI routes (DTO + validation pipes, proper 400/404 behavior)
 
 ## Advanced Scope
 
-- **+20** SSE streaming is implemented for `/api/chat` — tokens are streamed as `text/event-stream` events with proper format
-- **+15** Token tracking and cost estimation: `GET /api/usage` returns correct totals (totalRequests, totalTokens, estimatedCost, requestsByEndpoint)
-- **+15** Rate limiting is implemented (configurable RPM via `.env`, returns 429 with `Retry-After` header when exceeded)
-- **+10** OpenAI API errors are handled gracefully (rate limits, invalid key, timeouts — appropriate HTTP status codes and logged)
-- **+10** Conversation context management: `/api/chat` maintains session history per `sessionId` (up to last 20 messages)
+- **+15** Rate limiting is implemented for AI routes (configurable RPM, `429` + `Retry-After`)
+- **+15** Usage tracking endpoint is implemented (totals + by-endpoint counters, optional token counters)
+- **+10** Gemini API errors are handled gracefully (timeouts, auth errors, upstream rate limits)
+- **+10** Response caching is implemented for summarize/translate with TTL and deterministic cache key
+- **+10** Optional generic endpoint (`POST /ai/generate`) is implemented with validation and guardrails
 
 ## Hacker Scope
 
-- **+15** Response caching for `/api/summarize` and `/api/translate` (in-memory with TTL, `X-Cache: HIT/MISS` header, cache key from input hash)
-- **+10** Graceful degradation when AI API is unavailable (returns 503 with descriptive message, retries with exponential backoff)
-- **+5** Model selection is configurable per-request (optional `model` field in request body, falls back to `.env` default)
+- **+10** Structured AI output validation (schema-based response checks with safe fallback)
+- **+10** AI observability improvements (latency metrics, cache hit ratio, diagnostics)
+- **+10** Conversation context support for generic endpoint (session-based short-term memory)
 
 ## Forfeits
 
@@ -31,4 +30,6 @@
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
 - **-20** Less than 3 commits in the development branch, not including commits that make changes only to `Readme.md` or similar files (`tsconfig.json`, `.gitignore`, `.prettierrc.json`, etc.)
+- **-10** Gemini integration is missing or replaced with a different LLM provider
+- **-10** README does not contain complete Gemini setup instructions (how to run after clone + API key setup)
 - **-5** The `.env` file with actual API key is present in the repository (should be `.env.example` instead)
