@@ -1,6 +1,6 @@
 # Scoring: Node.js Fundamentals
 
-Max total score: 190
+Max total score: 200
 
 
 ## Check
@@ -17,7 +17,8 @@ NB! Some scripts have predefined data (e.g. environment variables, CLI arguments
     - **+6** `merge.js` implemented properly (reads .txt files in order, concatenates, writes result)
 - CLI (src/cli)
     - **+10** `interactive.js` implemented properly (readline prompt, supports uptime/cwd/date/exit commands, handles Ctrl+C)
-    - **+6** `progress.js` implemented properly (in-place updating progress bar, 0-100% over ~5 seconds)
+    - **+10** `progress.js` implemented properly (in-place updating progress bar, 0-100% over ~5 seconds)
+    - **+6** `progress.js` supports `--color <hex>` (`#RRGGBB`), applies color only to filled segment, and resets ANSI style correctly
 - Modules (src/modules)
     - **+10** `dynamic.js` implemented properly (dynamic import from plugins/, calls run(), handles missing plugin)
 - Hash (src/hash)
