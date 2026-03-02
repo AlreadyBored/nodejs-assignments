@@ -62,6 +62,9 @@ You should implement several functions in dedicated files:
   - `--duration <milliseconds>` — total duration in milliseconds (default: 5000)
   - `--interval <milliseconds>` — update interval in milliseconds (default: 100)
   - `--length <number>` — progress bar character length (default: 30)
+  - `--color <hex>` — optional color for the filled part of the progress bar in `#RRGGBB` format (default: no color)
+  - If `--color` is invalid, render the progress bar without color (do not throw)
+  - Apply color only to the filled part (`████...`) and reset style with `\x1b[0m` after it
   The output format should be: `[████████████████████          ] 67%`. When complete, print `Done!` on a new line.
 
 ### Modules (src/modules)
