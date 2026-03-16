@@ -1,6 +1,6 @@
 # Scoring: Data Processing CLI
 
-Max total score: 296
+Max total score: 250
 
 
 ## Basic Scope
@@ -30,7 +30,7 @@ Max total score: 296
 
 ## Advanced Scope
 
-- **+26** `log-stats` command works correctly:
+- **+28** `log-stats` command works correctly:
     - **+6** File is split into chunks equal to the number of CPU cores (line boundaries preserved)
     - **+10** Each chunk is processed in a separate Worker Thread
     - **+6** Partial stats are merged correctly (counters, maps, totals)
