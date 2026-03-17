@@ -57,7 +57,7 @@ Your task is to implement a simple CRUD API for a **Product Catalog** using an i
       ```
 
 6. There should be 2 modes of running the application (**development** and **production**):
-    - The application is run in development mode using `nodemon` or `ts-node-dev` (there is an `npm` script `start:dev`)
+    - The application is run in development mode using `nodemon` or `ts-node-dev` or `tsx` (there is an `npm` script `start:dev`)
     - The application is run in production mode (there is an `npm` script `start:prod` that starts the build process and then runs the bundled file)
 
 7. There could be some tests for the API (not less than **3** scenarios). Example of a test scenario:
