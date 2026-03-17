@@ -29,7 +29,7 @@ Max total score: 222
 
 ## Forfeits
 
-- **-95% of total task score** Any external tools except `fastify`, `@fastify/*` plugins, `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `tsx`, linter and its plugins, bundler and its plugins, formatter and its plugins, `uuid`, `@types/*` as well as libraries used for testing
+- **-95% of total task score** Any external tools except `fastify`, `@fastify/*` plugins, `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `tsx`, `zod` and `zod`-related linter and its plugins, bundler and its plugins, formatter and its plugins, `uuid`, `@types/*` as well as libraries used for testing
 - **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
