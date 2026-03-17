@@ -8,7 +8,7 @@ Your task is to implement a simple CRUD API for a **Product Catalog** using an i
 
 - Task can be implemented in JavaScript or TypeScript
 - Use [Fastify](https://fastify.dev/) as the web framework
-- Only `fastify`, `@fastify/*` plugins, `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `tsx`, linter and its plugins, bundler and its plugins and loaders, formatter and its plugins, `uuid`, `@types/*` as well as libraries used for testing are allowed
+- Only `fastify`, `@fastify/*` plugins, `nodemon`, `dotenv`, `cross-env`, `typescript`, `ts-node`, `ts-node-dev`, `tsx`, `zod` and `zod`-related linter and its plugins, bundler and its plugins and loaders, formatter and its plugins, `uuid`, `@types/*` as well as libraries used for testing are allowed
 - Use 24.x.x version (24.10.0 or upper) of Node.js
 - Prefer asynchronous API whenever possible
 
