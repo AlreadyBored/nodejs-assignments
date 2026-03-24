@@ -4,6 +4,10 @@
 
 Your task is to implement a backend for a real-time **Live Quiz Game** using WebSocket. A host creates a quiz with questions, players join the game and answer questions in real time.
 
+**Fork this repository to get started:** [https://github.com/AlreadyBored/live-quiz-game-template](https://github.com/AlreadyBored/live-quiz-game-template)
+
+The repository contains a fully working React frontend (`client/`) and a server stub (`server/`) with TypeScript types and a basic WebSocket server setup. Your task is to implement the server logic.
+
 ## Technical requirements
 
 - Task can be implemented in JavaScript or TypeScript
