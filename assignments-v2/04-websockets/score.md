@@ -1,6 +1,6 @@
 # Scoring: WebSocket — Live Quiz Game
 
-Max total score: 222
+Max total score: 180
 
 
 ## Basic Scope
@@ -19,12 +19,6 @@ Max total score: 222
 - **+16** Scoring with speed bonus is implemented correctly (`basePoints * timeRemaining / timeLimit`)
 - **+16** Server-side timer is implemented — question results are sent after `timeLimitSec` even if not all players answered
 - **+16** Disconnects are handled correctly — player is removed from the game, `update_players` is broadcast, game continues
-
-## Hacker Scope
-
-- **+16** Bot player is implemented for single play — automatically joins and answers questions (randomly or with a strategy)
-- **+16** Pause/resume game functionality — host can pause the game (timer stops, no answers accepted) and resume it
-- **+10** Question export/import is implemented (host-only commands, input validation, import allowed only in `waiting` state)
 
 ## Forfeits
 
