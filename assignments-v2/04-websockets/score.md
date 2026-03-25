@@ -6,7 +6,7 @@ Max total score: 180
 ## Basic Scope
 
 - **+10** WebSocket server starts and accepts connections
-- **+16** Player registration/login (`reg`) works correctly — stores player data, handles duplicate names, returns error on wrong password
+- **+16** Player registration/login (`reg`) works correctly — allows user to login and proceed
 - **+16** Game creation (`create_game`) works correctly — validates questions, generates 6-character code, stores game
 - **+16** Joining a game (`join_game`) works correctly — validates code, adds player, broadcasts `player_joined` and `update_players`
 - **+16** Starting a game (`start_game`) works correctly — only host can start, sends first question to all players (without correct answer)
