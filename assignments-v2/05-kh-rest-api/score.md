@@ -1,6 +1,6 @@
 # Scoring: Nest.js Knowledge Hub API
 
-Max total score: 142
+Max total score: 602
 
 
 ## Basic Scope

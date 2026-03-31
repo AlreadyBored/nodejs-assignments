@@ -24,7 +24,7 @@ Max total score: 172
 
 ## Forfeits
 
-- **-10** for each failing test with `npm run test:auth` (this forfeit applied once if coincides with same forfeit in different assignments)
+- **-10** for each failing test with `npm run test:auth`, `npm run test:refresh`, or `npm run test:rbac` (this forfeit applied once if coincides with same forfeit in different assignments)
 - **-30% of max task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
