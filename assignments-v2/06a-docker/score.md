@@ -24,7 +24,7 @@ Max total score: 166
 ## Hacker Scope
 
 - **+10** Security scan is performed and results are documented (no critical vulnerabilities or they are addressed)
-- **+6** Final application image size is under 200MB
+- **+6** Final application image size is under 500MB
 - **+6** Application image is pushed to Docker Hub and the link is in `Readme.md`
 - **+6** Optional `adminer` service is added for local database debugging (isolated to development flow)
 
