@@ -1,6 +1,6 @@
 # Scoring: Basic testing
 
-Max total score: 148
+Max total score: 258
 
 
 ## Check
