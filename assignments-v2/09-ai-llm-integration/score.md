@@ -18,7 +18,7 @@ Max total score: 186
 - **+16** Usage tracking endpoint is implemented (totals + by-endpoint counters, optional token counters)
 - **+10** Gemini API errors are handled gracefully (timeouts, auth errors, upstream rate limits)
 - **+10** Response caching is implemented for summarize/translate with TTL and deterministic cache key
-- **+10** Optional generic endpoint (`POST /ai/generate`) is implemented with validation and guardrails
+- **+10** Optional generic endpoint (`POST /ai/generate`) is implemented
 
 ## Hacker Scope
 
