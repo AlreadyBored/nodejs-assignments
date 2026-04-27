@@ -105,7 +105,7 @@ The main goal is to integrate a **specific free LLM API** (Google Gemini API) in
 
 2. **Prompt templates**
 
-   Prompt templates should be stored in a dedicated module/directory (for example, `src/ai/prompts/`), not hardcoded in controllers.
+   Prompt templates should be stored in a dedicated module/directory, not hardcoded in controllers.
 
 3. **Input validation**
 
