@@ -95,7 +95,7 @@ The main goal is to integrate a **specific free LLM API** (Google Gemini API) in
 
 4. **Optional Generic Prompt Endpoint** — `POST /ai/generate` (optional)
 
-   Optional endpoint for non-article requests (free-form generation). If implemented, it should be validated and rate-limited similarly to article endpoints.
+   Optional endpoint for non-article requests (free-form generation). If implemented, it should be rate-limited similarly to article endpoints.
 
 ### Cross-cutting requirements
 
