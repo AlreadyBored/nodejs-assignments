@@ -28,7 +28,6 @@ Max total score: 194
 
 ## Forfeits
 
-- **-95% of total task score** Any external tools/libraries beyond those listed in technical requirements
 - **-30% of total task score** Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)
 - **-20** Missing PR or its description is incorrect
 - **-20** No separate development branch
